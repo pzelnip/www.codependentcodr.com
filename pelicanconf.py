@@ -3,8 +3,8 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Adam Parkin'
-SITENAME = 'Pedles Test'
-SITEURL = ''
+SITENAME = 'The Codependent Codr'
+SITEURL = 'http://www.codependentcodr.com'
 
 PATH = 'content'
 
@@ -33,3 +33,5 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+DEFAULT_CATEGORY = 'Posts'
