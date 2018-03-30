@@ -15,12 +15,12 @@
         {
             "label": "Start Dev server",
             "type": "shell",
-            "command": "source /Users/ad0418340/.virtualenvs/pelican_experiment/bin/activate && make devserver"
+            "command": "source ${config:pelican.activatePath} && make devserver"
         },
         {
             "label": "Stop Dev server",
             "type": "shell",
-            "command": "source /Users/ad0418340/.virtualenvs/pelican_experiment/bin/activate && make stopserver"
+            "command": "source ${config:pelican.activatePath} && make stopserver"
         },
     ]
 }
