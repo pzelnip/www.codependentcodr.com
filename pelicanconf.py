@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
+
+"""Development config for project
+"""
+
 from __future__ import unicode_literals
 
 AUTHOR = 'Adam Parkin'
@@ -31,7 +35,7 @@ SOCIAL = (('Github', 'https://github.com/pzelnip'),
           ('Twitter', 'https://twitter.com/codependentcodr'),
           ('StackOverflow', 'http://stackoverflow.com/users/808804'),
           ('LinkedIn', 'http://lnkd.in/ykHQiG'),
-          )
+         )
 
 DEFAULT_PAGINATION = 10
 

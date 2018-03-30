@@ -1,6 +1,7 @@
 PY?=python3
 PELICAN?=pelican
 PELICANOPTS=
+S3OPTS=
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
@@ -8,13 +9,15 @@ OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-S3_BUCKET=pzelnip_test_pelican
+S3_BUCKET=www.codependentcodr.com
+DOCKER_IMAGE_NAME=codependentcodr
 
 # GITHUB_PAGES_BRANCH=master
 
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
 	PELICANOPTS += -D
+	S3OPTS += --dryrun
 endif
 
 RELATIVE ?= 0
@@ -37,6 +40,9 @@ help:
 	@echo '   make s3_upload                      upload the web site via S3         '
 #	@echo '   make github                         upload the web site via gh-pages   '
 	@echo '   make markdownlint                   run markdownlint on content        '
+	@echo '   make pylint                         run pylint on content              '
+	@echo '   make dockerbuild                    build docker image                 '
+	@echo '   make dockerrun                      run a shell in built Docker image  '
 	@echo '                                                                          '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
@@ -47,6 +53,7 @@ html:
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
+	docker rmi $(DOCKER_IMAGE_NAME):latest || true
 
 regenerate:
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
@@ -81,16 +88,19 @@ publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 s3_upload: publish
-	aws s3 sync output/ s3://www.codependentcodr.com --delete
-
-s3_upload_dryrun: publish
-	aws s3 sync output/ s3://www.codependentcodr.com --delete --dryrun
+	aws s3 sync $(OUTPUTDIR) s3://$(S3_BUCKET) --delete $(S3OPTS)
 
 markdownlint: dockerbuild
-	docker run --rm -it codependentcodr:latest markdownlint .
+	docker run --rm -it -w /build/content $(DOCKER_IMAGE_NAME):latest markdownlint .
+
+pylint: dockerbuild
+	docker run --rm -it -w /build/python $(DOCKER_IMAGE_NAME):latest pylint *.py
 
 dockerbuild:
-	docker build -t codependentcodr:latest .
+	docker build -t $(DOCKER_IMAGE_NAME):latest .
+
+dockerrun: dockerbuild
+	docker run -it --rm $(DOCKER_IMAGE_NAME):latest /bin/sh
 
 # github: publish
 # 	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
