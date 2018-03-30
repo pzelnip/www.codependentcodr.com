@@ -11,6 +11,7 @@ PUBLISHCONF=$(BASEDIR)/publishconf.py
 
 S3_BUCKET=www.codependentcodr.com
 DOCKER_IMAGE_NAME=codependentcodr
+DOCKER_IMAGE_TAGS := $(shell docker images --format '{{.Repository}}:{{.Tag}}' | grep '$(DOCKER_IMAGE_NAME)')
 
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
@@ -50,7 +51,7 @@ html:
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
-	docker rmi $(DOCKER_IMAGE_NAME):latest || true
+	docker rmi $(DOCKER_IMAGE_TAGS) || true
 
 regenerate:
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
@@ -84,7 +85,7 @@ stopserver:
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
-s3_upload: publish
+s3_upload: publish markdownlint pylint
 	aws s3 sync $(OUTPUTDIR) s3://$(S3_BUCKET) --delete $(S3OPTS)
 
 markdownlint: dockerbuild
