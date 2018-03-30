@@ -6,12 +6,21 @@
         {
             "label": "Rebuild/Generate site",
             "type": "shell",
-            "command": "make publish"
+            "command": "make publish",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         },
         {
             "label": "Start Dev server",
             "type": "shell",
-            "command": "make devserver"
+            "command": "source /Users/ad0418340/.virtualenvs/pelican_experiment/bin/activate && make devserver"
+        },
+        {
+            "label": "Stop Dev server",
+            "type": "shell",
+            "command": "source /Users/ad0418340/.virtualenvs/pelican_experiment/bin/activate && make stopserver"
         },
     ]
 }
