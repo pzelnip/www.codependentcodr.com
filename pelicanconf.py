@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Adam Parkin'
 SITENAME = 'The Codependent Codr'
-SITEURL = 'http://www.codependentcodr.com'
+SITEURL = 'http://localhost:8000'
 
 PATH = 'content'
 
