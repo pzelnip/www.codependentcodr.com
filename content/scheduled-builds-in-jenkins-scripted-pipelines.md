@@ -1,5 +1,5 @@
 Title: Scheduled Builds in Jenkins Scripted Pipelines
-Date: 2017-03-20 10:20
+Date: 2018-03-20 10:20
 tags: jenkins,jenkinsfile
 
 Sometimes you’ll want to have Jenkins trigger a build on a recurring schedule. Common examples include things like a

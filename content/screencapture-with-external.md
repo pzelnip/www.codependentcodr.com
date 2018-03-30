@@ -1,5 +1,5 @@
 Title: Screencaptures on OSX
-Date: 2017-03-27 10:20
+Date: 2018-03-27 10:20
 tags: osx,osx_tips
 
 Oftentimes you want to take a screenshot.  On OSX this is easy: `⌘+SHIFT+4` and you're presented with a rectangle that
