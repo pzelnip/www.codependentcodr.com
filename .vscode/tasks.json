@@ -7,6 +7,11 @@
             "label": "Rebuild/Generate site",
             "type": "shell",
             "command": "make publish"
-        }
+        },
+        {
+            "label": "Start Dev server",
+            "type": "shell",
+            "command": "make devserver"
+        },
     ]
 }
