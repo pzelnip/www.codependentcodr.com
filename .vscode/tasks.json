@@ -22,5 +22,10 @@
             "type": "shell",
             "command": "source ${config:pelican.activatePath} && make stopserver"
         },
+        {
+            "label": "Deploy to S3",
+            "type": "shell",
+            "command": "source envs && make s3_upload"
+        },
     ]
 }
