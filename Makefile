@@ -36,6 +36,7 @@ help:
 	@echo '   make stopserver                     stop local server                  '
 	@echo '   make s3_upload                      upload the web site via S3         '
 #	@echo '   make github                         upload the web site via gh-pages   '
+	@echo '   make markdownlint                   run markdownlint on content        '
 	@echo '                                                                          '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
@@ -84,6 +85,12 @@ s3_upload: publish
 
 s3_upload_dryrun: publish
 	aws s3 sync output/ s3://www.codependentcodr.com --delete --dryrun
+
+markdownlint: dockerbuild
+	docker run --rm -it codependentcodr:latest markdownlint .
+
+dockerbuild:
+	docker build -t codependentcodr:latest .
 
 # github: publish
 # 	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
