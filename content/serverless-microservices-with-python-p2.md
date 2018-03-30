@@ -2,7 +2,8 @@ Title: Serverless Microservices and Python (with tests!) - Part 2
 Date: 2017-07-28 10:20
 tags: lambda,serverless,microservices,aws,python
 
-Ok, so in part 1 of this series, I started off by exploring the use of [Lambda](https://aws.amazon.com/lambda/) and
+Ok, so in [part 1]({filename}/serverless-microservices-with-python-p1.md) of this series, I started off by exploring the
+use of [Lambda](https://aws.amazon.com/lambda/) and
 [API Gateway](https://aws.amazon.com/api-gateway/) as a tool for building scalable microservices in Python. I largely
 focussed on taking an existing tutorial, and building out some unit tests for it, as well as some supplementary scripts
 to make bundling stuff up for delivery to Lambda easier.
@@ -246,8 +247,8 @@ little different (in dev I'd still be dependent upon bcrypt, in prod upon lambda
 
 Supposedly you can
 [spin up an EC2 instance based on the Amazon Linux AMI and do your bundling for lambda there](https://markn.ca/2015/10/python-extension-modules-in-aws-lambda/)
-, but that's far from convenient (you need to spin up an EC2 instance, get your repo there, do the whole build, then get
-the zip file from that instance to wherever you need it to be). Alternatively, there's
+, but that's far from convenient (you need to spin up an EC2 instance, get your repository there, do the whole build,
+then get the zip file from that instance to wherever you need it to be). Alternatively, there's
 [a Docker image out there that mimics the Amazon Linux image that Lambda uses](https://github.com/lambci/docker-lambda),
 so you could (locally) run a container from that image and do the same thing (`pip install`, bundle it into a zip, etc).
 But this is really getting into a world I don't really want to go (at least not for now), so I did some more Googling
