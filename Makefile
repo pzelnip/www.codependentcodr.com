@@ -12,8 +12,6 @@ PUBLISHCONF=$(BASEDIR)/publishconf.py
 S3_BUCKET=www.codependentcodr.com
 DOCKER_IMAGE_NAME=codependentcodr
 
-# GITHUB_PAGES_BRANCH=master
-
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
 	PELICANOPTS += -D
@@ -38,7 +36,6 @@ help:
 	@echo '   make devserver [PORT=8000]          start/restart develop_server.sh    '
 	@echo '   make stopserver                     stop local server                  '
 	@echo '   make s3_upload                      upload the web site via S3         '
-#	@echo '   make github                         upload the web site via gh-pages   '
 	@echo '   make markdownlint                   run markdownlint on content        '
 	@echo '   make pylint                         run pylint on content              '
 	@echo '   make dockerbuild                    build docker image                 '
@@ -101,9 +98,5 @@ dockerbuild:
 
 dockerrun: dockerbuild
 	docker run -it --rm $(DOCKER_IMAGE_NAME):latest /bin/sh
-
-# github: publish
-# 	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
-# 	git push origin $(GITHUB_PAGES_BRANCH)
 
 .PHONY: html help clean regenerate serve serve-global devserver stopserver publish s3_upload github
