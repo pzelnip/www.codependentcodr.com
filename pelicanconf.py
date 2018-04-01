@@ -53,7 +53,7 @@ DISPLAY_PAGES_ON_MENU = False
 MENUITEMS = (
     ('Posts', '/category/posts.html'),
     ('Tags', '/tags.html'),
-    ('About', '/about.html'),
+    ('About', '/pages/about.html'),
 )
 
 THEME = 'Flex'

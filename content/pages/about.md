@@ -1,6 +1,5 @@
 Title: About
 Date: 2012-03-30 12:16
-Save_as: about.html
 
 So, who is this CodependentCodr person?  What's his/her story, and can he/she not spell?  Read on true believers for
 all the deets.
