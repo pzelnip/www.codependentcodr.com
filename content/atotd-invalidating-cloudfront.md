@@ -1,6 +1,6 @@
-Title: Invalidating Items in the CloudFront Cache
+Title: AWS Tip Of The Day - Invalidating Items in the CloudFront Cache
 Date: 2018-04-01 08:14
-tags: aws,cloudfront
+tags: aws,cloudfront,awstotd,awsTipOfTheDay
 
 TIL today: in [CloudFront](https://aws.amazon.com/cloudfront/), creating an invalidation for `/*.html` is not the same
 as creating an invalidation for `/` even though `/` redirects to `/index.html`.
