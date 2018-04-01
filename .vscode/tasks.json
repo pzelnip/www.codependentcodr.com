@@ -27,5 +27,21 @@
             "type": "shell",
             "command": "source envs && make s3_upload"
         },
+        {
+            "label": "Open Site in Browser",
+            "type": "shell",
+            "command": "open https://www.codependentcodr.com"
+        },
+        {
+            "label": "Open Site in Browser (via S3 URL)",
+            "type": "shell",
+            "command": "open http://www.codependentcodr.com.s3-website.ca-central-1.amazonaws.com/index.html"
+        },
+        {
+            "label": "Open Site in Browser (via CF URL)",
+            "type": "shell",
+            "command": "open https://d1c3rffik0endi.cloudfront.net"
+        },
+
     ]
 }

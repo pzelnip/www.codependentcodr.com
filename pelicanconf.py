@@ -45,3 +45,13 @@ DEFAULT_PAGINATION = 10
 DEFAULT_CATEGORY = 'Posts'
 
 STATIC_PATHS = ['static']
+
+DISPLAY_CATEGORIES_ON_MENU = False
+DISPLAY_PAGES_ON_MENU = False
+
+MENUITEMS = (
+    ('Home', '/'),
+    ('Posts', '/category/posts.html'),
+    ('Tags', '/tags.html'),
+    ('About', '/about.html'),
+)
