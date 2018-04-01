@@ -1,4 +1,4 @@
-Title: About Me
+Title: About
 Date: 2012-03-30 12:16
 Save_as: about.html
 
