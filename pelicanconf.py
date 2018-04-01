@@ -5,6 +5,7 @@
 """
 
 from __future__ import unicode_literals
+from datetime import datetime
 
 AUTHOR = 'Adam Parkin'
 SITENAME = 'The Codependent Codr'
@@ -24,17 +25,17 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-# LINKS = (('Github', 'https://github.com/pzelnip'),
+# LINKS = (('github', 'https://github.com/pzelnip'),
 #          ('Twitter', 'https://twitter.com/codependentcodr'),
 #          ('StackOverflow', 'http://stackoverflow.com/users/808804'),
 #          ('LinkedIn', 'http://lnkd.in/ykHQiG'),
 #          )
 
 # Social widget
-SOCIAL = (('Github', 'https://github.com/pzelnip'),
-          ('Twitter', 'https://twitter.com/codependentcodr'),
-          ('StackOverflow', 'http://stackoverflow.com/users/808804'),
-          ('LinkedIn', 'http://lnkd.in/ykHQiG'),
+SOCIAL = (('github', 'https://github.com/pzelnip'),
+          ('twitter', 'https://twitter.com/codependentcodr'),
+          ('stack-overflow', 'http://stackoverflow.com/users/808804'),
+          ('linkedin', 'http://lnkd.in/ykHQiG'),
          )
 
 DEFAULT_PAGINATION = 10
@@ -50,8 +51,24 @@ DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_PAGES_ON_MENU = False
 
 MENUITEMS = (
-    ('Home', '/'),
     ('Posts', '/category/posts.html'),
     ('Tags', '/tags.html'),
     ('About', '/about.html'),
 )
+
+THEME = 'Flex'
+
+# Settings for the Flex theme, see docs at:
+# https://github.com/alexandrevicenzi/Flex/wiki/Custom-Settings
+SITETITLE = 'The Codependent Codr'
+# SITESUBTITLE = 'Foobar'
+SITELOGO = '/static/imgs/me.jpg'
+SITEDESCRIPTION = 'Random thoughts from a random developer'
+BROWSER_COLOR = '#eff3f9'
+COPYRIGHT_YEAR = str(datetime.now().year)
+CC_LICENSE = {
+    'name': 'Creative Commons Attribution-ShareAlike',
+    'version': '4.0',
+    'slug': 'by-sa'
+}
+MAIN_MENU = True
