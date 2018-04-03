@@ -72,3 +72,6 @@ CC_LICENSE = {
     'slug': 'by-sa'
 }
 MAIN_MENU = True
+
+GITHUB_CORNER_URL = 'https://github.com/pzelnip/www.codependentcodr.com'
+GITHUB_CORNER_BG_COLOR = '#d9411e'
