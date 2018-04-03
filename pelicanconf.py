@@ -76,3 +76,5 @@ MAIN_MENU = True
 
 GITHUB_CORNER_URL = 'https://github.com/pzelnip/www.codependentcodr.com'
 GITHUB_CORNER_BG_COLOR = '#d9411e'
+
+ADD_THIS_ID = 'ra-5ac30fba879b9110'

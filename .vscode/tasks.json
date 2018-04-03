@@ -6,7 +6,7 @@
         {
             "label": "Rebuild/Generate site",
             "type": "shell",
-            "command": "make publish",
+            "command": "source ${config:pelican.activatePath} && make publish",
             "group": {
                 "kind": "build",
                 "isDefault": true
