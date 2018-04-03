@@ -101,7 +101,8 @@ pylint: dockerbuild
 	docker run --rm -it -w /build/python $(DOCKER_IMAGE_NAME):latest pylint *.py
 
 shellcheck: dockerbuild
-	docker run --rm -it -w /build/shell $(DOCKER_IMAGE_NAME):latest shellcheck *.sh
+	echo "Shellcheck disabled until its fixed"
+	#docker run --rm -it -w /build/shell $(DOCKER_IMAGE_NAME):latest shellcheck *.sh
 
 dockerbuild:
 	docker build -t $(DOCKER_IMAGE_NAME):latest .
