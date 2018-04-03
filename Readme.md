@@ -46,6 +46,18 @@ The `clean` target of the `Makefile` also removes any previously built `codepend
 Instead of `s3cmd` (which is what the generated `Makefile` uses), I changed to use the
 [AWS CLI](https://aws.amazon.com/cli/) because A) it's better, and B) I already had it installed.
 
+### Git SHA in Footer
+
+I hacked together some stuff in `pelicanconf.py` to get the git SHA & throw it into a variable.  This
+is then displayed in the page footer, which I find useful for sanity checking what revision is running.
+
+### Github Corners Configurable Colour
+
+Flex (the theme I use) has support for [Github Corners](https://github.com/tholman/github-corners),
+but the colour isn't configurable.  I modified the theme to use a config value `GITHUB_CORNER_BG_COLOR`
+which sets the background colour of the github corners icon (in my config I set it to the same value
+as the BG colour of buttons from the theme).
+
 ## Hosting
 
 As mentioned, I have the site set up in AWS.  All the generated content goes into a [S3](https://aws.amazon.com/s3/) bucket,

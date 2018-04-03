@@ -180,6 +180,10 @@
       {% else %}
         {% include "partial/copyright.html" %}
       {% endif %}
+
+      {% if GIT_SHA %}
+        <p>{{ GIT_SHA }}</p>
+      {% endif %}
     </footer>
   </main>
 

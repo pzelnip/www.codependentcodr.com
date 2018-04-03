@@ -6,6 +6,12 @@
 
 from __future__ import unicode_literals
 from datetime import datetime
+import subprocess
+
+
+def get_git_sha():
+    # shamefully stolen from: https://stackoverflow.com/a/21901260/808804
+    return str(subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']), 'utf-8').strip()
 
 AUTHOR = 'Adam Parkin'
 SITENAME = 'The Codependent Codr'
@@ -78,3 +84,5 @@ GITHUB_CORNER_URL = 'https://github.com/pzelnip/www.codependentcodr.com'
 GITHUB_CORNER_BG_COLOR = '#d9411e'
 
 ADD_THIS_ID = 'ra-5ac30fba879b9110'
+
+GIT_SHA = get_git_sha()
