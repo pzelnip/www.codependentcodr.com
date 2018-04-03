@@ -87,3 +87,6 @@ GITHUB_CORNER_BG_COLOR = '#d9411e'
 ADD_THIS_ID = 'ra-5ac30fba879b9110'
 
 GIT_SHA = get_git_sha()
+
+STATUSCAKE = {'trackid': 'SqJ8yVmHYBFNGvAX2kndbxz3cL6Tp4',
+              'days': 7, 'design': 6, 'rumid': 1234}
