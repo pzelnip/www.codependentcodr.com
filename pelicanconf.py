@@ -36,6 +36,7 @@ SOCIAL = (('github', 'https://github.com/pzelnip'),
           ('twitter', 'https://twitter.com/codependentcodr'),
           ('stack-overflow', 'http://stackoverflow.com/users/808804'),
           ('linkedin', 'http://lnkd.in/ykHQiG'),
+          ('youtube', 'http://youtube.codependentcodr.com'),
          )
 
 DEFAULT_PAGINATION = 10
