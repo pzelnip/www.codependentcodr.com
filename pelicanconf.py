@@ -10,6 +10,7 @@ import subprocess
 
 
 def get_git_sha():
+    """Returns the short Git SHA from the current working directory"""
     # shamefully stolen from: https://stackoverflow.com/a/21901260/808804
     return str(subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']), 'utf-8').strip()
 
