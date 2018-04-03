@@ -56,7 +56,7 @@ MENUITEMS = (
     ('About', '/pages/about.html'),
 )
 
-THEME = 'Flex'
+THEME = 'theme/Flex'
 
 # Settings for the Flex theme, see docs at:
 # https://github.com/alexandrevicenzi/Flex/wiki/Custom-Settings
