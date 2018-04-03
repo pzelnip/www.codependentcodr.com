@@ -39,6 +39,8 @@ help:
 	@echo '   make s3_upload                      upload the web site via S3         '
 	@echo '   make markdownlint                   run markdownlint on content        '
 	@echo '   make pylint                         run pylint on content              '
+	@echo '   make shellcheck                     run shellcheck on all the scripts  '
+	@echo '   make lint_the_things                run all linters & checks           '
 	@echo '   make dockerbuild                    build docker image                 '
 	@echo '   make dockerrun                      run a shell in built Docker image  '
 	@echo '                                                                          '
@@ -87,14 +89,19 @@ publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 	if test -d $(BASEDIR)/extra; then cp $(BASEDIR)/extra/* $(OUTPUTDIR)/; fi
 
-s3_upload: publish markdownlint pylint
+s3_upload: publish lint_the_things
 	aws s3 sync $(OUTPUTDIR) s3://$(S3_BUCKET) --delete $(S3OPTS)
+
+lint_the_things: markdownlint pylint shellcheck
 
 markdownlint: dockerbuild
 	docker run --rm -it -w /build/content $(DOCKER_IMAGE_NAME):latest markdownlint .
 
 pylint: dockerbuild
 	docker run --rm -it -w /build/python $(DOCKER_IMAGE_NAME):latest pylint *.py
+
+shellcheck: dockerbuild
+	docker run --rm -it -w /build/shell $(DOCKER_IMAGE_NAME):latest shellcheck *.sh
 
 dockerbuild:
 	docker build -t $(DOCKER_IMAGE_NAME):latest .
