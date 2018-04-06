@@ -13,7 +13,7 @@
             }
         },
         {
-            "label": "Start Dev server",
+            "label": "Run Server",
             "type": "shell",
             "command": "source ${config:pelican.activatePath} && make devserver"
         },
