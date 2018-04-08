@@ -58,6 +58,16 @@ but the colour isn't configurable.  I modified the theme to use a config value `
 which sets the background colour of the github corners icon (in my config I set it to the same value
 as the BG colour of buttons from the theme).
 
+### Auto-tag Deployments
+
+On a deployment to S3 I automagically tag the current commit with a generated tag that includes
+the current date/time, the milliseconds since the epoch, and the Git SHA.  This means that I can
+look at the tags page on Github to see a history of deployments.
+
+I also prevent deployments of uncommitted changes.  This is to prevent "ooops, I didn't realize
+I had edited that file but not committed it" problems (speaking from experience, these can be
+fun to figure out).
+
 ## Hosting
 
 As mentioned, I have the site set up in AWS.  All the generated content goes into a [S3](https://aws.amazon.com/s3/) bucket,
