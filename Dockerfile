@@ -1,4 +1,4 @@
-FROM koalaman/shellcheck-alpine
+FROM alpine:latest
 
 WORKDIR /build
 
