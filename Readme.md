@@ -64,7 +64,7 @@ On a deployment to S3 I automagically tag the current commit with a generated ta
 the current date/time, the milliseconds since the epoch, and the Git SHA.  This means that I can
 look at the tags page on Github to see a history of deployments.
 
-I also prevent deployments of uncommitted changes.  This is to prevent "ooops, I didn't realize
+I also prevent deployments of uncommitted changes.  This is to prevent "oops, I didn't realize
 I had edited that file but not committed it" problems (speaking from experience, these can be
 fun to figure out).
 
