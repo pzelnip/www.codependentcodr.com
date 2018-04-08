@@ -15,6 +15,8 @@ DOCKER_IMAGE_TAGS := $(shell docker images --format '{{.Repository}}:{{.Tag}}' |
 
 SHA := $(shell git rev-parse --short HEAD)
 DEPLOY_TIME := $(shell date -u +"%Y-%m-%dT%H-%M-%SZ_%s%3")
+HOST := $(shell hostname)
+
 
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
@@ -91,7 +93,7 @@ publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 	if test -d $(BASEDIR)/extra; then cp $(BASEDIR)/extra/* $(OUTPUTDIR)/; fi
 
-deploy: s3_upload tag
+deploy: s3_upload tag slackpost
 
 s3_upload: publish lint_the_things
 	# don't upload if directory is dirty
@@ -115,5 +117,8 @@ dockerbuild:
 
 dockerrun: dockerbuild
 	docker run -it --rm $(DOCKER_IMAGE_NAME):latest /bin/sh
+
+slackpost:
+	curl -X POST --data-urlencode "payload={\"channel\": \"#codependentcodr\", \"username\": \"$(USER)@$(HOST)\", \"text\": \"Deployed $(SHA).\", \"icon_emoji\": \":rocket:\"}" https://hooks.slack.com/services/$(SLACK_TOKEN)
 
 .PHONY: html help clean regenerate serve serve-global devserver stopserver publish s3_upload github
