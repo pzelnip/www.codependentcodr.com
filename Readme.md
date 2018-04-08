@@ -58,7 +58,7 @@ but the colour isn't configurable.  I modified the theme to use a config value `
 which sets the background colour of the github corners icon (in my config I set it to the same value
 as the BG colour of buttons from the theme).
 
-### Auto-tag Deployments
+### Deployments & Automation
 
 On a deployment to S3 I automagically tag the current commit with a generated tag that includes
 the current date/time, the milliseconds since the epoch, and the Git SHA.  This means that I can
@@ -67,6 +67,11 @@ look at the tags page on Github to see a history of deployments.
 I also prevent deployments of uncommitted changes.  This is to prevent "oops, I didn't realize
 I had edited that file but not committed it" problems (speaking from experience, these can be
 fun to figure out).
+
+As well, I throw a notification into a private Slack channel when a deployment happens.  This
+probably is silly right now (since I'm the only person deploying), but was fun to set up. :)
+This was set up as a basic Slack incoming webhook.  The secret token on the URL I have in an
+environment variable.
 
 ## Hosting
 
