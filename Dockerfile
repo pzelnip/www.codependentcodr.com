@@ -3,7 +3,11 @@ FROM koalaman/shellcheck-alpine
 WORKDIR /build
 
 RUN apk add --no-cache --update \
-    python3 nodejs
+    python3 \
+    nodejs \
+    make \
+    bash \
+    git
 
 RUN python3 -m ensurepip
 RUN pip3 install --upgrade pip
@@ -16,6 +20,11 @@ RUN pip3 install -r requirements.txt
 COPY *.sh /build/shell/
 COPY .markdownlint.json /build/content/
 COPY *.py /build/python/
-COPY content/ /build/content/
+# COPY content/ /build/content/
 
 WORKDIR /build
+COPY . /develop
+
+WORKDIR /develop
+
+CMD ["make", "devserver"]

@@ -108,6 +108,7 @@ dockerbuild:
 	docker build -t $(DOCKER_IMAGE_NAME):latest .
 
 dockerrun: dockerbuild
-	docker run -it --rm $(DOCKER_IMAGE_NAME):latest /bin/sh
+	#docker run -it -p 8000:8000 --rm $(DOCKER_IMAGE_NAME):latest /bin/sh
+	docker run -it -p 8000:8000 --rm --name=codependentcodr $(DOCKER_IMAGE_NAME):latest make devserver
 
 .PHONY: html help clean regenerate serve serve-global devserver stopserver publish s3_upload github
