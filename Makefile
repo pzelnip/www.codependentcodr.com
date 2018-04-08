@@ -13,6 +13,8 @@ S3_BUCKET=www.codependentcodr.com
 DOCKER_IMAGE_NAME=codependentcodr
 DOCKER_IMAGE_TAGS := $(shell docker images --format '{{.Repository}}:{{.Tag}}' | grep '$(DOCKER_IMAGE_NAME)')
 
+LINTER_BASE_ARGS=--rm -it -v $(shell pwd):/develop -w /develop
+
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
 	PELICANOPTS += -D
@@ -42,6 +44,8 @@ help:
 	@echo '   make lint_the_things                run all linters & checks           '
 	@echo '   make dockerbuild                    build docker image                 '
 	@echo '   make dockerrun                      run a shell in built Docker image  '
+	@echo '   make dockerdevserverstart           run a dev server in a container    '
+	@echo '   make dockerdevserverstop            stop a running container server    '
 	@echo '                                                                          '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
@@ -72,7 +76,7 @@ else
 	cd $(OUTPUTDIR) && $(PY) -m pelican.server 80 0.0.0.0
 endif
 
-
+# old deprecated way to run dev server, see dockerdevserverstart
 devserver:
 ifdef PORT
 	$(BASEDIR)/develop_server.sh restart $(PORT)
@@ -80,6 +84,7 @@ else
 	$(BASEDIR)/develop_server.sh restart
 endif
 
+# old deprecated way to stop dev server, see dockerdevserverstop
 stopserver:
 	$(BASEDIR)/develop_server.sh stop
 	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
@@ -94,16 +99,22 @@ s3_upload: publish lint_the_things
 lint_the_things: markdownlint pylint
 
 markdownlint: dockerbuild
-	docker run --rm -it -w /build/content $(DOCKER_IMAGE_NAME):latest markdownlint .
+	docker run $(LINTER_BASE_ARGS) $(DOCKER_IMAGE_NAME):latest markdownlint content/
 
 pylint: dockerbuild
-	docker run --rm -it -w /build/python $(DOCKER_IMAGE_NAME):latest pylint *.py
+	docker run $(LINTER_BASE_ARGS) $(DOCKER_IMAGE_NAME):latest pylint *.py
 
 dockerbuild:
 	docker build -t $(DOCKER_IMAGE_NAME):latest .
 
 dockerrun: dockerbuild
-	#docker run -it -p 8000:8000 --rm $(DOCKER_IMAGE_NAME):latest /bin/sh
-	docker run -it -p 8000:8000 --rm --name=codependentcodr $(DOCKER_IMAGE_NAME):latest make devserver
+	docker run $(LINTER_BASE_ARGS) $(DOCKER_IMAGE_NAME):latest /bin/sh
+
+dockerdevserverstart: dockerbuild
+	# run a dev server in a container
+	docker run -d -p 8000:8000 -v $(shell pwd):/develop --rm --name=codependentcodr $(DOCKER_IMAGE_NAME):latest make devserver
+
+dockerdevserverstop:
+	docker stop codependentcodr
 
 .PHONY: html help clean regenerate serve serve-global devserver stopserver publish s3_upload github

@@ -15,12 +15,12 @@
         {
             "label": "Run Server",
             "type": "shell",
-            "command": "source ${config:pelican.activatePath} && make devserver"
+            "command": "make dockerdevserverstart ; echo 'Server running, enter to stop' ; read ; make dockerdevserverstop"
         },
         {
             "label": "Stop Dev server",
             "type": "shell",
-            "command": "source ${config:pelican.activatePath} && make stopserver"
+            "command": "make dockerdevserverstop"
         },
         {
             "label": "Deploy to S3",
