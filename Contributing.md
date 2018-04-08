@@ -2,6 +2,11 @@
 
 Hey, thanks for taking the time to help me out with my site, much appreciated!
 
+## Issues
+
+If you find something wrong or needs attention please file an issue and follow
+the instructions from the issue template.
+
 ## Code Changes
 
 Before you submit a PR my way, please follow these guidelines:
