@@ -13,6 +13,9 @@ S3_BUCKET=www.codependentcodr.com
 DOCKER_IMAGE_NAME=codependentcodr
 DOCKER_IMAGE_TAGS := $(shell docker images --format '{{.Repository}}:{{.Tag}}' | grep '$(DOCKER_IMAGE_NAME)')
 
+SHA := $(shell git rev-parse --short HEAD)
+DEPLOY_TIME := $(shell date -u +"%Y-%m-%dT%H-%M-%SZ_%s%3")
+
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
 	PELICANOPTS += -D
@@ -88,8 +91,14 @@ publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 	if test -d $(BASEDIR)/extra; then cp $(BASEDIR)/extra/* $(OUTPUTDIR)/; fi
 
+deploy: s3_upload tag
+
 s3_upload: publish lint_the_things
 	aws s3 sync $(OUTPUTDIR) s3://$(S3_BUCKET) --delete $(S3OPTS)
+
+tag:
+	git tag "$(SHA)_$(DEPLOY_TIME)"
+	git push origin $(SHA)_$(DEPLOY_TIME)
 
 lint_the_things: markdownlint pylint
 
