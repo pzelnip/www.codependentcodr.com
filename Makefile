@@ -99,8 +99,8 @@ s3_upload: publish lint_the_things
 	aws s3 sync $(OUTPUTDIR) s3://$(S3_BUCKET) --delete $(S3OPTS)
 
 tag:
-	git tag "$(SHA)_$(DEPLOY_TIME)"
-	git push origin $(SHA)_$(DEPLOY_TIME)
+	git tag "$(DEPLOY_TIME)_$(SHA)"
+	git push origin $(DEPLOY_TIME)_$(SHA)
 
 lint_the_things: markdownlint pylint
 
