@@ -23,9 +23,9 @@ I wondered if this was mentioned in the [standard docs](https://docs.python.org/
 ```python
 >>> result = []
 >>> for v in range(50):
-...     if v % 2 == 0:
-...             if v > 10:
-...                     result.append(v)
+...    if v % 2 == 0:
+...        if v > 10:
+...            result.append(v)
 ...
 >>> result
 [12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48]
