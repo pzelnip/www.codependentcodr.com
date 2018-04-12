@@ -1,6 +1,7 @@
 Title: Book Review: The Software Craftsman
 Date: 2015-02-03 20:58
 tags: bookreview,craftsmanship,quality,tdd
+cover: static/imgs/default_page_image.jpg
 
 # Book: The Software Craftsman
 

@@ -1,6 +1,7 @@
 Title: The Polyglot {UN}Conference 2012
 Date: 2012-06-02 05:04
 tags: polyglotconf,conferences,learning
+cover: static/imgs/default_page_image.jpg
 
 This year I was fortunate to be allowed to attend the inaugural [Polyglot UN-Conference](http://www.polyglotconf.com/).
 An UN-conference is a unique format that is rather well suited to coding topics whereby attendees suggest and facilitate

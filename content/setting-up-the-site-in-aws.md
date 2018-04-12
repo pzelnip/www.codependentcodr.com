@@ -1,6 +1,7 @@
 Title: Setting Up A Pelican Site in AWS
 Date: 2018-04-08 07:24
 tags: pelican,aws,s3,hosting
+cover: static/imgs/default_page_image.jpg
 
 So I was going to write a blog post outlining most of the stuff I did in getting this
 site up off the ground, but then a colleague went ahead and did the same and

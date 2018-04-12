@@ -1,6 +1,7 @@
 Title: Book Review - The Clean Coder
 Date: 2014-01-20 09:07
 tags: bookreview,professionalism,quality
+cover: static/imgs/default_page_image.jpg
 
 # Book: The Clean Coder - A Code of Conduct For Professional Programmers
 

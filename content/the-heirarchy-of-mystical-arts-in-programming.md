@@ -1,6 +1,7 @@
 Title: The hierarchy of Mystical Arts in Programming
 Date: 2012-02-29 14:12
 tags: perl,python
+cover: static/imgs/default_page_image.jpg
 
 I was responding
 [to an incredibly detailed answer on StackOverflow on Python metaclasses](http://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python)

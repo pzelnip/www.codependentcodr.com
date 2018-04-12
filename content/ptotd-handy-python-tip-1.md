@@ -1,6 +1,7 @@
 Title: Handy Python tip #1
 Date: 2012-06-07 20:16
 tags: ptotd,pythonTipOfTheDay,python
+cover: static/imgs/python-logo-inkscape.svg
 
 The other day I was adding the rich comparison methods (the ones for operator overloading) to a class I had defined.
 Like many Python programmers before me I wondered "why is it that if I define a method for equality, I still have to

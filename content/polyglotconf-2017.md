@@ -1,6 +1,7 @@
 Title: The 2017 Vancouver Polyglot Unconference
 Date: 2017-05-28 10:20
 tags: polyglotconf,conferences,learning
+cover: static/imgs/default_page_image.jpg
 
 This year as in many years past I was fortunate enough to be able to attend the annual
 [Vancouver Polyglot Unconference](https://www.polyglotconf.com). For those unaware, this event (now in it's 6th year!)

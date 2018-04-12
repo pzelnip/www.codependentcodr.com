@@ -1,6 +1,7 @@
 Title: Why not exact story point estimates?
 Date: 2017-12-12 10:20
 tags: agile,scrum,estimation
+cover: static/imgs/default_page_image.jpg
 
 Awhile back at a job a question was raised in a sprint planning meeting about why we don't do exact story point
 estimation, instead of doing the fibonacci (or fibonacci-like) scales. We had scales of 0.25, 0.5, 1, 3, 5, 8, 13, etc

@@ -1,6 +1,7 @@
 Title: Screencaptures on OSX
 Date: 2018-03-27 10:20
 tags: osx,osx_tips
+cover: static/imgs/default_page_image.jpg
 
 Oftentimes you want to take a screenshot.  On OSX this is easy: `⌘+SHIFT+4` and you're presented with a rectangle that
 allows you to click & select what to capture.  But what happens when you want things like capturing a tooltip, or the

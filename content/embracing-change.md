@@ -1,6 +1,7 @@
 Title: Embracing Change
 Date: 2015-03-01 22:04
 tags: agile
+cover: static/imgs/default_page_image.jpg
 
 I recently listened to a recording of a webinar put on through the ACM titled
 ["Agile Methods: Agile Methods: The Good, the Hype and the Ugly"](https://event.on24.com/eventRegistration/EventLobbyServlet?target=reg20.jsp&eventid=937091&sessionid=1&key=5B3C11566E06BE6564E638C6DFE0F413&sourcepage=register)

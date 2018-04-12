@@ -1,6 +1,7 @@
 Title: Serverless Microservices and Python (with tests!) - Part 1
 Date: 2017-07-27 10:20
 tags: lambda,serverless,microservices,aws,python,testing
+cover: static/imgs/python-logo-inkscape.svg
 
 So I'm currently on holiday and also between jobs (had my last day at old job last week, and first day at new gig is
 next week), which means of course what am I doing but spending some time learning some tech that's fun & buzzwordy.

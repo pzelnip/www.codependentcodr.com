@@ -1,6 +1,7 @@
 Title: Useful Python Tools
 Date: 2012-05-18 16:23
 tags: ptotd,pythonTipOfTheDay,python,nose,metrics,quality
+cover: static/imgs/python-logo-inkscape.svg
 
 I often stumble across and use a number of useful tools for creating Python code.  Thought I'd barf out a blog post
 documenting a few of them so that my future self will be able to find this info again if need be. :)

@@ -1,6 +1,7 @@
 Title: This Changes Everything....
 Date: 2017-03-29 22:12
 tags: aws,ec2,ebs
+cover: static/imgs/default_page_image.jpg
 
 The other day our staging environment at work ran out of space on the EBS volume holding our MongoDb data.  The fun part
 about Mongo is that when you get to the point that there's no space left because Mongo's filled it, the Mongo shell will
