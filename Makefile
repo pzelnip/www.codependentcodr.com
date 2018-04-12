@@ -97,7 +97,7 @@ deploy: s3_upload tag slackpost
 
 s3_upload: publish lint_the_things
 	# don't upload if directory is dirty
-	git diff --exit-code
+	./git-clean-dir.sh
 	aws s3 sync $(OUTPUTDIR) s3://$(S3_BUCKET) --delete $(S3OPTS)
 
 tag:

@@ -107,3 +107,4 @@ venv.bak/
 envs
 pelican.pid
 srv.pid
+.vscode/settings.json
