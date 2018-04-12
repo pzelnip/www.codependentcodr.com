@@ -12,7 +12,7 @@ import subprocess
 def get_git_sha():
     """Returns the short Git SHA from the current working directory"""
     # shamefully stolen from: https://stackoverflow.com/a/21901260/808804
-    return str(subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']), 'utf-8').strip()
+    return str(subprocess.check_output(['git', 'rev-parse', 'HEAD']), 'utf-8').strip()
 
 AUTHOR = 'Adam Parkin'
 SITENAME = 'The Codependent Codr'
@@ -43,7 +43,7 @@ SOCIAL = (('github', 'https://github.com/pzelnip'),
           ('twitter', 'https://twitter.com/codependentcodr'),
           ('stack-overflow', 'http://stackoverflow.com/users/808804'),
           ('linkedin', 'http://lnkd.in/ykHQiG'),
-          ('youtube', 'http://youtube.codependentcodr.com'),
+          #('youtube', 'http://youtube.codependentcodr.com'),
          )
 
 DEFAULT_PAGINATION = 10
@@ -69,7 +69,7 @@ THEME = 'theme/Flex'
 # Settings for the Flex theme, see docs at:
 # https://github.com/alexandrevicenzi/Flex/wiki/Custom-Settings
 SITETITLE = 'The Codependent Codr'
-# SITESUBTITLE = 'Foobar'
+SITESUBTITLE = 'Confessions of an Impostor'
 SITELOGO = '/static/imgs/me.jpg'
 SITEDESCRIPTION = 'Random thoughts from a random developer'
 BROWSER_COLOR = '#eff3f9'
@@ -87,6 +87,7 @@ GITHUB_CORNER_BG_COLOR = '#d9411e'
 ADD_THIS_ID = 'ra-5ac30fba879b9110'
 
 GIT_SHA = get_git_sha()
+GIT_SHA_LINK = f"{GITHUB_CORNER_URL}/commit/{GIT_SHA}"
 
 STATUSCAKE = {'trackid': 'SqJ8yVmHYBFNGvAX2kndbxz3cL6Tp4',
               'days': 7, 'design': 6, 'rumid': 1234}

@@ -182,7 +182,16 @@
       {% endif %}
 
       {% if GIT_SHA %}
-        <p>{{ GIT_SHA }}</p>
+        <p>
+        {% if GIT_SHA_LINK %}
+            <a href="{{ GIT_SHA_LINK }}">
+        {% endif %}
+        {{ GIT_SHA }}
+        {% if GIT_SHA_LINK %}
+            </a>
+        {% endif %}
+
+        </p>
       {% endif %}
     </footer>
   </main>
