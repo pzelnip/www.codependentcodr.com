@@ -181,6 +181,11 @@
         {% include "partial/copyright.html" %}
       {% endif %}
 
+      {% if STATUS_PAGE_URL %}
+        <p>
+        <a href="{{ STATUS_PAGE_URL }}">Status Page</a>
+        </p>
+      {% endif %}
       {% if GIT_SHA %}
         <p>
         {% if GIT_SHA_LINK %}
