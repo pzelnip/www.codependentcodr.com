@@ -42,6 +42,10 @@
             "type": "shell",
             "command": "open https://d1c3rffik0endi.cloudfront.net"
         },
-
+        {
+            "label": "Invalidate Cloudfront Cache",
+            "type": "shell",
+            "command": "make cfinvalidate"
+        },
     ]
 }

@@ -3,6 +3,8 @@ PELICAN?=pelican
 PELICANOPTS=
 S3OPTS=
 
+AWSCLI_PROFILE=codependentcodr
+
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
@@ -47,6 +49,7 @@ help:
 	@echo '   make lint_the_things                run all linters & checks           '
 	@echo '   make dockerbuild                    build docker image                 '
 	@echo '   make dockerrun                      run a shell in built Docker image  '
+	@echo '   make cfinvalidate                   invalidate the CF cache of html    '
 	@echo '                                                                          '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
@@ -98,7 +101,7 @@ deploy: s3_upload tag slackpost
 s3_upload: publish lint_the_things
 	# don't upload if directory is dirty
 	./git-clean-dir.sh
-	aws s3 sync $(OUTPUTDIR) s3://$(S3_BUCKET) --delete $(S3OPTS)
+	aws --profile $(AWSCLI_PROFILE) s3 sync $(OUTPUTDIR) s3://$(S3_BUCKET) --delete $(S3OPTS)
 
 tag:
 	git tag "$(DEPLOY_TIME)_$(SHA)"
@@ -120,5 +123,8 @@ dockerrun: dockerbuild
 
 slackpost:
 	curl -X POST --data-urlencode "payload={\"channel\": \"#codependentcodr\", \"username\": \"$(USER)@$(HOST)\", \"text\": \"Deployed $(SHA).\", \"icon_emoji\": \":rocket:\"}" https://hooks.slack.com/services/$(SLACK_TOKEN)
+
+cfinvalidate:
+	aws --profile $(AWSCLI_PROFILE) cloudfront create-invalidation --distribution-id ER3YIY14W87BX --paths '/*.html'
 
 .PHONY: html help clean regenerate serve serve-global devserver stopserver publish s3_upload github
