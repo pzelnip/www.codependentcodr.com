@@ -1,7 +1,7 @@
 Title: Python Tip of the Day - subTest!
 Date: 2017-09-23 10:20
 tags: ptotd,pythonTipOfTheDay,testing,unittest
-cover: static/imgs/python-logo-inkscape.svg
+cover: static/imgs/python-logo-master-v3-TM.png
 
 Coming from a [jUnit](https://junit.org/junit5/) background, one of the things I always missed with the vanilla
 [Python unitttest library](https://docs.python.org/3/library/unittest.html) was parameterized tests.  Oftentimes when

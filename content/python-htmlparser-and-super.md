@@ -1,7 +1,7 @@
 Title: Python HTMLParser and super()
 Date: 2012-02-16 15:48
 tags: python,inheritance
-cover: static/imgs/python-logo-inkscape.svg
+cover: static/imgs/python-logo-master-v3-TM.png
 
 So I have a class that inherits from `HTMLParser`, and I want to call the super class init (the `__init__` of
 `HTMLParser`), I would think I should do:
