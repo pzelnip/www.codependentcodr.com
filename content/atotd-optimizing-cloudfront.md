@@ -147,13 +147,13 @@ That is, invalidate all the HTML, the root page, and the RSS feed.  The intentio
 I push new content (like a new blog post), I run this invalidation so that changes get picked up
 right away.  Ideally I'd only create an invalidation for stuff that's actually changed, but doing
 a diff between what's currently deployed and what's about to be deployed is tricky with
-Pelican<sup>***</sup>.
+Pelican***.
 
 If I'm doing less content-related stuff (for example, just playing around with some layout or
 tweaking the theme), I don't really care if people get the old version for a bit so I just let
 the cache expire naturally.
 
-<sup>***</sup> - Side note: I've thought about doing this, like essentially before a push to S3 first pull down
+*** - Side note: I've thought about doing this, like essentially before a push to S3 first pull down
 whatever's in S3 to my local box, then do a diff between what I pulled down from S3 and what's
 in the `output/` directory I'm about to push and then only push & invalidate that stuff
 specifically.  Maybe someday....
