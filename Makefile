@@ -125,6 +125,6 @@ slackpost:
 	curl -X POST --data-urlencode "payload={\"channel\": \"#codependentcodr\", \"username\": \"$(USER)@$(HOST)\", \"text\": \"Deployed $(SHA).\", \"icon_emoji\": \":rocket:\"}" https://hooks.slack.com/services/$(SLACK_TOKEN)
 
 cfinvalidate:
-	aws --profile $(AWSCLI_PROFILE) cloudfront create-invalidation --distribution-id ER3YIY14W87BX --paths '/*.html'
+	aws --profile $(AWSCLI_PROFILE) cloudfront create-invalidation --distribution-id ER3YIY14W87BX --paths '/*.html' '/' '/feeds/all.atom.xml'
 
 .PHONY: html help clean regenerate serve serve-global devserver stopserver publish s3_upload github
