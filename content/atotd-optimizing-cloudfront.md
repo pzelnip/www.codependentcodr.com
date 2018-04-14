@@ -1,6 +1,6 @@
 Title: Optimizing Cloudfront
-Date: 2018-04-13 18:32
-Modified: 2018-04-13 18:32
+Date: 2018-04-12 19:32
+Modified: 2018-04-13 18:01
 Category: Posts
 tags: atotd,awsTipOfTheDay,cloudfront,aws
 cover: static/imgs/aws_cloudfront.png
