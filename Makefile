@@ -95,6 +95,7 @@ stopserver:
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 	if test -d $(BASEDIR)/extra; then cp $(BASEDIR)/extra/* $(OUTPUTDIR)/; fi
+	find output -name .DS_Store | xargs rm
 
 deploy: s3_upload tag slackpost
 
