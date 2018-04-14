@@ -1,6 +1,6 @@
 Title: Optimizing Cloudfront
 Date: 2018-04-12 19:32
-Modified: 2018-04-13 18:01
+Modified: 2018-04-14 12:24
 Category: Posts
 tags: atotd,awsTipOfTheDay,cloudfront,aws
 cover: static/imgs/aws_cloudfront.png
@@ -89,7 +89,7 @@ the site, I edited the cloudfront distribution to have two alternate domain name
 
 You'll also have to set up DNS entries with whatever you use for DNS to have CNAME
 records on your custom domain that point to your Cloudfront url (which is typically
-`https://<whateverYourDistributionIdIs>.cloudfront.net`)
+`<whateverYourDistributionIdIs>.cloudfront.net`)
 
 ## Redirecting HTTP to HTTPS
 
