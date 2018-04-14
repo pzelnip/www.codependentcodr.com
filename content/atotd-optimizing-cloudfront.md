@@ -135,7 +135,7 @@ made even this redirect to HTTPS.
 
 Even with the tweaked behaviours, I still find myself wanting to create invalidations to speed
 up refreshes for "dynamic" content.  Taking inspiration from
-[Ben again](https://ben.gnoinski.ca/invalidating-cloudfront-cache.html) I set up a commands
+[Ben again](https://ben.gnoinski.ca/invalidating-cloudfront-cache.html) I set up a command
 in my `Makefile` to create an invalidation with a single command (which I also set up in VS Code
 as a Task that I can run with a couple keystrokes).  It looks like this:
 
