@@ -18,10 +18,10 @@ def update_file(bucket, key):
         cache_control = item.get('CacheControl', None)
         if not cache_control:
             print(f"No Cache Control set for {bucket}/{key}, updating to {CACHE_CONTROL_SETTING}")
-            CLIENT.copy_object(Bucket=bucket, Key=key, CopySource=bucket + '/' + key,
-                               CacheControl=CACHE_CONTROL_SETTING,
-                               Metadata=item["Metadata"],
-                               MetadataDirective='REPLACE')
+            # CLIENT.copy_object(Bucket=bucket, Key=key, CopySource=bucket + '/' + key,
+            #                    CacheControl=CACHE_CONTROL_SETTING,
+            #                    Metadata=item["Metadata"],
+            #                    MetadataDirective='REPLACE')
             return True
     return False
 
