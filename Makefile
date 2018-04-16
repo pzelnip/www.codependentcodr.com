@@ -50,6 +50,7 @@ help:
 	@echo '   make dockerbuild                    build docker image                 '
 	@echo '   make dockerrun                      run a shell in built Docker image  '
 	@echo '   make cfinvalidate                   invalidate the CF cache of html    '
+	@echo '   make s3cachecontrol                 set cache control on stuff in s3   '
 	@echo '                                                                          '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
