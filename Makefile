@@ -99,9 +99,9 @@ publish:
 
 deploy: s3_upload s3cachecontrol tag slackpost
 
-s3_upload: #publish lint_the_things
+s3_upload: publish lint_the_things
 	# don't upload if directory is dirty
-	#./git-clean-dir.sh
+	./git-clean-dir.sh
 	aws --profile $(AWSCLI_PROFILE) s3 sync $(OUTPUTDIR) s3://$(S3_BUCKET) --delete $(S3OPTS)
 
 tag:
