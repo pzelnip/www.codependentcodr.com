@@ -89,7 +89,7 @@ ADD_THIS_ID = 'ra-5ac30fba879b9110'
 GIT_SHA = get_git_sha()
 GIT_SHA_LINK = f"{GITHUB_CORNER_URL}/commit/{GIT_SHA}"
 
-STATUSCAKE = {'trackid': 'SqJ8yVmHYBFNGvAX2kndbxz3cL6Tp4',
-              'days': 7, 'design': 6, 'rumid': 1234}
+# STATUSCAKE = {'trackid': 'SqJ8yVmHYBFNGvAX2kndbxz3cL6Tp4',
+#               'days': 7, 'design': 6, 'rumid': 1234}
 
 STATUS_PAGE_URL = 'https://stats.uptimerobot.com/NYJoEuz6w'
