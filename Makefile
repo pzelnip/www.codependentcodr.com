@@ -130,6 +130,7 @@ cfinvalidate:
 	aws --profile $(AWSCLI_PROFILE) cloudfront create-invalidation --distribution-id ER3YIY14W87BX --paths '/*.html' '/' '/feeds/all.atom.xml'
 
 s3cachecontrol:
-	python3 update_cache_control.py
+	echo "Cache control disabled until it's fixed"
+	#python3 update_cache_control.py
 
 .PHONY: html help clean regenerate serve serve-global devserver stopserver publish s3_upload github
