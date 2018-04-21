@@ -93,3 +93,6 @@ GIT_SHA_LINK = f"{GITHUB_CORNER_URL}/commit/{GIT_SHA}"
 #               'days': 7, 'design': 6, 'rumid': 1234}
 
 STATUS_PAGE_URL = 'https://stats.uptimerobot.com/NYJoEuz6w'
+
+# set to False to disable using the hard-coded combined CSS file
+COMBINED_CSS = True
