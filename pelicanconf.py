@@ -70,7 +70,7 @@ THEME = 'theme/Flex'
 # https://github.com/alexandrevicenzi/Flex/wiki/Custom-Settings
 SITETITLE = 'The Codependent Codr'
 SITESUBTITLE = 'Confessions of an Impostor'
-SITELOGO = '/static/imgs/me.jpg'
+SITELOGO = '/static/imgs/me2.jpg'
 SITEDESCRIPTION = 'Random thoughts from a random developer'
 BROWSER_COLOR = '#eff3f9'
 COPYRIGHT_YEAR = str(datetime.now().year)
