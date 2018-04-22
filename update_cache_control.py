@@ -16,10 +16,13 @@ def update_file(bucket, key):
     if any(key.endswith(cache_type) for cache_type in CACHEABLE_TYPES):
         item = CLIENT.head_object(Bucket=bucket, Key=key)
         cache_control = item.get('CacheControl', None)
+        content_type = item.get('ContentType', None)
+
         if not cache_control:
             print(f"No Cache Control set for {bucket}/{key}, updating to {CACHE_CONTROL_SETTING}")
             CLIENT.copy_object(Bucket=bucket, Key=key, CopySource=bucket + '/' + key,
                                CacheControl=CACHE_CONTROL_SETTING,
+                               ContentType=content_type,
                                Metadata=item["Metadata"],
                                MetadataDirective='REPLACE')
             return True
@@ -46,3 +49,4 @@ def process_bucket(bucket):
 
 if __name__ == "__main__":
     process_bucket('www.codependentcodr.com')
+    # update_file('www.codependentcodr.com', 'static/imgs/cloudfront-behaviour-1.png')
