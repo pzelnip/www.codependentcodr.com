@@ -135,7 +135,6 @@ test/test_integr.py:119
 
 Note how Py.test warns us that we might be doing something dumb.
 
-
 # Testing Raised Exceptions
 
 A common thing to do in unit tests is test if a particular exception is
@@ -447,7 +446,6 @@ test/test_integr.py:167: AssertionError
 ```
 
 You can then use the usual `pdb` commands to try and figure how why a test is failing.
-
 
 # Other Stuff
 
