@@ -1,6 +1,6 @@
 Title: Python Tip of the Day - subTest!
 Date: 2017-09-23 10:20
-tags: ptotd,pythonTipOfTheDay,testing,unittest
+tags: ptotd,pythonTipOfTheDay,testing,unittest,python
 cover: static/imgs/python-logo-master-v3-TM.png
 
 Coming from a [jUnit](https://junit.org/junit5/) background, one of the things I always missed with the vanilla
