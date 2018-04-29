@@ -3,7 +3,7 @@ Date: 2018-04-21 11:23
 Modified: 2018-04-21 11:23
 Category: Posts
 tags: aws,monitoring
-cover: static/imgs/default_page_image.jpg
+cover: static/imgs/default_page_imagev2.jpg
 summary: An experiment using screen capturing to detect CSS errors
 
 So the other day I used [Pingdom's speed test](https://tools.pingdom.com/) to do some analysis

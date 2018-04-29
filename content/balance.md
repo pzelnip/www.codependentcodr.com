@@ -1,7 +1,7 @@
 Title: Balance
 Date: 2017-03-15 22:17
 tags: health
-cover: static/imgs/default_page_image.jpg
+cover: static/imgs/default_page_imagev2.jpg
 
 I place a strong emphasis on work/life balance. That sounds funny given that I currently am employed as a software
 developer at a startup, and

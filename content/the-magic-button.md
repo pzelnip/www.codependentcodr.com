@@ -1,7 +1,7 @@
 Title: The Magic Button
 Date: 2017-04-04 22:06
 tags: testing
-cover: static/imgs/default_page_image.jpg
+cover: static/imgs/default_page_imagev2.jpg
 
 Bob Martin is awesome.
 
