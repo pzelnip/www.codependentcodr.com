@@ -1,6 +1,6 @@
 Title: Python Tip of the Day - Double If's in Comprehensions
 Date: 2018-04-11 13:21
-tags: ptotd,pythonTipOfTheDay
+tags: pythonTipOfTheDay,python
 cover: static/imgs/python-logo-master-v3-TM.png
 
 So I was reviewing a coworkers pull request today and saw something I hadn't seen in

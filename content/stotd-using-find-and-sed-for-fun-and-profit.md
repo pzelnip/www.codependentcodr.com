@@ -2,7 +2,7 @@ Title: Shell Tip of the Day: Using find and sed For Fun and Profit
 Date: 2018-04-29 13:59
 Modified: 2018-04-29 13:59
 Category: Posts
-tags: stotd,shell,linux
+tags: shellTipOfTheDay,shell,linux
 cover: static/imgs/default_page_imagev2.jpg
 summary: How to use find and sed to replace a common string across many files in one go
 status: published

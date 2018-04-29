@@ -1,6 +1,6 @@
 Title: Handy Python tip #1
 Date: 2012-06-07 20:16
-tags: ptotd,pythonTipOfTheDay,python
+tags: pythonTipOfTheDay,python
 cover: static/imgs/python-logo-master-v3-TM.png
 
 The other day I was adding the rich comparison methods (the ones for operator overloading) to a class I had defined.

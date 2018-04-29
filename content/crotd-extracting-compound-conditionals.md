@@ -1,6 +1,6 @@
 Title: Code Refactor of the Day - Extracting Compound Conditionals
 Date: 2018-01-15 10:20
-tags: codeRefactorOfTheDay,crotd,refactoring,quality,python
+tags: codeRefactorOfTheDay,refactoring,quality,python
 cover: static/imgs/default_page_imagev2.jpg
 
 I'm currently doing the 30-Day Code Quality Challenge (<https://www.codequalitychallenge.com>), and today's exercise was
