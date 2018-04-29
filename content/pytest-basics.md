@@ -3,7 +3,7 @@ Date: 2018-04-27 18:51
 Modified: 2018-04-28 12:51
 Category: Posts
 tags: python,testing,pytest,unittest
-cover: static/imgs/default_page_image.jpg
+cover: static/imgs/default_page_imagev2.jpg
 summary: Learning some of the basics of Py.test
 status: published
 

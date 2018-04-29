@@ -1,7 +1,7 @@
 Title: Scheduled Builds in Jenkins Scripted Pipelines
 Date: 2018-03-20 10:20
 tags: jenkins,jenkinsfile,devops
-cover: static/imgs/default_page_image.jpg
+cover: static/imgs/default_page_imagev2.jpg
 
 Sometimes you’ll want to have Jenkins trigger a build on a recurring schedule. Common examples include things like a
 scheduled build at midnight (or some other time when regular work isn’t happening).  Traditionally in Jenkins this could

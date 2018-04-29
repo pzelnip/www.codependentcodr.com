@@ -3,7 +3,7 @@ Date: 2018-04-23 10:55
 Modified: 2018-04-23 17:30
 Category: Posts
 tags: vscode,silversearcher,editors
-cover: static/imgs/default_page_image.jpg
+cover: static/imgs/default_page_imagev2.jpg
 summary: Tip for opening up all files which match a string in separate VS Code tabs.
 
 Oftentimes when working on a project you'll need to search through the codebase for

@@ -1,7 +1,7 @@
 Title: Resumes, my take
 Date: 2017-04-17 10:20
 tags: resumes,writing,job_hunting
-cover: static/imgs/default_page_image.jpg
+cover: static/imgs/default_page_imagev2.jpg
 
 So a blog I follow had a [recent post about resumes for devs](http://melreams.com/2017/04/resume-advice/), particularly
 for junior devs or recent grads. It ended with the open question:

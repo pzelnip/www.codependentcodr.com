@@ -1,7 +1,7 @@
 Title: Python Tip of the Day - Logging basicConfig
 Date: 2018-02-14 10:20
 tags: ptotd,pythonTipOfTheDay,logging
-cover: static/imgs/default_page_image.jpg
+cover: static/imgs/default_page_imagev2.jpg
 
 Oftentimes you just want to try out something related to logging in the REPL, or in a hacky script.  Wading through the
 docs on the logging module is this painful exercise in reading about handlers and formatters and other stuff you don't

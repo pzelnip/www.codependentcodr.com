@@ -1,7 +1,7 @@
 Title: Cool Link of the day
 Date: 2017-03-25 22:14
 tags: shell
-cover: static/imgs/default_page_image.jpg
+cover: static/imgs/default_page_imagev2.jpg
 
 Ever wanted to sanity check your shell scripts?  Check out <https://www.shellcheck.net/>
 
