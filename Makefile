@@ -100,10 +100,14 @@ publish:
 
 deploy: s3_upload s3cachecontrol tag slackpost
 
-s3_upload: publish lint_the_things
+s3_upload: publish lint_the_things cleanbranches
 	# don't upload if directory is dirty
 	./git-clean-dir.sh
 	aws --profile $(AWSCLI_PROFILE) s3 sync $(OUTPUTDIR) s3://$(S3_BUCKET) --delete $(S3OPTS)
+
+cleanbranches:
+	git remote | xargs -n 1 git fetch -v --prune $1
+	git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
 
 tag:
 	git tag "$(DEPLOY_TIME)_$(SHA)"
