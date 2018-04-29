@@ -2,7 +2,7 @@ Title: Optimizing Cloudfront
 Date: 2018-04-12 19:32
 Modified: 2018-04-14 12:24
 Category: Posts
-tags: atotd,awsTipOfTheDay,cloudfront,aws
+tags: awsTipOfTheDay,cloudfront,aws
 cover: static/imgs/aws_cloudfront.png
 summary: Lets recap some tips & tricks around optimizing your use of AWS CloudFront as a CDN.
 

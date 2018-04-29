@@ -2,7 +2,7 @@ Title: Python Tip of the Day - Simple HTTP Server
 Date: 2018-04-17 12:46
 Modified: 2018-04-17 12:46
 Category: Posts
-tags: ptotd,pythonTipOfTheDay
+tags: pythonTipOfTheDay,python
 cover: static/imgs/python-logo-master-v3-TM.png
 summary: Using Python's Simple HTTP Server for fun and profit (and quickly sharing files)
 

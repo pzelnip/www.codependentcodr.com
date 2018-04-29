@@ -1,6 +1,6 @@
 Title: Python Tip of the Day - Logging basicConfig
 Date: 2018-02-14 10:20
-tags: ptotd,pythonTipOfTheDay,logging
+tags: pythonTipOfTheDay,logging,python
 cover: static/imgs/default_page_imagev2.jpg
 
 Oftentimes you just want to try out something related to logging in the REPL, or in a hacky script.  Wading through the
