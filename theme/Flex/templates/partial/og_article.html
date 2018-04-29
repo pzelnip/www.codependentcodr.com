@@ -18,6 +18,16 @@
 {% endfor %}
 {% if 'cover' in article.metadata %}
 <meta property="og:image" content="{{ SITEURL }}/{{ article.metadata['cover'] }}">
+<meta name="twitter:image" content="{{ article.summary|striptags|escape }}" />
 {% else %}
 <meta property="og:image" content="{{ SITELOGO }}">
+<meta name="twitter:image" content="{{ SITELOGO }}" />
+{% endif %}
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ article.title|striptags|escape }}" />
+<meta name="twitter:description" content="{{ article.summary|striptags|escape }}" />
+{% if TWITTER_HANDLE %}
+<meta name="twitter:site" content="@{{ TWITTER_HANDLE }}" />
+<meta name="twitter:creator" content="@{{ TWITTER_HANDLE }}" />
 {% endif %}

@@ -9,6 +9,16 @@
 <meta property="og:description" content="{{ SITEDESCRIPTION }}"/>
 <meta property="og:locale" content="{{ default_locale }}"/>
 <meta property="og:url" content="{{ SITEURL }}"/>
+
 {% if SITELOGO %}
 <meta property="og:image" content="{{ SITELOGO }}">
+<meta name="twitter:image" content="{{ SITELOGO }}" />
+{% endif %}
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ SITENAME }}" />
+<meta name="twitter:description" content="{{ SITEDESCRIPTION }}" />
+{% if TWITTER_HANDLE %}
+<meta name="twitter:site" content="@{{ TWITTER_HANDLE }}" />
+<meta name="twitter:creator" content="@{{ TWITTER_HANDLE }}" />
 {% endif %}
