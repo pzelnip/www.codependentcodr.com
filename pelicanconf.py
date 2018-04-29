@@ -31,6 +31,8 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+TWITTER_HANDLE = 'codependentcodr'
+
 # Blogroll
 # LINKS = (('github', 'https://github.com/pzelnip'),
 #          ('Twitter', 'https://twitter.com/codependentcodr'),
@@ -40,7 +42,7 @@ AUTHOR_FEED_RSS = None
 
 # Social widget
 SOCIAL = (('github', 'https://github.com/pzelnip'),
-          ('twitter', 'https://twitter.com/codependentcodr'),
+          ('twitter', f'https://twitter.com/{TWITTER_HANDLE}'),
           ('stack-overflow', 'http://stackoverflow.com/users/808804'),
           ('linkedin', 'http://lnkd.in/ykHQiG'),
           #('youtube', 'http://youtube.codependentcodr.com'),
