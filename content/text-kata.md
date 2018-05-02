@@ -7,6 +7,60 @@ cover: static/imgs/default_page_imagev2.jpg
 summary: Using Visual Studio Code to do the Text Editing Kata - https://code.joejag.com/2016/text-editing-kata.html
 status: draft
 
+I recently stumbled across this article which had a challenge to do some funky text
+editing to convert a list of strings into some specially formatted HTML.  The idea is
+take this as input:
+
+```text
+Basic Price
+Discount
+Sub total
+Factory options
+Dealer options
+Fuel and mats
+Road fund licence
+Number plates and delivery
+Registration fees
+Sub total
+Service plan
+Autocare
+Protect
+VRI
+Our Insurance
+Sub total
+Customer contribution
+Part exchange value
+Cash back
+Settlement
+Sub total
+Credit card handling charge
+Vat
+Total to pay
+```
+
+And produce:
+
+```html
+<dt runat="server" id="dtBasicPrice">Basic Price</dt>
+<dd runat="server" id="ddBasicPrice"></dd>
+
+<dt runat="server" id="dtDiscount">Discount</dt>
+<dd runat="server" id="ddDiscount"></dd>
+
+<dt runat="server" id="dtSubTotal">Sub total</dt>
+<dd runat="server" id="ddSubTotal"></dd>
+
+.... etc ....
+```
+
+That is, for each line produce a `<dt>` and `<dd>` tag, with the `id` of those tags being
+the text, but with the text coverted to title case (first character following a space
+capitalized) and spaces removed.
+
+My first attempt was literally just typing each line manually using no shortcuts other than
+copy & paste.  It took me just over 10 minutes to do the entire list.
+
+There has to be a better way.  I saw some
 
 
 Ok, here's the recording of the best I could come up with in VS Code.  Note that this does require the `change-case` extension: https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case
@@ -40,3 +94,22 @@ I've remapped a bunch of keys, and installed the Sublime Keymap extension
 * manually type `"></dd>`
 * go to start of line & manually add `<dd runat="server" id="dd`
 * profit!
+
+Or, you could just write a little Python script to do it:
+
+```python
+import fileinput
+
+def process_line(line):
+    line = line.strip()
+    idline = line.title().replace(" ", "")
+    return f"""<dt runat="server" id="dt{idline}">{line}</dt>
+<dd runat="server" id="dd{idline}"></dd>
+"""
+
+for line in fileinput.input():
+    print(process_line(line))
+```
+
+This was a fun, albeit contrived editor example that really stretched my knowledge of how to wrangle text
+with VS Code.
