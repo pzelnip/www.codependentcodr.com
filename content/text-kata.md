@@ -51,7 +51,14 @@ Eventually I came up with a technique with which I did the entire exercise in ju
 minute. Here's a recording of it, note that this does require the `change-case` extension:
 <https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case>
 
-![Doing the Kata in VS Code]({filename}/static/imgs/textKata.gif)
+<!-- ![Doing the Kata in VS Code]({filename}/static/imgs/textKata.gif) -->
+
+<!-- markdownlint-disable MD033 -->
+<video autoplay loop controls>
+  <source src="/static/vids/textKata480p.mp4" type="video/mp4">
+  <img src="/static/imgs/textKata.gif">
+</video>
+<!-- markdownlint-enable MD033 -->
 
 Ok, that's hard to follow, but this is the gist of what I did.  Note that some shortcut
 keys may be different for you, because
