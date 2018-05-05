@@ -22,7 +22,9 @@ So, the story: one day about a month ago, I went to <https://tools.pingdom.com> 
 ran this site through Pingdom's speed test.  It gave back a bunch of recommendations
 around how to improve the performance of my site, one of those being to "Leverage
 Browser Caching" by setting a particular HTTP header on resources that don't change
-often (ex: images).
+often (ex: images).  It'll look something like:
+
+![Leverage Browser Caching]({filename}/static/imgs/pingdomcachewarning-fs8.png)
 
 Specifically you set the
 [`Cache-Control` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
