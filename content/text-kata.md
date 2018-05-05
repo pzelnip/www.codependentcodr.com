@@ -1,6 +1,6 @@
 Title: The Text Editing Kata - VS Code Edition
 Date: 2018-05-01 21:55
-Modified: 2018-05-01 21:55
+Modified: 2018-05-04 20:55
 Category: Posts
 tags: vscode,editing
 cover: static/imgs/default_page_imagev2.jpg
@@ -105,3 +105,11 @@ for line in fileinput.input():
 
 This was a fun, albeit contrived editor example that really stretched my knowledge of how to wrangle text
 with VS Code.
+
+**Edit**: re-recorded again this time doing the steps a bit more concisely.
+
+<!-- markdownlint-disable MD033 -->
+<video autoplay loop controls>
+  <source src="/static/vids/textKata480p_p2.mp4" type="video/mp4">
+</video>
+<!-- markdownlint-enable MD033 -->
