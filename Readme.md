@@ -1,5 +1,7 @@
 # CodependentCodr - The Source
 
+[![Build Status](https://travis-ci.com/pzelnip/www.codependentcodr.com.svg?branch=master)](https://travis-ci.com/pzelnip/www.codependentcodr.com)
+
 This is the source that powers <https://www.codependentcodr.com>
 
 ## Overview
