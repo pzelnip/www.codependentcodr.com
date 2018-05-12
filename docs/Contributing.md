@@ -20,4 +20,8 @@ Before you submit a PR my way, please follow these guidelines:
 And that's pretty much it, I'll review the PR and either merge or add feedback
 as appropriate.
 
+## Relevant Reading
+
+If you do want to contribute, I'd suggest reading [my post on PRs & Code Reviews](https://www.codependentcodr.com/pull-requests-code-review.html).
+
 Thanks again!
