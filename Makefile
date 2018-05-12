@@ -93,6 +93,8 @@ stopserver:
 	$(BASEDIR)/develop_server.sh stop
 	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
 
+travis: lint_the_things dockerpush
+
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 	if test -d $(BASEDIR)/extra; then cp $(BASEDIR)/extra/* $(OUTPUTDIR)/; fi
@@ -136,5 +138,12 @@ cfinvalidate:
 s3cachecontrol:
 	echo "Cache control disabled until it's fixed"
 	#python3 update_cache_control.py
+
+dockerpush: dockerbuild
+	echo "$(DOCKER_PASSWORD)" | docker login -u "$(DOCKER_USERNAME)" --password-stdin
+	docker tag $(DOCKER_IMAGE_NAME) pzelnip/$(DOCKER_IMAGE_NAME):latest
+	docker tag $(DOCKER_IMAGE_NAME) pzelnip/$(DOCKER_IMAGE_NAME):$(SHA)
+	docker push pzelnip/$(DOCKER_IMAGE_NAME):latest
+	docker push pzelnip/$(DOCKER_IMAGE_NAME):$(SHA)
 
 .PHONY: html help clean regenerate serve serve-global devserver stopserver publish s3_upload github
