@@ -5,6 +5,11 @@ cover: static/imgs/default_page_imagev2.jpg
 
 # Book: The Clean Coder - A Code of Conduct For Professional Programmers
 
+
+
+
+sdafljdsaf adslfkdsajf ldsakfj dsalkfj asdlkf jasdsdafljdsaf adslfkdsajf ldsakfj dsalkfj asdlkf jasdsdafljdsaf adslfkdsajf ldsakfj dsalkfj asdlkf jasdsdafljdsaf adslfkdsajf ldsakfj dsalkfj asdlkf jasdsdafljdsaf adslfkdsajf ldsakfj dsalkfj asdlkf jasdsdafljdsaf adslfkdsajf ldsakfj dsalkfj asdlkf jasdsdafljdsaf adslfkdsajf ldsakfj dsalkfj asdlkf jasdsdafljdsaf adslfkdsajf ldsakfj dsalkfj asdlkf jasdsdafljdsaf adslfkdsajf ldsakfj dsalkfj asdlkf jasdsdafljdsaf adslfkdsajf ldsakfj dsalkfj asdlkf jasdsdafljdsaf adslfkdsajf ldsakfj dsalkfj asdlkf jasdsdafljdsaf adslfkdsajf ldsakfj dsalkfj asdlkf jasdsdafljdsaf adslfkdsajf ldsakfj dsalkfj asdlkf jasd
+
 *Authors:* "Uncle" Bob Martin
 
 *Publisher:* Prentice Hall
