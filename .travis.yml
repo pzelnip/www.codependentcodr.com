@@ -6,4 +6,5 @@ services:
 - docker
 
 script:
-- make lint_the_things
+- if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
+  make deploy; else make lint_the_things; fi
