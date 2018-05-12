@@ -6,4 +6,4 @@ services:
 - docker
 
 script:
-- echo "hello world"
+- make lint_the_things
