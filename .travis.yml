@@ -8,3 +8,6 @@ services:
 script:
 - if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
   make travis; else make lint_the_things; fi
+
+notifications:
+    slack: 'pzelnip:wgeNXIkOkYPcx0s96Ad3Zbjr'
