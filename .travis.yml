@@ -8,3 +8,8 @@ services:
 script:
 - if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
   make travis; else make lint_the_things; fi
+
+notifications:
+    email: false
+    slack:
+        secure: "PuRi741ylUFPLHFOIdPpSEivSmJ0z4eytiKxfz/bvoRFDAhNZEfEW9uu6OeFlYIk5mcGVTr+jgk4IV4qzVNt61Yuf1rrIm87/WOLUuKS7EjgewWu6eS5Mtdam4Q/SZLeTAtRWd9r9dplcXDeeW82qggVl54ekDM4BEiCYNhI1TAAESdspwKWiho2+7YjBzaGQhg/bxkq11kTwRhrQPAtxbyVoASnCZ/2LwPbjVC2KuVWzjLue8TiZpZTEVOVGkf7fVGtNwM7Z843lSgMRjXOwfOLQY+9Tvp/02JvpmhOEKZC9+Y0CfjSqslHZKF2Gy8xa/vOF+qgjhJB/evGAT5FOO8XgTfBuf3TOka2cJ1rDi/yTYzWCKGItX6kO0WKQPUoPe1alS/OR83H1XI/AIRa9Rm/rey5nMqGRAdkNjfMQ8uphmWqQ8nVWUVa4aoQY3WXnw3+RZGshGlcg4wT3RJwSJVbbpzvns5hNoylUxNz/r3TmLTzlijfr1Xx7TZAPTd4r9BIUkI9SXGHzwlfeqMOx5JvQxhK8p5TEA8MBgNxqq7V8VxhorqfDUFu14zfotT/fIyHRfjPS+vZ6bQ4mI0KS0dgy0ZFtha5FZaevn7unqaEaBm9g/JipxBAal5iRejX008x+wTnMWRrEzGhEWCODCnjATwg8jTKKPKvYpk+yrE="
