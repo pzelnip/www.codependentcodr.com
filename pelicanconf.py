@@ -98,3 +98,5 @@ STATUS_PAGE_URL = 'https://stats.uptimerobot.com/NYJoEuz6w'
 
 # set to False to disable using the hard-coded combined CSS file
 COMBINED_CSS = True
+
+DISQUS_SITENAME = "codependentcodr"
