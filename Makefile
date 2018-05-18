@@ -1,7 +1,6 @@
 PY?=python3
 PELICAN?=pelican
 PELICANOPTS=
-S3OPTS=
 
 AWSCLI_PROFILE=codependentcodr
 
@@ -11,19 +10,15 @@ OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-S3_BUCKET=www.codependentcodr.com
 DOCKER_IMAGE_NAME=codependentcodr
-DOCKER_IMAGE_TAGS := $(shell docker images --format '{{.Repository}}:{{.Tag}}' | grep '$(DOCKER_IMAGE_NAME)')
 
 SHA := $(shell git rev-parse --short HEAD)
 DEPLOY_TIME := $(shell date -u +"%Y-%m-%dT%H-%M-%SZ_%s%3")
 HOST := $(shell hostname)
 
-
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
 	PELICANOPTS += -D
-	S3OPTS += --dryrun
 endif
 
 RELATIVE ?= 0
@@ -31,38 +26,12 @@ ifeq ($(RELATIVE), 1)
 	PELICANOPTS += --relative-urls
 endif
 
-help:
-	@echo 'Makefile for a pelican Web site                                           '
-	@echo '                                                                          '
-	@echo 'Usage:                                                                    '
-	@echo '   make html                           (re)generate the web site          '
-	@echo '   make clean                          remove the generated files         '
-	@echo '   make regenerate                     regenerate files upon modification '
-	@echo '   make publish                        generate using production settings '
-	@echo '   make serve [PORT=8000]              serve site at http://localhost:8000'
-	@echo '   make serve-global [SERVER=0.0.0.0]  serve (as root) to $(SERVER):80    '
-	@echo '   make devserver [PORT=8000]          start/restart develop_server.sh    '
-	@echo '   make stopserver                     stop local server                  '
-	@echo '   make s3_upload                      upload the web site via S3         '
-	@echo '   make markdownlint                   run markdownlint on content        '
-	@echo '   make pylint                         run pylint on content              '
-	@echo '   make lint_the_things                run all linters & checks           '
-	@echo '   make dockerbuild                    build docker image                 '
-	@echo '   make dockerrun                      run a shell in built Docker image  '
-	@echo '   make cfinvalidate                   invalidate the CF cache of html    '
-	@echo '   make s3cachecontrol                 set cache control on stuff in s3   '
-	@echo '                                                                          '
-	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
-	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
-	@echo '                                                                          '
-
 html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 	if test -d $(BASEDIR)/extra; then cp $(BASEDIR)/extra/* $(OUTPUTDIR)/; fi
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
-	docker rmi $(DOCKER_IMAGE_TAGS) || true
 
 regenerate:
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
@@ -81,7 +50,6 @@ else
 	cd $(OUTPUTDIR) && $(PY) -m pelican.server 80 0.0.0.0
 endif
 
-
 devserver:
 ifdef PORT
 	$(BASEDIR)/develop_server.sh restart $(PORT)
@@ -93,19 +61,12 @@ stopserver:
 	$(BASEDIR)/develop_server.sh stop
 	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
 
-travis: lint_the_things dockerpush
-
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 	if test -d $(BASEDIR)/extra; then cp $(BASEDIR)/extra/* $(OUTPUTDIR)/; fi
-	find output -name .DS_Store | xargs rm
 
-deploy: s3_upload s3cachecontrol tag slackpost
-
-s3_upload: publish lint_the_things cleanbranches
-	# don't upload if directory is dirty
-	./git-clean-dir.sh
-	aws --profile $(AWSCLI_PROFILE) s3 sync $(OUTPUTDIR) s3://$(S3_BUCKET) --delete $(S3OPTS)
+s3_upload:
+	docker run -e AWS_ACCESS_KEY_ID=$(AWS_ACCESS_KEY_ID) -e AWS_SECRET_ACCESS_KEY=$(AWS_SECRET_ACCESS_KEY) --rm -it -w /build $(DOCKER_IMAGE_NAME):latest ./s3_push.sh
 
 cleanbranches:
 	git remote | xargs -n 1 git fetch -v --prune $1
@@ -118,10 +79,10 @@ tag:
 lint_the_things: markdownlint pylint
 
 markdownlint: dockerbuild
-	docker run --rm -it -w /build/content $(DOCKER_IMAGE_NAME):latest markdownlint .
+	docker run --rm -it -w /build $(DOCKER_IMAGE_NAME):latest markdownlint -i theme/ .
 
 pylint: dockerbuild
-	docker run --rm -it -w /build/python $(DOCKER_IMAGE_NAME):latest pylint *.py
+	docker run --rm -it -w /build $(DOCKER_IMAGE_NAME):latest pylint *.py
 
 dockerbuild:
 	docker build -t $(DOCKER_IMAGE_NAME):latest .
@@ -139,7 +100,7 @@ s3cachecontrol:
 	echo "Cache control disabled until it's fixed"
 	#python3 update_cache_control.py
 
-dockerpush: dockerbuild
+dockerpush:
 	echo "$(DOCKER_PASSWORD)" | docker login -u "$(DOCKER_USERNAME)" --password-stdin
 	docker tag $(DOCKER_IMAGE_NAME) pzelnip/$(DOCKER_IMAGE_NAME):latest
 	docker tag $(DOCKER_IMAGE_NAME) pzelnip/$(DOCKER_IMAGE_NAME):$(SHA)
@@ -147,3 +108,11 @@ dockerpush: dockerbuild
 	docker push pzelnip/$(DOCKER_IMAGE_NAME):$(SHA)
 
 .PHONY: html help clean regenerate serve serve-global devserver stopserver publish s3_upload github
+
+prebuild: dockerbuild
+
+test: lint_the_things
+
+deploy: s3_upload tag dockerpush slackpost
+
+travis: prebuild test deploy
