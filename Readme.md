@@ -4,6 +4,13 @@
 [![Updates](https://pyup.io/repos/github/pzelnip/www.codependentcodr.com/shield.svg)](https://pyup.io/repos/github/pzelnip/www.codependentcodr.com/)
 [![Python 3](https://pyup.io/repos/github/pzelnip/www.codependentcodr.com/python-3-shield.svg)](https://pyup.io/repos/github/pzelnip/www.codependentcodr.com/)
 
+![GitHub tag](https://img.shields.io/github/tag/pzelnip/www.codependentcodr.com.svg)
+![GitHub last commit](https://img.shields.io/github/last-commit/pzelnip/www.codependentcodr.com.svg)
+![license](https://img.shields.io/github/license/pzelnip/www.codependentcodr.com.svg)
+
+![Uptime Robot status](https://img.shields.io/uptimerobot/status/m780253504-7571416f58db1c6bcc1712ea.svg)
+![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m780253504-7571416f58db1c6bcc1712ea.svg)
+
 This is the source that powers <https://www.codependentcodr.com>
 
 ## Overview
