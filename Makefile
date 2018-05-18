@@ -102,7 +102,11 @@ publish:
 
 deploy: s3_upload s3cachecontrol tag slackpost
 
-s3_upload: publish lint_the_things cleanbranches
+dockerdeploy: publish tag slackpost
+	echo "aws deploy $(AWS_ACCESS_KEY_ID) $(AWS_SECRET_ACCESS_KEY)"
+	#aws --profile $(AWSCLI_PROFILE) s3 sync $(OUTPUTDIR) s3://$(S3_BUCKET) --delete $(S3OPTS)
+
+s3_upload: publish
 	# don't upload if directory is dirty
 	./git-clean-dir.sh
 	aws --profile $(AWSCLI_PROFILE) s3 sync $(OUTPUTDIR) s3://$(S3_BUCKET) --delete $(S3OPTS)
@@ -113,7 +117,7 @@ cleanbranches:
 
 tag:
 	git tag "$(DEPLOY_TIME)_$(SHA)"
-	git push origin $(DEPLOY_TIME)_$(SHA)
+	#git push origin $(DEPLOY_TIME)_$(SHA)
 
 lint_the_things: markdownlint pylint
 
