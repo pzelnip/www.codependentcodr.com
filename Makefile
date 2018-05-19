@@ -13,7 +13,7 @@ PUBLISHCONF=$(BASEDIR)/publishconf.py
 DOCKER_IMAGE_NAME=codependentcodr
 
 SHA := $(shell git rev-parse --short HEAD)
-DEPLOY_TIME := $(shell date -u +"%Y-%m-%dT%H-%M-%SZ_%s%3")
+DEPLOY_TIME := $(shell date -u +"%Y-%m-%dT%H-%M-%SZ_%s")
 HOST := $(shell hostname)
 
 DEBUG ?= 0
@@ -73,9 +73,9 @@ cleanbranches:
 	git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
 
 tag:
-	echo "Disabling tagging as its borked on travis"
-	# git tag "$(DEPLOY_TIME)_$(SHA)"
-	# git push origin $(DEPLOY_TIME)_$(SHA)
+	git remote add travis https://${GH_TOKEN}@github.com/pzelnip/www.codependentcodr.com
+	git tag "$(DEPLOY_TIME)_$(SHA)"
+	git push travis $(DEPLOY_TIME)_$(SHA)
 
 lint_the_things: markdownlint pylint
 
