@@ -52,9 +52,8 @@ cleanbranches:
 	git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
 
 tag:
-	git remote add travis https://${GH_TOKEN}@github.com/$(REPO_NAME)
 	git tag "$(DEPLOY_TIME)_$(SHA)"
-	git push travis $(DEPLOY_TIME)_$(SHA)
+	git push https://${GH_TOKEN}@github.com/$(REPO_NAME) $(DEPLOY_TIME)_$(SHA)
 
 lint_the_things: markdownlint pylint
 
