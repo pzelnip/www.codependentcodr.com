@@ -1,6 +1,7 @@
 Title: Get In Touch
 Date: 2012-03-30 12:16
 
+<!-- markdownlint-disable MD033 -->
 <style>
 input[type=text], textarea, select {
     width: 100%;
@@ -57,4 +58,4 @@ on Twitter [@codependentcodr](https://www.twitter.com/codependentcodr)
   </form>
 </div>
 
-</form>
+<!-- markdownlint-enable MD033 -->
