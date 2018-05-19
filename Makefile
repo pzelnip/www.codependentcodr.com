@@ -87,6 +87,6 @@ s3_upload:
 
 test: lint_the_things
 
-deploy: s3_upload tag dockerpush slackpost
+deploy: dockerbuild s3_upload tag dockerpush slackpost
 
 .PHONY: html clean regenerate devserver stopserver publish s3_upload cleanbranches tag lint_the_things markdownlint pylint dockerbuild dockerrun dockerpush slackpost cfinvalidate test deploy
