@@ -45,7 +45,7 @@ SOCIAL = (('github', 'https://github.com/pzelnip'),
           ('twitter', f'https://twitter.com/{TWITTER_HANDLE}'),
           ('stack-overflow', 'http://stackoverflow.com/users/808804'),
           ('linkedin', 'http://lnkd.in/ykHQiG'),
-          #('youtube', 'http://youtube.codependentcodr.com'),
+          ('youtube', 'http://youtube.codependentcodr.com'),
          )
 
 DEFAULT_PAGINATION = 10
@@ -100,3 +100,7 @@ STATUS_PAGE_URL = 'https://stats.uptimerobot.com/NYJoEuz6w'
 COMBINED_CSS = True
 
 DISQUS_SITENAME = "codependentcodr"
+
+MAILCHIMP_SUBFORM_UUID = "ed1e503cf09db80010bf0e7eb"
+MAILCHIMP_SUBFORM_LID = "fc0932eb49"
+MAILCHIMP_SUBFORM_BASEURL = "mc.us18.list-manage.com"
