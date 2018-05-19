@@ -25,7 +25,7 @@
         {
             "label": "Deploy to S3",
             "type": "shell",
-            "command": "source ${config:pelican.activatePath} && source envs && make deploy"
+            "command": "source envs && make deploy"
         },
         {
             "label": "Open Site in Browser",
@@ -45,7 +45,7 @@
         {
             "label": "Invalidate Cloudfront Cache",
             "type": "shell",
-            "command": "make cfinvalidate"
+            "command": "source envs && make cfinvalidate"
         },
     ]
 }
