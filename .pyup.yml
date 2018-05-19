@@ -1,0 +1,3 @@
+update: all
+
+schedule: "every sunday, wednesday, friday"
