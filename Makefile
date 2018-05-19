@@ -73,8 +73,9 @@ cleanbranches:
 	git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
 
 tag:
-	git tag "$(DEPLOY_TIME)_$(SHA)"
-	git push origin $(DEPLOY_TIME)_$(SHA)
+	echo "Disabling tagging as its borked on travis"
+	# git tag "$(DEPLOY_TIME)_$(SHA)"
+	# git push origin $(DEPLOY_TIME)_$(SHA)
 
 lint_the_things: markdownlint pylint
 
