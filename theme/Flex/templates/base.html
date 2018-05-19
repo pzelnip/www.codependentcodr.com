@@ -123,6 +123,11 @@
           {% for name, link in LINKS %}
           <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
           {% endfor %}
+
+          {% if MAILCHIMP_SUBFORM_UUID %}
+          <li><a href="#" onclick="showMailingPopUp()">Subscribe</a></li>
+          {% endif %}
+
         </ul>
       </nav>
       {% endif %}
@@ -222,6 +227,11 @@
 
   {% if GITHUB_CORNER_URL %}
   {% include 'partial/github.html' %}
+  {% endif %}
+
+  {% if MAILCHIMP_SUBFORM_UUID %}
+  <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+  <script>function showMailingPopUp() {require(["mojo/signup-forms/Loader"],function(L){L.start({"baseUrl":"{{ MAILCHIMP_SUBFORM_BASEURL }}","uuid":"{{ MAILCHIMP_SUBFORM_UUID }}","lid":"{{ MAILCHIMP_SUBFORM_LID }}"})});document.cookie = 'MCPopupClosed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';document.cookie = 'MCPopupSubscribed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';}</script>
   {% endif %}
 </body>
 </html>
