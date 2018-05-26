@@ -5,7 +5,6 @@ Category: Posts
 tags: devops,conferences,learning
 cover: static/imgs/devopsdaysyyj.jpg
 summary: I was fortunate enough to attend the inaugural DevOps Days Victoria.  Let's recap what I saw.
-status: draft
 
 This year I was fortunate enough to get to attend the very first
 [DevOps days here in beautiful Victoria, BC](https://www.devopsdays.org/events/2018-victoria/welcome/).
@@ -27,13 +26,14 @@ Let's give a quick recap of the talks I got to sit in on.
 
 Jeff works at a local company here in town called [Giftbit](https://giftbit.com), and has created a
 nice little framework for getting an AWS Lambda powered project off the ground.  You can find the repo
-at FIXME repo to his framework.
+at <https://github.com/Giftbit/sam-scaffold>.
 
 Was a nice introduction to a good way to get started with [AWS Lambda](https://aws.amazon.com/lambda/)
 If you're thinking about playing with Lambda I'd definitely recommend checking it out as a way of
 getting up and running quickly.
 
-Side note, I've met Jeff a few times at social events (notably FIXME link to whiskydev) which he
+Side note, I've met Jeff a few times at social events (notably
+[Whisky Orientated Development](https://whiskydev.com/)) which he
 co-organizes, and I'd definitely recommend that event as well as it's a lot of fun.
 
 ## Taming Infrastructure Workflow at Scale - Anubhav Mishra
@@ -43,7 +43,7 @@ space such as Vagrant, Terraform, Vault, and others.
 
 The talk started with a bit of a history lesson on how operations work has evolved over the last
 10 years or so, going from physical servers to virtualization, to the cloud, etc.  He then dove
-in to an overview of Terraform (FIXME hyperlink) which is a really great tool for provisioning
+in to an overview of [Terraform](https://www.terraform.io/) which is a really great tool for provisioning
 infrastructure via code.  He then concluded with a quick demo of using Terraform to provision a
 webserver in Google Cloud with a DNS entry provisioned in AWS via Route 53.  Simple, but really
 was a nice little overview of the kind of stuff that's possible with Terraform.
