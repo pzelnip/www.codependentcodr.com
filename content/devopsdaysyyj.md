@@ -16,9 +16,8 @@ around the world and give technical practitioners a place to come together and s
 learned in the DevOps space.  This was the first time I was able to attend a DevOps Days event, so going into it I
 wasn't really sure what to expect.  The format the event took was to have two sets of talks on various
 topics in and around the devops movement.  Everything from deep technical talks about AWS services to
-human stories about how to not burn out your employees from on-call rotations.  The full schedule is at:
-
-FIXME link to schedule
+human stories about how to not burn out your employees from on-call rotations.  The full schedule is at
+<https://www.devopsdays.org/events/2018-victoria/program/>
 
 Let's give a quick recap of the talks I got to sit in on.
 
@@ -30,7 +29,7 @@ Jeff works at a local company here in town called [Giftbit](https://giftbit.com)
 nice little framework for getting an AWS Lambda powered project off the ground.  You can find the repo
 at FIXME repo to his framework.
 
-Was a nice introduction to a good way to get started with AWS Lambda (FIXME hypperlink).
+Was a nice introduction to a good way to get started with [AWS Lambda](https://aws.amazon.com/lambda/)
 If you're thinking about playing with Lambda I'd definitely recommend checking it out as a way of
 getting up and running quickly.
 
@@ -73,11 +72,9 @@ with leaked credentials trying to compromise accounts on their service.
 
 Great overview of some of the technical challenges associated with the problem they've faced,
 and how they've to date leveraged a number of technologies in AWS (ex:
-Lambda, FIXME links
-Athena,
-Cloudfront,
-WAF,
-etc)
+[Lambda](https://aws.amazon.com/lambda/),
+[Athena](https://aws.amazon.com/athena/),
+[Cloudfront](https://aws.amazon.com/cloudfront/), etc)
 to try and combat it.  Some great discussion afterwards about alternative techniques that
 could potentially be used was had.
 
@@ -106,9 +103,10 @@ time (blameless post-mortems, release planning, etc).
 
 All-in-all, particularly for a first time, DevOps Days YYJ was a great event.  More importantly,
 it was great to see the Victoria tech community come together in a day of learning, as while
-the Victoria tech scene has grown dramatically in the last few years, and there's a thriving
-Slack group (FIXME YYJTEch slack link), there to date haven't been many conference events
-here in town (StartupSlam FIXME link being the only other I can think of).
+the Victoria tech scene has grown dramatically in the last few years, and there's a
+[thriving Slack group](https://joinyyjtechslack.herokuapp.com/)
+there to date haven't been many conference events
+here in town ([StartupSlam](https://www.startupslam.io/) being the only other I can think of).
 
 Would definitely recommend the event in the future to anyone in or around the Devops space
 in Victoria.
