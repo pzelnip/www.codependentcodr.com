@@ -6,7 +6,8 @@ tags: polyglotconf,conferences,learning
 cover: static/imgs/polyglotconflogo.png
 summary: I got to go back yet again for the 7th Annual Polyglot Unconference in Vancouver.  Let's recap.
 
-This year, like many past years, I was fortunate enough to be able to make the trip to
+This year, like many past years (see [here]({filename}/polyglotconf-2012.md) and
+[here]({filename}/polyglotconf-2017.md)), I was fortunate enough to be able to make the trip to
 YVR for the annual [Polyglot Unconference](https://www.polyglotconf.com).  This event, now
 in it's 7th year, has been a favourite of mine for some time as it's a great (and very
 affordable) opportunity to network with a bunch of other technologists, hear about new
