@@ -1,3 +1,9 @@
 update: all
 
-schedule: "every sunday, wednesday, friday"
+schedule: "every day"
+
+branch: "master"
+
+label_prs: pyup
+
+assignees: pzelnip
