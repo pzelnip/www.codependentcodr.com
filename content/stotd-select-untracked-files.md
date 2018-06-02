@@ -3,7 +3,7 @@ Date: 2018-06-01 20:34
 Modified: 2018-06-01 20:34
 Category: Posts
 tags: bash,shell,shellTipOfTheDay,git
-cover: static/imgs/Gnu-bash-logo-crunch.png
+cover: static/imgs/logos/Gnu-bash-logo-crunch.png
 summary: Shell Tip Of the Day - Selecting untracked files
 
 Today's tip of the day is a follow up from something I learned at
