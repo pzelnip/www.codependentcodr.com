@@ -2,8 +2,9 @@ update: all
 
 schedule: "every day"
 
-branch: "master"
+branch: master
 
 label_prs: pyup
 
-assignees: pzelnip
+assignees:
+  - pzelnip
