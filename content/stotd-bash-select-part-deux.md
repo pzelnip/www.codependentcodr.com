@@ -6,7 +6,10 @@ tags: bash,shell,shellTipOfTheDay,git
 cover: static/imgs/logos/Gnu-bash-logo-crunch.png
 summary: Shell Tip Of the Day - Interactively deleting Docker images with Bash's select statement
 
-![Sometimes when you learn about a hammer, everything looks like a nail....]({filename}/static/imgs/hammer_nail.jpg)
+![Sometimes when you learn about a hammer, everything looks like a nail....]
+({filename}/static/imgs/hammer_nail.jpg)
+
+([source](https://devrant.com/rants/752222/if-all-you-have-is-a-hammer-everything-looks-like-a-nail-this-was-something-whic))
 
 Sometimes when you learn about a hammer, everything looks like a nail....  In
 [a previous tip]({filename}/stod-select-untracked-files.md) I showed off using
