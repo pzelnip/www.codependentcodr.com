@@ -33,7 +33,7 @@ ruby                          2.3                 9cc35bb87070        2 months a
 And then copy the `IMAGE ID` and delete it:
 
 ```shell
-$ docker rmi my-project
+$ docker rmi 2d0ff261164e
 Untagged: my-project:latest
 Deleted: sha256:2d0ff261164e6caf1024f67e702652ccad040b3031bc56c829d810b3e4a3f72b
 Deleted: sha256:0144bb04af73ca7e66420954ef1ebd0355739d932e2b3ce4f0d4e852f1e2cb28
