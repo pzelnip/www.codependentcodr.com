@@ -33,7 +33,7 @@ ruby                          2.3                 9cc35bb87070        2 months a
 And then copy the `IMAGE ID` and delete it:
 
 ```shell
-$ docker rmi my-project
+$ docker rmi 2d0ff261164e
 Untagged: my-project:latest
 Deleted: sha256:2d0ff261164e6caf1024f67e702652ccad040b3031bc56c829d810b3e4a3f72b
 Deleted: sha256:0144bb04af73ca7e66420954ef1ebd0355739d932e2b3ce4f0d4e852f1e2cb28
@@ -91,7 +91,7 @@ done
 
 Dissecting the clunky argument to `docker rmi`: `awk -F'--' '{print $1}'` splits
 the input string on a double dash and then prints just the first column (the ID
-in our case).  we then just echo it back to `docker rmi`.  This works, and I
+in our case).  We then just echo it back to `docker rmi`.  This works, and I
 tweeted it at Eric Promislow who was the person who demoed
 [the select statement at Polyglot this year]({filename}/polyglotconf-2018.md)
 which was where I first saw the trick:
