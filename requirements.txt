@@ -1,6 +1,6 @@
 autopep8==1.3.5
 Markdown==2.6.11
 pelican==3.7.1
-boto3==1.7.37
+boto3==1.7.38
 pylint==1.9.2
 awscli==1.15.37
