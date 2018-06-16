@@ -85,7 +85,10 @@ cfinvalidate:
 s3_upload:
 	docker run -e AWS_ACCESS_KEY_ID=$(AWS_ACCESS_KEY_ID) -e AWS_SECRET_ACCESS_KEY=$(AWS_SECRET_ACCESS_KEY) --rm -it -w /build $(SITE_NAME):latest ./s3_push.sh
 
-test: lint_the_things
+safety:
+	safety check -r requirements.txt
+
+test: lint_the_things safety
 
 deploy: dockerbuild s3_upload tag dockerpush slackpost
 
