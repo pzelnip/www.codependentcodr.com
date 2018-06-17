@@ -12,7 +12,7 @@ summary: Shell Tip Of the Day - Interactively deleting Docker images with Bash's
 ([source](https://devrant.com/rants/752222/if-all-you-have-is-a-hammer-everything-looks-like-a-nail-this-was-something-whic))
 
 Sometimes when you learn about a hammer, everything looks like a nail....  In
-[a previous tip]({filename}/stod-select-untracked-files.md) I showed off using
+[a previous tip]({filename}/stotd-select-untracked-files.md) I showed off using
 Bash's `select` statement to interactively select untracked files in a Git repo.
 
 Today I found another use for the `select` statement -- deleting local Docker

@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 
-"""Production/publication config for project
-"""
+"""Production/publication config for project."""
+
 # pylint: disable=unused-wildcard-import
 
 from __future__ import unicode_literals

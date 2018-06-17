@@ -1,8 +1,7 @@
-"""Calculate rough costs of having things in s3
-"""
+"""Calculate rough costs of having things in s3."""
 
 def main():
-    """Main entry point"""
+    """The main entry point."""
     factor = 100000
     standard = int(0.025 * factor)
     ia_1zone = int(0.01104 * factor)

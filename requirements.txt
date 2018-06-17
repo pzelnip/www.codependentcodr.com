@@ -5,3 +5,4 @@ boto3==1.7.40
 pylint==1.9.2
 awscli==1.15.40
 safety==1.8.1
+pydocstyle==2.1.1
