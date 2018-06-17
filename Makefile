@@ -55,7 +55,10 @@ tag:
 	git tag "$(DEPLOY_TIME)_$(SHA)"
 	git push https://${GH_TOKEN}@github.com/$(REPO_NAME) $(DEPLOY_TIME)_$(SHA)
 
-lint_the_things: markdownlint pylint
+lint_the_things: markdownlint pylint pydocstyle
+
+pydocstyle:
+	docker run --rm -it -w /build $(SITE_NAME):latest pydocstyle .
 
 markdownlint: dockerbuild
 	docker run --rm -it -w /build $(SITE_NAME):latest markdownlint -i theme/ .

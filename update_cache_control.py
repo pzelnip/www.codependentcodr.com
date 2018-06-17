@@ -1,5 +1,4 @@
-"""Tool for setting the cache-control header on items in an S3 bucket.
-"""
+"""Tool for setting the cache-control header on items in an S3 bucket."""
 
 import boto3
 
@@ -11,8 +10,7 @@ CACHE_CONTROL_SETTING = f'public, max-age={SECONDS_IN_A_WEEK}'
 
 
 def update_file(bucket, key):
-    """Sets the cache-control header on the item in the bucket
-    """
+    """Sets the cache-control header on the item in the bucket."""
     if any(key.endswith(cache_type) for cache_type in CACHEABLE_TYPES):
         item = CLIENT.head_object(Bucket=bucket, Key=key)
         cache_control = item.get('CacheControl', None)
@@ -30,8 +28,7 @@ def update_file(bucket, key):
 
 
 def process_bucket(bucket):
-    """For all items in the given bucket, apply update_file
-    """
+    """For all items in the given bucket, apply update_file."""
     print(f"Processing {bucket}...")
 
     paginator = CLIENT.get_paginator('list_objects_v2')
