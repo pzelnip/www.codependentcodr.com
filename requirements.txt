@@ -3,6 +3,6 @@ Markdown==2.6.11
 pelican==3.7.1
 boto3==1.7.41
 pylint==1.9.2
-awscli==1.15.40
+awscli==1.15.41
 safety==1.8.1
 pydocstyle==2.1.1
