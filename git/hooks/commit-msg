@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+
+#
+# commit-msg hook to validate commit messages.  Inspired by:
+# https://gist.github.com/aradi/a651ee97cc6bd09acb237794a05eaa7f
+#
+# and others
+
+lineno=0
+errors=()
+
+error() {
+    errors+=("$1")
+}
+
+while read -r line
+do
+    # Ignore comment lines (don't count line number either)
+    [[ "$line" =~ ^#.* ]] && continue
+
+    let lineno+=1
+    length=${#line}
+
+    # Subject line tests
+    if [[ $lineno -eq 1 ]]; then
+        [[ $length -gt 79 ]] && error "First line exceeds 79 char limit."
+    fi
+
+    # check 2nd line is blank
+    [[ $lineno -eq 2 ]] && [[ -n $line ]] && error "Second line of commit message is not blank/empty."
+
+    # check remaining lines for length
+    [[ $lineno -gt 1 ]] && [[ $length -gt 80 ]] && error "Line greater than 80 characters long."
+done < "$1"
+
+# check for Clubhouse ticket reference
+ticket_regex='\[[A-Za-z]+[0-9]+\]'
+if ! grep -iqE "$ticket_regex" "$1"; then
+    error "Missing a Clubhouse issue reference (ex [ch234])."
+fi
+
+
+# if errors found, display them & prompt for confirmation
+if [ ${#errors[@]} -gt 0 ]; then
+    echo ""
+    echo "Errors found:"
+
+    for i in "${errors[@]}"
+    do
+    echo "* $i"
+    done
+
+    # needed for reading from keyboard, see https://stackoverflow.com/a/10015707/808804
+    exec < /dev/tty
+    echo ""
+    read -p "Do you want to commit anyways? (y/n) " -n 1 -r
+    echo ""
+
+    if [[ ! $REPLY =~ ^[Yy]$ ]]
+    then
+        echo "Aborting commit, for your reference your original commit message was:"
+        echo ""
+        cat $1
+        exit 1
+    fi
+fi
+
+# Either confirmed override or no errors, so commit
+echo ""
+echo "Committing"
