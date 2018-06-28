@@ -11,7 +11,8 @@ import sys
 
 sys.path.append(os.curdir)
 # pylint: disable=wildcard-import,wrong-import-position
-from pelicanconf import *
+from pelicanconf import *  # noqa: E402,F401,F403
+
 
 # pylint: enable=wildcard-import,wrong-import-position
 
