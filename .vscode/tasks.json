@@ -6,7 +6,7 @@
         {
             "label": "Rebuild/Generate site",
             "type": "shell",
-            "command": "source ${config:pelican.activatePath} && make publish",
+            "command": "source $(dirname ${config:python.pythonPath})/activate && make publish",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -15,17 +15,12 @@
         {
             "label": "Run Server",
             "type": "shell",
-            "command": "source ${config:pelican.activatePath} && make devserver"
+            "command": "source $(dirname ${config:python.pythonPath})/activate && make devserver"
         },
         {
             "label": "Stop Dev server",
             "type": "shell",
-            "command": "source ${config:pelican.activatePath} && make stopserver"
-        },
-        {
-            "label": "Deploy to S3",
-            "type": "shell",
-            "command": "source envs && make deploy"
+            "command": "source $(dirname ${config:python.pythonPath})/activate && make stopserver"
         },
         {
             "label": "Open Site in Browser",
