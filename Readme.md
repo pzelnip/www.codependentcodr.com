@@ -11,39 +11,62 @@
 ![Uptime Robot status](https://img.shields.io/uptimerobot/status/m780253504-7571416f58db1c6bcc1712ea.svg)
 ![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m780253504-7571416f58db1c6bcc1712ea.svg)
 
-This is the source that powers <https://www.codependentcodr.com>
+## Vision
 
-## Overview
+Codependent Codr is my personal tech blog where I braindump things I've learned, tips, tricks
+and ideas around full-stack development.  The site can be found at <https://www.codependentcodr.com>
 
-Site is generated using [Pelican](https://getpelican.com), and hosted in [AWS](https://aws.amazon.com/).
+## Technical Overview
+
+The site is generated using [Pelican](https://getpelican.com), and hosted in [AWS](https://aws.amazon.com/).
+Currently it's a static site in an S3 bucket, served via AWS Cloudfront.
 
 ## Pelican Tidbits
 
 By in large I just ran the `pelican-quickstart` and have tweaked a few things here and there as I work on the site.
-Some of the things I've changed that might be novel:
+At this point my `Makefile` has been largely rewritten.  Some of the things I've changed/added/done that might be
+novel:
 
 ### Tasks.json
 
-Being a VS Code user, I created a `tasks.json` file which has a handful of tasks for things like starting
-the dev server, uploading to S3, etc.
+Being a [Visual Studio Code](https://code.visualstudio.com/) user, I created a `tasks.json` file which has a
+handful of tasks for things like starting the dev server, uploading to S3, etc.
 
-Because of the way the project is set up you need the path to the virtual environment where pelican is installed (you
-need to be able to call the `activate` script in the virtual environment before the actual command).
-I created a config value in my workspace config for this called `pelican.activatePath`.  This however, does give a
-warning in VS Code (since it's an "Unknown configuration setting"), but I can't think of a better way to have the
-tasks point at the virtual environment where Pelican is installed.
+### Deployments And Automation
+
+Currently I use [Travis CI](https://travis-ci.org/) for my CI/CD needs.  Merges to the `master` branch are
+automatically deployed to S3 by Travis.  Pull requests are automatically built with a number of checks
+(mostly linters) and builds are "failed" on non-zero exit codes.
+
+On a deployment to S3 I automagically tag the current commit with a generated tag that includes
+the current date/time, the milliseconds since the epoch, and the Git SHA.  This means that I can
+look at the tags page on Github to see a history of deployments.
+
+As well, I throw a notification into a private Slack channel when a deployment happens.  This
+probably is silly right now (since I'm the only person deploying), but was fun to set up. :)
+This was set up as a basic Slack incoming webhook.  The secret token on the URL I have in an
+environment variable.
+
+Lastly, when Travis does a build it produces a Docker image and does the deployment from a running
+instance of that Docker image.  After successful deployment that Docker image is uploaded to
+[Docker Hub](https://hub.docker.com/).  This allows me to see exactly what was deployed, including
+for old deployments.
 
 ### Linting
 
 In the Makefile I added targets for running [`markdownlint`](https://github.com/DavidAnson/markdownlint) and
-[`pylint`](https://www.pylint.org).  A push to S3 first runs these linters over the stuff in the repo and a non-zero
-result stops the deployment.  While not as robust as a proper CI/CD pipeline with Jenkins or such, this is good
-enough for my needs and was super quick to set up.
+[`pylint`](https://www.pylint.org), and ['pydocstyle'](https://github.com/PyCQA/pydocstyle).
+
+This allows me to run linters over the repository before any deployment.  I currently have a zero-tolerance
+policy for linting errors (ie linters must run clean before code can be merged into the `master` branch).
 
 Config for the markdown linter is in `.markdownlint.json`.  For the most part I just added exceptions that were
 needed so that Pelican's metadata didn't trigger markdownlint warnings.
 
 For Pylint I don't use any special config (just default out of the box config).
+
+For Pydocstyle, config is in `.pydocstyle`, which currently excludes the rather noisy D401 warning, as well
+as excludes the `theme` directory from analysis.
 
 ### Dockerfile
 
@@ -51,6 +74,12 @@ To support the linting stuff, rather than enforcing I have the tools installed, 
 the tools to it.  This means if you want to do the same all you need is Docker, no need for `npm`, etc.
 
 The `clean` target of the `Makefile` also removes any previously built `codependentcodr` images.
+
+### Safety
+
+I also have a Makefile target to run the [Safety](https://github.com/pyupio/safety) tool for checking any
+Python dependencies I have for security vulnerabilities.  This is also enforced by my CI pipeline (no merges
+if vulnerability found).
 
 ### AWS CLI
 
@@ -68,21 +97,6 @@ Flex (the theme I use) has support for [Github Corners](https://github.com/tholm
 but the colour isn't configurable.  I modified the theme to use a config value `GITHUB_CORNER_BG_COLOR`
 which sets the background colour of the github corners icon (in my config I set it to the same value
 as the BG colour of buttons from the theme).
-
-### Deployments & Automation
-
-On a deployment to S3 I automagically tag the current commit with a generated tag that includes
-the current date/time, the milliseconds since the epoch, and the Git SHA.  This means that I can
-look at the tags page on Github to see a history of deployments.
-
-I also prevent deployments of uncommitted changes.  This is to prevent "oops, I didn't realize
-I had edited that file but not committed it" problems (speaking from experience, these can be
-fun to figure out).
-
-As well, I throw a notification into a private Slack channel when a deployment happens.  This
-probably is silly right now (since I'm the only person deploying), but was fun to set up. :)
-This was set up as a basic Slack incoming webhook.  The secret token on the URL I have in an
-environment variable.
 
 ## Hosting
 
