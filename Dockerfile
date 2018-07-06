@@ -3,7 +3,7 @@ FROM alpine:latest
 WORKDIR /build
 
 RUN apk add --no-cache --update \
-    python3 nodejs make git curl
+    python3 nodejs-current-npm make git curl
 
 RUN python3 -m ensurepip
 RUN pip3 install --upgrade pip
