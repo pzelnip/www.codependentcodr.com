@@ -8,12 +8,14 @@ from datetime import datetime
 
 
 import subprocess
+import shlex
 
 
 def get_git_sha():
     """Return the short Git SHA from the current working directory."""
     # shamefully stolen from: https://stackoverflow.com/a/21901260/808804
-    return str(subprocess.check_output(["git", "rev-parse", "HEAD"]), "utf-8").strip()
+    args = shlex.split("git rev-parse HEAD")
+    return str(subprocess.check_output(args, shell=False), "utf-8").strip()
 
 
 AUTHOR = "Adam Parkin"
