@@ -1,5 +1,5 @@
 autopep8==1.3.5
-awscli==1.15.56
+awscli==1.15.57
 bandit==1.4.0
 black==18.6b4
 boto3==1.7.55
