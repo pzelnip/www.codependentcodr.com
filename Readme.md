@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.com/pzelnip/www.codependentcodr.com.svg?branch=master)](https://travis-ci.com/pzelnip/www.codependentcodr.com)
 [![Updates](https://pyup.io/repos/github/pzelnip/www.codependentcodr.com/shield.svg)](https://pyup.io/repos/github/pzelnip/www.codependentcodr.com/)
 [![Python 3](https://pyup.io/repos/github/pzelnip/www.codependentcodr.com/python-3-shield.svg)](https://pyup.io/repos/github/pzelnip/www.codependentcodr.com/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 ![GitHub tag](https://img.shields.io/github/tag/pzelnip/www.codependentcodr.com.svg)
 ![GitHub last commit](https://img.shields.io/github/last-commit/pzelnip/www.codependentcodr.com.svg)
