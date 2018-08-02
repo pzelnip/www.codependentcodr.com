@@ -9,6 +9,7 @@ Please review the [guidelines for contributing](Contributing.md) to this reposit
 
 ## Description
 
+<!--
 Please replace this section with a description of your pull request.  Please:
 
 - Include the purpose of this Pull Request. For example: This simplifies the display of... This fixes handling of... etc
@@ -19,11 +20,15 @@ Please replace this section with a description of your pull request.  Please:
     - if the Pull Request is work in progress, say so with a [WIP] prefix in the title
 - @mention individuals that you specifically want to involve in the discussion
 
+-->
+
 ## Useful Resources
 
-Add links to any external resources that may be relevant to this pull request.
+<!-- Add links to any external resources that may be relevant to this pull request. -->
 
-## Meta
+<!--
 
-You may find the following link useful to review before opening your PR:
+Lastly, you may find the following link useful to review before opening your PR:
 <https://blog.github.com/2015-01-21-how-to-write-the-perfect-pull-request/>
+
+-->
