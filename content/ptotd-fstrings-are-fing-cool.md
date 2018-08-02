@@ -12,8 +12,6 @@ and while there can be a "really do we need yet another way to do this?" respons
 when you first see them, in actuality they are one of the coolest additions to the
 language I've seen in recent years.
 
-<!-- markdownlint-disable MD002 -->
-
 ## The Basics
 
 You denote an f-string by prefixing a `f` or `F` in front of a string literal:
