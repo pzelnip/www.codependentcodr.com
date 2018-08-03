@@ -12,6 +12,11 @@
 ![Uptime Robot status](https://img.shields.io/uptimerobot/status/m780253504-7571416f58db1c6bcc1712ea.svg)
 ![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m780253504-7571416f58db1c6bcc1712ea.svg)
 
+<!-- markdownlint-disable MD013 -->
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/pzelnip/www.codependentcodr.com.svg)](http://isitmaintained.com/project/pzelnip/www.codependentcodr.com "Average time to resolve an issue")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/pzelnip/www.codependentcodr.com.svg)](http://isitmaintained.com/project/pzelnip/www.codependentcodr.com "Percentage of issues still open")
+<!-- markdownlint-enable MD013 -->
+
 ## Vision
 
 Codependent Codr is my personal tech blog where I braindump things I've learned, tips, tricks
