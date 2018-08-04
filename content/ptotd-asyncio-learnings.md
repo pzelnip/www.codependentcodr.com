@@ -6,11 +6,198 @@ tags: asyncio,python,ptotd
 cover: static/imgs/default_page_imagev2.jpg
 summary: Learning asyncio
 
+Recently I've been digging into Python's `asyncio` library which was introduced as part of Python 3.4, and
+iterated upon in each release since.  My reasons are work-related, but I thought it'd be interesting/insightful
+to share things I've learned here, partly to share with the world (as the docs for asyncio are rather subpar)
+as well as reinforce what I've managed to figure out.
+
+This is likely going to be long, as there's a lot to learn & know about asyncio.  Context: I never used
+[Twisted](https://twistedmatrix.com/), nor have I done really much/any asynchronous programming (except for multithreaded or multiprocessed
+code if you count that).  As such, most of this was entirely new for me.
+
+## Basic Definitions
+
+To talk about asyncio, you need to talk about coroutines.  To talk about coroutines, you need to talk about
+generators.  To talk about generators, you need to talk about the `yield` statement.  Rather than regurgitate
+all this, I'm going to point you at a phenomenal post by [Brett Cannon](https://twitter.com/brettsky) (one of
+the Python core devs) that gives all this background info:
+
+<https://snarky.ca/how-the-heck-does-async-await-work-in-python-3-5/>
+
+That post is largely about the `async`/`await` keywords introduced in Python 3.5, but Brett does a phenomenal
+job of painstakingly going through the fundamentals of coroutines, generators, etc.  Please do give this a
+read before continuing on (I know it's long, but really worth it).
+
+I'm not going to go into too much detail talking about what asynchronous programming is, or why you might want
+to do it, instead I'll point you at these resources:
+
+* <http://sdiehl.github.io/gevent-tutorial/#synchronous-asynchronous-execution>
+* <https://djangostars.com/blog/asynchronous-programming-in-python-asyncio/>
+* <https://medium.freecodecamp.org/a-guide-to-asynchronous-programming-in-python-with-asyncio-232e2afa44f6>
+
+These videos are also quite good (though can be long):
+
+* <https://www.youtube.com/watch?v=ZKnETCH4S0w>
+* <https://www.youtube.com/watch?v=Z_OAlIhXziw> (classic, though pre-dates asyncio by a good degree)
+
+Some of the key ideas to take away from those:
+
+* `asyncio` is an implementation of an event loop that coroutines can be scheduled on
+* `async` and `await` are keywords added for convenience sake to make coroutines easier
+* asynchronous programming with asyncio means "single threaded concurrency"
+
+That last point is really key: with `asyncio` only one thread is in play.  You get the concurrency via
+cooperative multitasking between coroutines (ie when one blocks on IO you switch to another while the
+previous one is waiting).  This has a few implications, one of which is if your code is CPU bound you're
+not going to get any perf benefit from `asyncio`.  This is true of threads as well because of the GIL,
+but not for multiprocessing (if that's possible for your problem, though at the expense of complexity,
+safety, and resources).
+
+## Hello World As A Coroutine
+
+Or "How the %@#@ do I even run a coroutine?"  This is the first spot where I feel a very real pain with
+`asyncio` -- it feels like there's multiple ways to do basically the same thing, but that vary slightly
+leading to lots of cognitive load in using the library.  But a basic example:
+
+```python
+import asyncio
+
+async def helloworld():
+    print("Hello world from a coroutine!")
+
+def main():
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(helloworld())
+
+if __name__ == "__main__":
+    main()
+```
+
+Breaking this down:
+
+* the `async` keyword (new in Python 3.5) makes `helloworld()` a coroutine
+* the call to `get_event_loop()` gets us an event loop we can schedule this coroutine on
+* the call to `run_until_complete()` does a few things:
+    * schedules the `helloworld()` coroutine to run on the loop
+    * yields control to the event loop scheduler
+    * the event loop then picks up that scheduled coroutine & switches control to it
+    * the coroutine executes, prints the message and then returns control back to the loop
+    * the loop then switches control back to the `main()` routine
+
+And then the program continues on its merry (synchronous) way.
+
+It's worth noting that "scheduling a coroutine" can be done many different ways.
+`run_until_complete()` will do it implicitly with a coroutine by wrapping it in a
+`Future` & scheduling it, but there are others:
+
+```python
+loop.run_until_complete(asyncio.wait([helloworld()]))
+
+... or ...
+
+loop.run_until_complete(asyncio.gather(helloworld()))
+```
+
+And probably others I'm not thinking of.  The idea is that `run_until_complete` gets
+a `Future` and it runs that `Future` to completion.  If given a coroutine it'll wrap
+it in a `Future` before running.  `wait()` takes a collection of `Future`s and returns
+a `Future` representing the completion of all those sub-Future's.  Much like
+`run_until_complete`, if it's given a coroutine it'll wrap it in a `Future` (well,
+technically `Task`s, but those are subclasses of `Future`).  `gather()` is
+similar in that you give it "a bunch of tasks", but takes either coroutines or
+`Future`'s.  There's also some very subtle differences between `gather()` and `wait()`
+in terms of cancellation ability, return values, etc.
+
+There's other ways to schedule tasks as well.  In Python 3.7 there's a new `create_task`
+routine in `asyncio` that schedules *and* runs a task, but requires that you're executing
+in a running event loop.  For example to trigger a coroutine to run from within a coroutine:
+
+```python
+async def helloworld():
+    print("Hello world from a coroutine!")
+    asyncio.create_task(helloworld())
+
+def main():
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(helloworld())
+```
+
+Runs the `helloworld()` coroutine twice. It's also worth noting that `asyncio.create_task` (introduced in 3.7) is *not* the same
+thing as `AbstractEventLoop.create_task` though serves largely the same purpose.  The previous
+example using `create_task` could also be written as:
+
+```python
+async def helloworld():
+    print("Hello world from a coroutine!")
+    asyncio.get_event_loop().create_task(helloworld())
+
+def main():
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(helloworld())
+```
+
+It appears as though `asyncio.create_task()` is just shorthand to save you the call
+to `get_event_loop()`.
+
+Note that doing `asyncio.create_task` from in `main()` would be an error:
+
+```python
+def main():
+    loop = asyncio.get_event_loop()
+    asyncio.create_task(helloworld())   # gives "RuntimeError: no running event loop"
+```
+
+But `loop.create_task` is fine (though unless the loop is run the task will never be
+executed):
+
+```python
+    loop = asyncio.get_event_loop()
+    loop.create_task(helloworld())
+    loop.run_until_complete(helloworld())
+```
+
+Initially the call to `asyncio.create_task(helloworld())` within `helloworld()`
+puzzled me as I assumed that would result in infinite scheduling of the task, but
+we only see the message get printed twice.  So what's up with that?
+I [asked on StackOverflow](https://stackoverflow.com/questions/51680178/asyncio-create-task-vs-await)
+ and the gist is that what happens is that
+`run_until_complete()` means "run until this coroutine I'm giving you is done
+and then stop the event loop".  So `helloworld()` gets run once, it schedules
+another run of it on the event loop.  This then schedules another run, but because
+the first run (from the `run_until_complete`) is now done, the loop is stopped and
+control returned.
+
+You can use this for a neat trick, for example if we want to run a co-routine
+repeatedly for 2 seconds:
+
+```python
+async def helloworld():
+    print("Hello world from a coroutine!")
+    asyncio.create_task(helloworld())
+
+def main():
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(asyncio.gather(helloworld(), asyncio.sleep(2)))
+```
 
 
-status: draft
+In terms of the "hey make the event loop run the stuff", there's kinda two basic
+approaches.  The first is `run_until_complete()` which just runs the
+task/coroutine/whatever until it's done and returns control, and the second is
+`run_forever` which runs until something calls `stop()` on the event loop.  An
+example of `run_forever`:
 
-Some boilerplate:
+* FIXME: talk about run_forever as an alternative
+
+Again, this is some of the pain of `asyncio`, knowing what to use where.
+
+## "Infinite" co-routines
+
+Sometimes you want to have a coroutine that is effectively "always running in the background".  The classic
+example is something that reads stuff off of some shared memory (like a queue) and do some sort of background
+processing with each item.
+
+Some boilerplate code that I'll assume is present in each example:
 
 ```python
 import asyncio
@@ -18,16 +205,20 @@ import random
 import functools
 
 # make the print function always flush output immediately
+# without this you'll find nothing gets printed until program
+# end when suddenly all output is printed at once
 print = functools.partial(print, flush=True)
 
-# A message to indicate end of processing
+# A message to indicate end of processing, the purpose of this
+# will become clear in the examples
 END_OF_QUEUE = "This is the end...  This value doesn't actually matter so long as it's not a possible real value to go in the queue"
 ```
 
-A basic example of a co-routine that loops waiting on a queue:
+`asyncio` provides a `Queue` implementation that allows for asynchronously
+yielding control when doing a `put()` or `get()`.  A basic example of a
+co-routine that loops waiting on a queue:
 
 ```python
-
 async def queue_coro(queue):
     while True:
         message = await queue.get()
@@ -58,10 +249,16 @@ Got message: foobar is another!
 This is the end my friend....
 ```
 
-But if you put that `END_OF_QUEUE` before the `queue_coro` then it goes forever.  Remember that
+Description: we put two items on the queue, and then the special `END_OF_QUEUE`
+value which acts as a [sentinel value](https://en.wikipedia.org/wiki/Sentinel_value)
+to indicate that processing is done and the coroutine consuming items from the
+queue should quit.  We then queue up that consumer coroutine & run it.
+
+Note if you put that `END_OF_QUEUE` before the `queue_coro` then it goes forever.  Remember that
 the event loop is single threaded.
 
-We can expand this to a basic producer/consumer example:
+We can expand this to a basic
+[producer/consumer](https://en.wikipedia.org/wiki/Producer%E2%80%93consumer_problem) example:
 
 ```python
 async def producer(queue):
@@ -73,6 +270,7 @@ async def producer(queue):
         else:
             msg = f"Emitting {emit_me}"
             print(msg)
+            # simulate some IO time
             await asyncio.sleep(random.uniform(0, 0.5))
             await queue.put(msg)
 
@@ -86,6 +284,7 @@ async def consumer(queue):
             print(f"This is the end my friend....")
             break
         print(f"Got message: {message}")
+        # simulate some IO time
         await asyncio.sleep(random.uniform(0, 1.0))
 
 
@@ -145,12 +344,8 @@ Emitting 36
 Got message: Emitting 18
 Emitting 20
 Got message: Emitting 31
-Emitting 37
-Emitting 39
 Emitting 12
-Emitting 27
 Got message: Emitting 5
-Emitting 10
 At the end
 Got message: Emitting 39
 Got message: Emitting 29
@@ -162,11 +357,7 @@ Got message: Emitting 31
 Got message: Emitting 1
 Got message: Emitting 36
 Got message: Emitting 20
-Got message: Emitting 37
-Got message: Emitting 39
 Got message: Emitting 12
-Got message: Emitting 27
-Got message: Emitting 10
 This is the end my friend....
 ```
 
@@ -208,8 +399,9 @@ returning control back to the event loop, which then schedules the next task and
 passes control to it.
 
 
+## Testing Antipatterns
 
-Testing Antipatterns
+Another significant challenge with `asyncio` is around testing.
 
 Don't use `get_event_loop` as then you can introduce dependencies between tests (ex: one test
 closes the loop, then another tries to run something on it and boom, but dependent on order)
