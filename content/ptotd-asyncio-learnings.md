@@ -7,10 +7,11 @@ cover: static/imgs/default_page_imagev2.jpg
 summary: Learning asyncio
 
 Recently I've been digging into Python's `asyncio` library which was introduced
-as part of Python 3.4, and iterated upon in each release since.  My reasons are
-work-related, but I thought it'd be interesting/insightful to share things I've
-learned here, partly to share with the world (as the docs for `asyncio` are
-rather...terse) as well as reinforce what I've managed to figure out.
+as part of Python 3.4, and iterated upon in each release since.  My reasons for
+learning about it are work-related, but I thought it'd be interesting/insightful
+to share things I've learned here, partly to share with the world (as the docs
+for `asyncio` are rather...terse) as well as reinforce what I've managed to
+figure out.
 
 This is likely going to be long, as there's a lot to learn & know about
 `asyncio`.
@@ -207,7 +208,73 @@ task/coroutine/whatever until it's done and returns control, and the second is
 `run_forever` which runs until something calls `stop()` on the event loop.  An
 example of `run_forever`:
 
-* FIXME: talk about run_forever as an alternative
+```python
+async def start():
+    while True:
+        print("in start")
+        await asyncio.sleep(1)
+
+
+def main():
+    loop = asyncio.get_event_loop()
+
+    loop.create_task(start())
+    loop.run_forever()
+```
+
+Note that this truly does run forever.  Any call to `run_forever()` will cause
+the current thread to yield control to the event loop, and that event loop will
+continue to keep control until something executes a `.stop()` on the event loop.
+
+`run_forever()` seems to be a tricky construct to get right.  Googling around I
+had a lot of difficulty finding any examples of `run_forever()` that seemed to
+show how to (in a single threaded application) use it.  The common approach I
+saw was to do the `run_forever()` in a separate thread:
+
+```python
+import time
+import asyncio
+from threading import Thread
+
+
+async def start():
+    while True:
+        print("in start")
+        await asyncio.sleep(1)
+
+
+def run_it_forever(loop):
+    loop.run_forever()
+
+
+def main():
+    loop = asyncio.get_event_loop()
+
+    loop.create_task(start())
+    thread = Thread(target=run_it_forever, args=(loop,))
+    thread.start()
+
+    time.sleep(5)
+    loop.stop()
+```
+
+This will run the `start()` coroutine in an event loop which is running
+in a subthread, and after 5 seconds the main thread will stop the loop,
+and then exit.
+
+One thing to note here: suddenly now we've given up one of the primary
+benefits of `asyncio`.  This is no longer a single threaded, easy to reason
+about program, but now with multiple threads, suddenly we've introduced
+all the complexity of multithreaded programming just to get our event loop
+running indefinitely.
+
+There's a lot of notes in the docs about how you have to be careful about
+mixing `asyncio` and multiple threads.  I'll point you at the (not so great
+but all we have) docs:
+
+* <https://docs.python.org/3/library/asyncio-dev.html#concurrency-and-multithreading>
+* <https://docs.python.org/3/library/asyncio-subprocess.html#asyncio-subprocess-threads>
+* <https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.AbstractEventLoop.call_soon_threadsafe>
 
 Again, this is some of the pain of `asyncio`, knowing what to use where.
 
@@ -448,9 +515,9 @@ can cause subsequent tests to fail if they also use `get_event_loop()`.
 For example:
 
 ```python
-def thing_im_testing(somearg):
+def thing_im_testing(some_argument):
     loop = get_event_loop()
-    result = loop.run_until_complete(some_coroutine(somearg))
+    result = loop.run_until_complete(some_coroutine(some_argument))
     return result
 
 def test_the_thing():
@@ -474,4 +541,37 @@ Best practice: use a fixture or setup/teardown to create a fresh event loop with
 a call to `new_event_loop()` *per test* to ensure tests do their async stuff in
 isolation.
 
-* FIXME: Armind's post on how complex it is
+## It Is a Complex Beast
+
+There's a now rather famous post by Armin Ronacher (the guy who created Flask,
+Jinja, and so many other seminal Python projects) talking about the complexities
+of `asyncio`.  It's an extremely well-written and sobering post from someone who's
+been in at the core of the Python community for a long time now.  Give it a read
+at: <http://lucumr.pocoo.org/2016/10/30/i-dont-understand-asyncio/>
+
+It's worth noting that that post was written pre-Python 3.6, but after Python 3.5
+(when `async`/`await` were introduced).
+
+Thus far for me I'd echo a similar sentiment about `asyncio`, for trivial toy
+examples it makes sense.  For example, if I have a function that needs to hit 3
+separate REST API endpoints, it's really easy to use `asyncio` to make those
+calls into coroutines, and execute them concurrently with a
+`run_until_complete()` saving some time and avoiding the overhead of
+threads/processes. Having said that, once you get past the little toy examples,
+figuring out all the subtle differences in the various methods across
+`AbstractEventLoop`s, the `asyncio` module, `Future`s, `Task`s, etc, it gets
+really heavy really fast from a cognitive load point of view.
+
+This is already one of my longest posts, and I barely scratched the surface, I
+didn't talk at all (or even start looking into)
+[protocols or transports](https://docs.python.org/3/library/asyncio-protocol.html),
+or [streams](https://docs.python.org/3/library/asyncio-stream.html).  I also didn't
+get into how the async aspect of the library tends to "leak" all throughout your
+code, which (going back to the testing issue) can be a real impediment to forward
+progress.
+
+Like Armin said, "It's hard to comprehend how it works in all details. When you can
+pass a generator, when it has to be a real coroutine, what futures are, what tasks
+are, how the loop works and that did not even come to the actual IO part."  There's
+real promise with `asyncio`, but the complexity cost of using it currently is
+extremely high.
