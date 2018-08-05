@@ -1,6 +1,6 @@
 Title: Asyncio, You are a complex beast...
-Date: 2018-08-05 12:54
-Modified: 2018-08-05 12:54
+Date: 2018-08-05 10:00
+Modified: 2018-08-05 10:30
 Category: Posts
 tags: asyncio,python,ptotd
 cover: static/imgs/default_page_imagev2.jpg
@@ -543,11 +543,13 @@ isolation.
 
 ## It Is a Complex Beast
 
-There's a now rather famous post by Armin Ronacher (the guy who created Flask,
-Jinja, and so many other seminal Python projects) talking about the complexities
-of `asyncio`.  It's an extremely well-written and sobering post from someone who's
-been in at the core of the Python community for a long time now.  Give it a read
-at: <http://lucumr.pocoo.org/2016/10/30/i-dont-understand-asyncio/>
+There's a now rather famous post by [Armin
+Ronacher](http://lucumr.pocoo.org/about/) (the guy who created
+[Flask](http://flask.pocoo.org/), [Jinja](http://jinja.pocoo.org/), and so many
+other seminal Python projects) talking about the complexities of `asyncio`.
+It's an extremely well-written and sobering post from someone who's been in at
+the core of the Python community for a long time now.  Give it a read at:
+<http://lucumr.pocoo.org/2016/10/30/i-dont-understand-asyncio/>
 
 It's worth noting that that post was written pre-Python 3.6, but after Python 3.5
 (when `async`/`await` were introduced).
