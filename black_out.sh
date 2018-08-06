@@ -20,4 +20,5 @@ else
     # git push https://$1@github.com/pzelnip/www.codependentcodr.com $2
     echo "Blackened changes, aborting build"
     exit 1
+
 fi
