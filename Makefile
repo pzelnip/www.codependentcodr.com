@@ -94,7 +94,7 @@ safety:
 bandit:
 	docker run -it --rm $(SITE_NAME):latest bandit . -r
 
-blackenit:
+blackenit: dockerbuild
 	./black_out.sh
 
 test: blackenit lint_the_things safety bandit
