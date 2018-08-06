@@ -12,7 +12,7 @@ else
     echo "Dirty directory"
     git branch
     git commit -am "BLACK-123 Automated Black out"
-    git push https://$1@github.com/pzelnip/www.codependentcodr.com $2
+    echo "git push https://$1@github.com/pzelnip/www.codependentcodr.com $2"
     echo "Blackened changes, aborting build"
     exit 1
 fi
