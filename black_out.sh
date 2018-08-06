@@ -9,5 +9,5 @@ if [ -z "$(git status --porcelain)" ]; then
 else
     echo "Dirty directory"
     git commit -am "BLACK-123 Automated Black out"
-    # git push origin HEAD
+    git push origin HEAD
 fi
