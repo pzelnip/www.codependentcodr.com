@@ -94,7 +94,10 @@ safety:
 bandit:
 	docker run -it --rm $(SITE_NAME):latest bandit . -r
 
-test: lint_the_things safety bandit
+blackenit:
+	docker run -it --rm -v $(shell pwd):/build $(SITE_NAME):latest black .
+
+test: black lint_the_things safety bandit
 
 deploy: dockerbuild s3_upload tag dockerpush slackpost
 
