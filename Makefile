@@ -95,7 +95,7 @@ bandit:
 	docker run -it --rm $(SITE_NAME):latest bandit . -r
 
 blackenit:
-	docker run -it --rm -v $(shell pwd):/build $(SITE_NAME):latest black .
+	./black_out.sh
 
 test: blackenit lint_the_things safety bandit
 

@@ -2,7 +2,7 @@
 
 echo "Blackening code...."
 
-make blackenit
+docker run -it --rm -v $(shell pwd):/build codependentcodr:latest black .
 
 if [ -z "$(git status --porcelain)" ]; then
     exit 0
