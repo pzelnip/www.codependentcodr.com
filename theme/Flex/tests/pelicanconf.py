@@ -4,32 +4,32 @@
 from __future__ import unicode_literals
 
 # Optional 'neighbors' plugin adds previous/next post buttons to articles.
-PLUGIN_PATHS = ['../plugins']
-PLUGINS = ['i18n_subsites', 'neighbors']
+PLUGIN_PATHS = ["../plugins"]
+PLUGINS = ["i18n_subsites", "neighbors"]
 
-JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n',
-                                    'jinja2.ext.autoescape',
-                                    'jinja2.ext.with_']}
+JINJA_ENVIRONMENT = {
+    "extensions": ["jinja2.ext.i18n", "jinja2.ext.autoescape", "jinja2.ext.with_"]
+}
 
-AUTHOR = u'Test'
-SITEURL = u'http://localhost:8000'
-SITENAME = u"Test Blog"
+AUTHOR = "Test"
+SITEURL = "http://localhost:8000"
+SITENAME = "Test Blog"
 SITETITLE = AUTHOR
-SITESUBTITLE = u'Test'
-SITEDESCRIPTION = u'%s\'s Thoughts and Writings' % AUTHOR
-SITELOGO = u'https://www.example.com/img/profile.png'
-FAVICON = SITEURL + '/images/favicon.ico'
-BROWSER_COLOR = '#333'
+SITESUBTITLE = "Test"
+SITEDESCRIPTION = "%s's Thoughts and Writings" % AUTHOR
+SITELOGO = "https://www.example.com/img/profile.png"
+FAVICON = SITEURL + "/images/favicon.ico"
+BROWSER_COLOR = "#333"
 
-ROBOTS = u'index, follow'
+ROBOTS = "index, follow"
 
-THEME = u'../'
-PATH = u'content'
-TIMEZONE = u'America/Sao_Paulo'
-DEFAULT_LANG = u'en'
-OG_LOCALE = u'en_US'
+THEME = "../"
+PATH = "content"
+TIMEZONE = "America/Sao_Paulo"
+DEFAULT_LANG = "en"
+OG_LOCALE = "en_US"
 
-FEED_ALL_ATOM = 'feeds/all.atom.xml'
+FEED_ALL_ATOM = "feeds/all.atom.xml"
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
@@ -38,35 +38,35 @@ AUTHOR_FEED_RSS = None
 USE_FOLDER_AS_CATEGORY = True
 MAIN_MENU = True
 
-LINKS = (('Portfolio', '//alexandrevicenzi.com'),)
+LINKS = (("Portfolio", "//alexandrevicenzi.com"),)
 
-SOCIAL = (('linkedin', 'https://br.linkedin.com/in/test'),
-          ('github', 'https://github.com/test'),
-          ('google', 'https://google.com/+Test'),
-          ('rss', '//www.example.com/feeds/all.atom.xml'))
+SOCIAL = (
+    ("linkedin", "https://br.linkedin.com/in/test"),
+    ("github", "https://github.com/test"),
+    ("google", "https://google.com/+Test"),
+    ("rss", "//www.example.com/feeds/all.atom.xml"),
+)
 
-MENUITEMS = (('Archives', '/archives.html'),
-             ('Categories', '/categories.html'),
-             ('Tags', '/tags.html'),)
+MENUITEMS = (
+    ("Archives", "/archives.html"),
+    ("Categories", "/categories.html"),
+    ("Tags", "/tags.html"),
+)
 
 CC_LICENSE = {
-    'name': 'Creative Commons Attribution-ShareAlike',
-    'version': '4.0',
-    'slug': 'by-sa'
+    "name": "Creative Commons Attribution-ShareAlike",
+    "version": "4.0",
+    "slug": "by-sa",
 }
 
 COPYRIGHT_YEAR = 2016
 
-STATUSCAKE = {
-    'trackid': 'test-test',
-    'days': 7,
-    'rumid': 1234,
-}
+STATUSCAKE = {"trackid": "test-test", "days": 7, "rumid": 1234}
 
 RELATIVE_URLS = False
 
-FEED_ALL_ATOM = 'feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+FEED_ALL_ATOM = "feeds/all.atom.xml"
+CATEGORY_FEED_ATOM = "feeds/%s.atom.xml"
 
 DELETE_OUTPUT_DIRECTORY = False
 
@@ -75,6 +75,6 @@ SUMMARY_MAX_LENGTH = 150
 
 DISQUS_SITENAME = "test-test"
 GOOGLE_ANALYTICS = "UA-XXXXXX-X"
-ADD_THIS_ID = 'ra-XX3242XX'
+ADD_THIS_ID = "ra-XX3242XX"
 
 USE_LESS = True

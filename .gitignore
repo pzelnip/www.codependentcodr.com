@@ -109,3 +109,4 @@ pelican.pid
 srv.pid
 .vscode/settings.json
 site_look_monitor/sitecapt/
+test.sh
