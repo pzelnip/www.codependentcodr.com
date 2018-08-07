@@ -53,7 +53,7 @@ But, some resources I found on parallelizing Jenkins builds:
 * https://stackoverflow.com/questions/36872657/running-stages-in-parallel-with-jenkins-workflow-pipeline
 * https://www.google.ca/search?q=jenkinsfile+parallel+stages+scripted
 
-## What About You?
+## What About You
 
 Did you try the challenge? How'd it go? Would love to hear any feedback,
 comments, or observations. And if you have ideas for future challenges, please
