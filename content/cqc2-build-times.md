@@ -48,10 +48,10 @@ stream, and Pylint in a parallel stream.  Unfortunately I wasn't able to get it 
 
 But, some resources I found on parallelizing Jenkins builds:
 
-* https://jenkins.io/doc/book/pipeline/jenkinsfile/#parallel-execution
-* https://stackoverflow.com/questions/46834998/scripted-jenkinsfile-parallel-stage
-* https://stackoverflow.com/questions/36872657/running-stages-in-parallel-with-jenkins-workflow-pipeline
-* https://www.google.ca/search?q=jenkinsfile+parallel+stages+scripted
+* <https://jenkins.io/doc/book/pipeline/jenkinsfile/#parallel-execution>
+* <https://stackoverflow.com/questions/46834998/scripted-jenkinsfile-parallel-stage>
+* <https://stackoverflow.com/questions/36872657/running-stages-in-parallel-with-jenkins-workflow-pipeline>
+* <https://www.google.ca/search?q=jenkinsfile+parallel+stages+scripted>
 
 ## What About You
 
