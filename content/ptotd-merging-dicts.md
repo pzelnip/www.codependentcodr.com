@@ -2,7 +2,7 @@ Title: Python Tip of the Day - Merging Dicts
 Date: 2018-08-03 18:35
 Modified: 2018-08-03 18:35
 Category: Posts
-tags: python,ptotd
+tags: python,pythonTipOfTheDay
 cover: static/imgs/python-logo-master-v3-TM.png
 summary: Python Tip of the Day - Merging Two Dicts
 
