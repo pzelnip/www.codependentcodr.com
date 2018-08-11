@@ -136,6 +136,18 @@
         {% for name, link in SOCIAL %}
         <li><a class="sc-{{ name }}" href="{{ link }}" target="_blank"><i class="fa fa-{{ name }}"></i></a></li>
         {% endfor %}
+
+        <!-- gross ugly hack to get dev.to link in place  Once it's in FA this can go.  See:
+        https://github.com/FortAwesome/Font-Awesome/issues/12589
+        and
+        https://app.clubhouse.io/codependentcodr/story/255/add-dev-to-profile-link
+        -->
+        <li>
+                <a href="https://dev.to/pzelnip">
+                    <img style="position: relative; top: 12px; background-color: white; width:40px;"
+                    src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Adam Parkin's DEV Profile" />
+                  </a>
+        </li>
       </ul>
     </div>
 
