@@ -3,7 +3,7 @@ Date: 2018-08-05 10:00
 Modified: 2018-08-05 10:30
 Category: Posts
 tags: asyncio,python,ptotd
-cover: static/imgs/default_page_imagev2.jpg
+cover: static/imgs/python-logo-master-v3-TM.png
 summary: Learning asyncio
 
 Recently I've been digging into Python's `asyncio` library which was introduced
