@@ -2,7 +2,7 @@ Title: Asyncio part 2 - Now More Abstract
 Date: 2018-08-08 11:56
 Modified: 2018-08-08 11:56
 Category: Posts
-tags: python,ptotd,asyncio,coroutine,abstract,abc
+tags: python,pythonTipOfTheDay,asyncio,coroutine,abstract,abc
 cover: static/imgs/python-logo-master-v3-TM.png
 summary: What happens when you mix coroutines with Abstract Base Classes?
 

@@ -2,7 +2,7 @@ Title: Asyncio, You are a complex beast...
 Date: 2018-08-05 10:00
 Modified: 2018-08-05 10:30
 Category: Posts
-tags: asyncio,python,ptotd
+tags: asyncio,python,pythonTipOfTheDay
 cover: static/imgs/python-logo-master-v3-TM.png
 summary: Learning asyncio
 
