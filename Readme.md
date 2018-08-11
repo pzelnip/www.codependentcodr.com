@@ -81,6 +81,12 @@ the tools to it.  This means if you want to do the same all you need is Docker, 
 
 The `clean` target of the `Makefile` also removes any previously built `codependentcodr` images.
 
+Originally everything was specified in the Dockerfile in this repo, however I found that led to long build
+times.  I ended up refactoring the Dockerfile to have a Dockerfile in a separate repo (see
+<https://github.com/pzelnip/codependentcodrbase>) which contains some basic 3rd party dependencies (npm, git,
+etc) and is built nightly.  This repo then uses the latest version of that Docker image as its base image.
+This helps with build times.
+
 ### Safety
 
 I also have a Makefile target to run the [Safety](https://github.com/pyupio/safety) tool for checking any
