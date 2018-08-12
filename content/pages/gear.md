@@ -20,6 +20,8 @@ I have a room set up in my house that I work out of.
 
 ### Desk
 
+![My Desk]({filename}/static/imgs/mydesk.jpg)
+
 I currently use the "broken-ass giant desk that was a hand-me-down from someone
 in my building when I was a teenager" desk. It weighs a metric ton, is ugly, the
 keyboard tray broke years ago, but works. 😄
