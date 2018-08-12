@@ -88,17 +88,13 @@ cfinvalidate:
 s3_upload:
 	docker run -e AWS_ACCESS_KEY_ID=$(AWS_ACCESS_KEY_ID) -e AWS_SECRET_ACCESS_KEY=$(AWS_SECRET_ACCESS_KEY) --rm -it -w /build $(SITE_NAME):latest ./s3_push.sh
 
-safety:
-	echo "move safety to codependentcodrbase, see https://app.clubhouse.io/codependentcodr/story/265/move-safety-check-to-codependentcodrbase"
-	# docker run -it --rm $(SITE_NAME):latest safety check -r requirements.txt --full-report
-
 bandit:
 	docker run -it --rm $(SITE_NAME):latest bandit . -r
 
 blackenit: dockerbuild
 	./black_out.sh ${GH_TOKEN} ${TRAVIS_BRANCH}
 
-test: blackenit lint_the_things safety bandit
+test: blackenit lint_the_things bandit
 
 deploy: dockerbuild s3_upload tag dockerpush slackpost
 
