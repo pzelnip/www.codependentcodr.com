@@ -89,7 +89,8 @@ s3_upload:
 	docker run -e AWS_ACCESS_KEY_ID=$(AWS_ACCESS_KEY_ID) -e AWS_SECRET_ACCESS_KEY=$(AWS_SECRET_ACCESS_KEY) --rm -it -w /build $(SITE_NAME):latest ./s3_push.sh
 
 safety:
-	docker run -it --rm $(SITE_NAME):latest safety check -r requirements.txt --full-report
+	echo "move safety to codependentcodrbase, see https://app.clubhouse.io/codependentcodr/story/265/move-safety-check-to-codependentcodrbase"
+	# docker run -it --rm $(SITE_NAME):latest safety check -r requirements.txt --full-report
 
 bandit:
 	docker run -it --rm $(SITE_NAME):latest bandit . -r
