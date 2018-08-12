@@ -93,6 +93,9 @@ I also have a Makefile target to run the [Safety](https://github.com/pyupio/safe
 Python dependencies I have for security vulnerabilities.  This is also enforced by my CI pipeline (no merges
 if vulnerability found).
 
+For the record, this actually now happens on the
+[codependentcodrbase image](https://github.com/pzelnip/codependentcodrbase) rather than in this repo.
+
 ### AWS CLI
 
 Instead of `s3cmd` (which is what the generated `Makefile` uses), I changed to use the
