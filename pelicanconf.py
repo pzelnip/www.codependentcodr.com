@@ -69,7 +69,7 @@ MENUITEMS = (
     ("Posts", "/category/posts.html"),
     ("Tags", "/tags.html"),
     ("About", "/pages/about.html"),
-    ("Talks", "/pages/talks.html"),
+    ("Talks", "/pages/talks-ive-given.html"),
 )
 
 THEME = "theme/Flex"

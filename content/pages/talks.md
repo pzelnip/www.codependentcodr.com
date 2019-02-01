@@ -1,8 +1,6 @@
 Title: Talks I've Given
 Date: 2012-03-30 12:16
 
-# Talks I've Given
-
 ## 2019
 
 ### Building A Basic Aws Lambda Function Without Frameworks with Python
