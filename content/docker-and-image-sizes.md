@@ -58,7 +58,7 @@ RUN apk del python3-dev gcc build-base
 Sweet, and this resulted in an image size of *381MB*, a savings of *NEGATIVE 2MB*.
 Wait.... WAT?
 
-![<INSERT ALT TEXT HERE>]({filename}/static/imgs/wat.jpg)
+![WAT]({filename}/static/imgs/wat.jpg)
 
 So I *removed* some stuff and ended up with an image that's a few MB's *larger*?
 How does that work?
