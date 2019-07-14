@@ -13,6 +13,10 @@ they use for work
 I thought it'd be funny to throw together something similar for myself, since
 I'm very much a thrifty "use bare bones super cheap old junk" guy. 😄
 
+July 2019 Update - This article was originally written in Aug 2018, I've gotten
+some new toys since then, so I've updated as appropriate.  Still all very much
+tongue-in-cheek.
+
 ## My Office Setup
 
 When I work at home (either on CDC or working from home for [my day job](https://www.bambora.com)),
@@ -46,16 +50,20 @@ For monitors I have the following:
 
 * [LG Flatron
   W2243T-PF](https://www.lg.com/ca_en/desktop-monitors/lg-W2243T-PF-lcd-monitor)
-* [Acer AL1706](https://www.pcliquidations.com/p7926-acer-al1706-17-lcd)
-* [Dell I don't know what model & I'm not going to unhook it to get at the
-  back](http://www.dell.com/learn/ca/en/cacorp1/campaigns/search-monitors-ca?c=ca&l=en&s=Corp&cid=283106&st=dell%20monitors&pdv=c&lid=5379490&VEN1=sng3LCW6h,287179067506,901yh87629,c&VEN2=e,dell%20monitors&dgc=st&dgseg=dhs&acd=123088137920560&VEN3=110304527797198549)
+* [Samsung BX2335 Series Business Monitor](https://www.samsung.com/us/business/support/owners/product/bx2335-series-bx2335/)
+* [LG W2442PA-BF](https://www.lg.com/ca_en/desktop-monitors/lg-W2442PA-BF-lcd-monitor)
 
-All three were free from organizations that were trying to get rid of old
-hardware.  The LG is effectively my "primary" monitor, and is used for both work
+The W2243T was a leftover from an organization trying to get rid of old
+hardware.  It's effectively my "primary" monitor, and is used for both work
 and for gaming.  The other two are more for secondary screen real estate.
-Typically on the left screen (the Acer) I have Slack open, on the right screen
-(the Dell) I have a browser or my password manager open, and I use the LG for
-writing code on.  This very much varies depending on what I'm doing though.
+
+The silly bit is that the LG W2442 is definitely a superior monitor, only reason
+it's not my primary is I've been too lazy to rewire the Xbox from the W2243T. 😕
+
+Typically on the left screen (the Samsung) I have Slack open, on the right
+screen (the W2442PA) I have a browser or my password manager open, and I use the
+middle LG for writing code on.  This very much varies depending on what I'm
+doing though.
 
 It's worth noting that I use [Spectacle](https://www.spectacleapp.com/) for
 hotkeys that allow me to very quickly move apps around between monitors (this is
@@ -131,10 +139,13 @@ which is nice as I can control it from my Macbook, the Hue app on my phone, or t
 room ("Why would you want to turn the light in your office on from your living room?" is a question that
 my wife asked as well 😜 ).
 
-As mentioned I have an [Echo Dot](https://www.amazon.ca/Echo-Dot-2nd-Generation-Black/dp/B07456NHZ7) for
-the sweet, sweet Alexa assistance.  I don't yet have one in my office, but am very seriously considering
-getting one (debating between a dot and a [Echo](https://www.amazon.ca/dp/B0749ZSPN7/ref=ods_mccc_Rdr)
-as I currently don't have any speakers in my office).
+As mentioned I have an [Echo
+Dot](https://www.amazon.ca/Echo-Dot-2nd-Generation-Black/dp/B07456NHZ7) for the
+sweet, sweet Alexa assistance in our house's kitchen/family area.  I don't yet
+have one in my office, but instead have a [Google Home
+Mini](https://store.google.com/ca/product/google_home_mini) that I got for free
+with a [Spotify](https://www.spotify.com) promo that sits on my desk.  So far I
+very much like the Google Assistant better than Alexa, though both are handy.
 
 ### Gaming
 
@@ -145,8 +156,8 @@ that sit on my desk.
 Technically I have 3 Xbox 360's (two slim's & 1 original) in my house and two Xbox One's (the S and
 and original).
 
-Tangentially related: I mentioned I don't have any speakers in my office yet.  As such, when gaming
-I just use headphones plugged into the Xbox controller.  Which headphones?  Well, there's two pairs:
+Tangentially related: When gaming I often just use headphones plugged into the
+Xbox controller.  Which headphones?  Well, there's two pairs:
 
 * [JVC Hamr60X XX Series Headphones](https://www.amazon.ca/JVC-Hamr60X-XX-Series-Headphones/dp/B00VV6WRTY)
 * [Sennheiser HD 598 Cs](https://www.amazon.ca/gp/product/B01JP436TS)
@@ -156,6 +167,10 @@ convenience (I often leave the Sennhiser's in other rooms in my house so the JVC
 too lazy to get up out of my office and look for the Sennheisers).  The 598's are *great* headphones (not
 sure they're worth the price they're currently going for, I got mine for half-price during a Black
 Friday sale).
+
+I do also have a cheap pair of Dell Speakers (A425, 2.1) which I bought for $10 off a dude on
+either <https://varagesale.com> or <https://usedvictoria.com>.  Honestly they're surprisingly
+good.  Nothing that will knock your socks off, but for $10 I definitely cannot complain.
 
 ### Networking
 
@@ -184,6 +199,28 @@ far (TBF: my phone needs are very modest).
 I have a couple tablets: a [first generation Nexus 7](https://en.wikipedia.org/wiki/Nexus_7_(2012)) which is
 capable of little more than being an e-book reader, and a 2nd generation [iPad](https://www.apple.com/ca/ipad/).
 The iPad is largely used as a portable Netflix player when I travel (which isn't very often).
+
+### Fitness Tracker
+
+I run quite a bit, and started off on my fitness journey wearing a [Xiaomi Mi
+Band](https://www.mi.com/global/miband/), which I wore for a couple of months.
+The Mi Band is super good value, but it is extremely bare-bones.  It's a step
+counter and pretty much nothing else.
+
+In August of 2017 I upgraded to a [Fitbit Charge
+2](https://www.theverge.com/2016/9/28/13078652/fitbit-charge-2-fitness-tracker-review)
+which I used extensively for almost 2 years.  The gamification aspects of the
+Fitbit platform really pulled me in.  Eventually though, the horrible battery
+life, extremely weak feature set, and lack of GPS wasn't meeting my needs, so in
+July 2019 I upgraded again.
+
+This time I went with the [Garmin Forerunner
+645](https://buy.garmin.com/en-CA/CA/p/591311).  Super awesome device, I
+seriously recommend one if you're a serious runner.  If all you want is
+something to count steps it's overkill, but if you're fitness orientated you'll
+find that the Forerunner is pretty stellar.  I managed to get one for 25% off
+because of a promo through my work's health plan, which made getting one a
+no-brainer.
 
 ## Software
 
