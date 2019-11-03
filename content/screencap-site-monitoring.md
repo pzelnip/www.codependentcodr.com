@@ -116,7 +116,7 @@ Some false leads that didn't quite work (
 It's a pretty simple tool -- give it two images, and it spits out a similarity score.  For example:
 
 ```shell
-$ image-diffr test_cropped.png test2_cropped.png
+image-diffr test_cropped.png test2_cropped.png
 
 ✓ Image 1 scanned OK:
   --> Source: /home/vagrant/test_cropped.png
@@ -134,7 +134,7 @@ are the same (0 being identical, and 1 being completely different).  Cool, let's
 screen caps of the homepage:
 
 ```shell
-$ vagrant@ubuntu-xenial:~$ image-diffr test1.png test2.png
+vagrant@ubuntu-xenial:~$ image-diffr test1.png test2.png
 
 ✓ Image 1 scanned OK:
   --> Source: /home/vagrant/test1.png
