@@ -1,11 +1,14 @@
 Title: Python manage.py pytest or Making Django Use Pytest
 Date: 2020-04-18 18:51
-Modified: 2020-04-18 18:51
+Modified: 2020-04-19 16:54
 Category: Posts
 tags: python,testing,pytest,unittest,django
 cover: static/imgs/default_page_imagev2.jpg
 summary: How to make Django's manage.py use Pytest instead of the default test runner
 status: published
+
+Edit: For those who prefer visual content, I've recorded this as a video on Youtube
+which you can find at: <https://youtu.be/toKW2YLnGFQ>
 
 Ok, so I've had to convert some Django projects to use Pytest as the test runner
 rather than the built in one that Django uses.  This is actually pretty
@@ -14,11 +17,13 @@ video](https://www.youtube.com/watch?v=7it7JFPInX0) showing the process.
 
 That's all fine and good, but one of the complaints I've heard from
 Django-ista's (is that a term?  Djangoites?  Django Devotees?) is that it means
-now the good old normal `python manage.py test` no longer works.
+now the good old normal `python manage.py test` no longer works (well, I suppose
+technically it still works, but doesn't use Pytest).
 
 So challenge accepted, as one can certainly create [custom manage.py
 commands](https://docs.djangoproject.com/en/2.2/howto/custom-management-commands/)
-in Django.
+in Django, so lets create a custom management command to run our unit tests with
+Pytest instead of the default built-in runner.
 
 ## Python Manage.py pytest
 
@@ -60,8 +65,8 @@ though, I essentially want the interface to Pytest, which would be non-trivial
 to recreate by hand (there's a lot of options on that Pytest executable).
 
 But, with argparse, there is a way to essentially say "accept any arguments",
-and that's the [`argparse.REMAINDER` value for the `nargs`
-parameter](https://docs.python.org/3/library/argparse.html#nargs).
+and that's the `argparse.REMAINDER` value for the `nargs`
+parameter ([docs](https://docs.python.org/3/library/argparse.html#nargs)).
 
 > `argparse.REMAINDER`. All the remaining command-line arguments are gathered
 > into a list. This is commonly useful for command line utilities that dispatch
@@ -114,6 +119,7 @@ Yup, that's it, 1 line of code.  Now doing a `python manage.py test` runs Pytest
 as the test runner.
 
 Did this all on a test project, source is up on Github at:
-<https://github.com/pzelnip/djangotest>  Or if you just want to see the
-management commands, they're at:
+<https://github.com/pzelnip/djangotest>
+
+Or if you just want to see the management commands, they're at:
 <https://github.com/pzelnip/djangotest/tree/master/djangotest/management/commands>
