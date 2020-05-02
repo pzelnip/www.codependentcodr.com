@@ -40,6 +40,7 @@ devserver:
 ifdef PORT
 	$(BASEDIR)/develop_server.sh restart $(PORT)
 else
+	# defaults to port 8000
 	$(BASEDIR)/develop_server.sh restart
 endif
 
