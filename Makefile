@@ -50,7 +50,7 @@ stopserver:
 
 cleanbranches:
 	git remote | xargs -n 1 git fetch -v --prune $1
-	git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
+	git branch --merged | egrep -v "(^\*|mainline|dev)" | xargs git branch -d
 
 tag:
 	git tag "$(DEPLOY_TIME)_$(SHA)"

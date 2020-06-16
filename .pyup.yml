@@ -2,7 +2,7 @@ update: all
 
 schedule: "every day"
 
-branch: master
+branch: mainline
 
 label_prs: pyup
 

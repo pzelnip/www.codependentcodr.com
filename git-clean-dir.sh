@@ -1,8 +1,8 @@
 #!/bin/sh
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
-if [[ "$BRANCH" != "master" ]]; then
-    echo "Not on master, currently on $BRANCH"
+if [[ "$BRANCH" != "mainline" ]]; then
+    echo "Not on mainline, currently on $BRANCH"
     exit 1
 fi
 
