@@ -1,6 +1,6 @@
 # CodependentCodr - The Source
 
-[![Build Status](https://travis-ci.com/pzelnip/www.codependentcodr.com.svg?branch=master)](https://travis-ci.com/pzelnip/www.codependentcodr.com)
+[![Build Status](https://travis-ci.com/pzelnip/www.codependentcodr.com.svg?branch=mainline)](https://travis-ci.com/pzelnip/www.codependentcodr.com)
 [![Updates](https://pyup.io/repos/github/pzelnip/www.codependentcodr.com/shield.svg)](https://pyup.io/repos/github/pzelnip/www.codependentcodr.com/)
 [![Python 3](https://pyup.io/repos/github/pzelnip/www.codependentcodr.com/python-3-shield.svg)](https://pyup.io/repos/github/pzelnip/www.codependentcodr.com/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
@@ -40,7 +40,7 @@ handful of tasks for things like starting the dev server, uploading to S3, etc.
 
 ### Deployments And Automation
 
-Currently I use [Travis CI](https://travis-ci.org/) for my CI/CD needs.  Merges to the `master` branch are
+Currently I use [Travis CI](https://travis-ci.org/) for my CI/CD needs.  Merges to the `mainline` branch are
 automatically deployed to S3 by Travis.  Pull requests are automatically built with a number of checks
 (mostly linters) and builds are "failed" on non-zero exit codes.
 
@@ -64,7 +64,7 @@ In the Makefile I added targets for running [`markdownlint`](https://github.com/
 [`pylint`](https://www.pylint.org), and ['pydocstyle'](https://github.com/PyCQA/pydocstyle).
 
 This allows me to run linters over the repository before any deployment.  I currently have a zero-tolerance
-policy for linting errors (ie linters must run clean before code can be merged into the `master` branch).
+policy for linting errors (ie linters must run clean before code can be merged into the `mainline` branch).
 
 Config for the markdown linter is in `.markdownlint.json`.  For the most part I just added exceptions that were
 needed so that Pelican's metadata didn't trigger markdownlint warnings.

@@ -10,7 +10,7 @@ breaks a build, even after development has continued past that commit.  So for e
 
 * Commit some code which (unknowing to you) happens to break the build
 * You then (not realizing things have gone sideways) continue on doing commits on stuff you're working on
-* You then are about to push your code up to a remote master, so you finally run all those unit tests and realize you broke the build somewhere, but you don't know which commit introduced the problem
+* You then are about to push your code up to a remote mainline, so you finally run all those unit tests and realize you broke the build somewhere, but you don't know which commit introduced the problem
 
 <!-- markdownlint-enable MD013 -->
 

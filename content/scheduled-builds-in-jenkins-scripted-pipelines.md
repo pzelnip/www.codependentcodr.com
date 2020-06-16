@@ -27,7 +27,7 @@ def triggers = []
 
 if("$BRANCH_NAME" == 'develop') {
     triggers << cron('H/15 * * * *') // every 15 minutes
-} else if("$BRANCH_NAME" == 'master') {
+} else if("$BRANCH_NAME" == 'mainline') {
     triggers << cron('H H(0-2) * * *') // daily between midnight & 2 AM
 } else {
     // no scheduled build
@@ -41,7 +41,7 @@ properties (
 ```
 
 In this we set up two schedules for the project: if the branch is the develop branch, we build it every 15 minutes.  If
-the branch is our master branch, we build it every night between midnight and 2AM. If the branch isn’t develop or master
+the branch is our mainline branch, we build it every night between midnight and 2AM. If the branch isn’t develop or mainline
 then we don’t schedule any automatic builds. Note that the else block is empty (I could have omitted it entirely), which
 means that the triggers for the current branch will be cleared. Side note: this is also how you’d delete a previously
 scheduled build for a branch, just clear the line which initializes the crontab schedule and then next time it’s build
