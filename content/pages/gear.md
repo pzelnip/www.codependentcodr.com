@@ -19,7 +19,7 @@ tongue-in-cheek.
 
 ## My Office Setup
 
-When I work at home (either on CDC or working from home for [my day job](https://www.bambora.com)),
+When I work at home (either on CDC or working from home for my day job),
 I have a room set up in my house that I work out of.
 
 ### Desk
