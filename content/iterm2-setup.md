@@ -26,9 +26,9 @@ documenting this so next time I don't have to figure it out from scratch"). 😄
 ## Keyboard Navigation
 
 So the default keystrokes in iTerm are weird.  I like to be able to press
-`cmd+left arrow` to go to the start of a line and `cmd+right arrow` to go to the
+`⌘+left arrow` to go to the start of a line and `⌘+right arrow` to go to the
 end of the line.  Additionally I like be able to move left/right by word by
-pressing `opt+left arrow`/`opt+right arrow`.  To set these up in iTerm's
+pressing `⌥+left arrow`/`⌥+right arrow`.  To set these up in iTerm's
 preferences go to Profiles -> Keys, and do the following:
 
 * change "Left Option (⌥) Key" to "Esc+"
@@ -42,7 +42,9 @@ preferences go to Profiles -> Keys, and do the following:
 Screenshots showing the settings:
 
 ![Keyboard Option Key Settings]({filename}/static/imgs/keymapping1.png)
+
 ![Keyboard Shortcut dialog for moving by word]({filename}/static/imgs/keymapping.png)
+
 ![Keyboard Shortcut dialog for moving to start/end of line]({filename}/static/imgs/keymapping2.png)
 
 ## Shell Integration
@@ -85,7 +87,7 @@ As I switch to different Python interpreters this value updates.
 
 ### Marks
 
-With shell integration on, you also get marks which the docs define as
+With shell integration on, you also get marks which the docs define as:
 
 > These are saved locations in history. They make it easy to navigate to
 > previous shell prompts or other locations of interest.
@@ -115,12 +117,12 @@ things:
 
 ![My iTerm2 Status Bar]({filename}/static/imgs/statusbar.png)
 
-From a glance this shows me that my current battery is at 72% charged, CPU is at 18%
-22GB of memory free, that it's currently January 31st at 10:59AM, that I'm in the
-`~/temp/sandbox/www.codependentcodr.com/content/static/imgs` directory, that my
-current Git branch is `iterm2setup` (and that there are uncommitted changes), and
-that my current Python version is 3.9.1 (which is probably redundant since that's
-in my badge, but 🤷).
+From a glance this shows me that my current battery is 72% charged, CPU is at
+18%, memory utilization is at 22GB, that it's currently January 31st at 10:59AM,
+that I'm in the `~/temp/sandbox/www.codependentcodr.com/content/static/imgs`
+directory, that my current Git branch is `iterm2setup` (and that there are
+uncommitted changes), and that my current Python version is 3.9.1 (which is
+probably redundant since that's in my badge, but 🤷).
 
 You can configure your status bar by going to Profiles -> Session and clicking
 "Configure Status Bar".  Here's a screenshot showing my settings:
@@ -170,10 +172,10 @@ Previous session's directory".  This means that whenever I open a new tab or
 window it opens up a terminal in the same directory I was previously in, which I
 find matches my workflow the best.
 
-One last thing: I have a global hotkey set up to open/close iTerm2.  This can be set
-under Keys -> Hotkey -> Show/hide all windows with a system-wide hotkey.  The key I
-use is `⌃ + ``, which if you're a long-time gamer you'll recognize is basically the
-key combination for displaying/hiding the
+One last thing: I have a global hotkey set up to open/close iTerm2.  This can be
+set under Keys -> Hotkey -> Show/hide all windows with a system-wide hotkey.
+The key I use is `⌃ + tilde`, which if you're a long-time gamer you'll recognize
+is basically the key combination for displaying/hiding the
 [console in Quake](https://quake.fandom.com/wiki/Console_Commands_(Q1)).
 
 ## And That's It
