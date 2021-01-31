@@ -68,6 +68,7 @@ pylint: dockerbuild
 	docker run --rm -it -w /build $(SITE_NAME):latest pylint *.py
 
 dockerbuild:
+	echo "$$DOCKER_PASSWORD" | docker login -u "$$DOCKER_USERNAME" --password-stdin
 	docker build -t $(SITE_NAME):latest .
 
 dockerrun: dockerbuild
