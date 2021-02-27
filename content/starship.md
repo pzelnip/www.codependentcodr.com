@@ -123,8 +123,9 @@ depending on your current context.  In this you can see:
 
 * I'm in a directory called `dotfiles`
 * I'm currently in a Git repo, but not on any branch instead checked out an
-  arbitrary commit with SHA 931e5c4
-* I don't know what the coffee cup is 🤷
+  arbitrary commit with SHA `931e5c4`
+* The coffee cup has to do with Java, but I don't have a valid JDK installed so
+  it's not showing what version
 * My current Python environment is Python 3.9.2
 * My AWS environment is configured to communicate with the `ca-central-1` region
 
@@ -171,7 +172,7 @@ module, I gave this a try to configure it:
 [directory]
 truncation_length = 100
 truncate_to_repo = false
-style = " yellow"
+style = "yellow"
 format = "[:$path]($style)[$read_only]($read_only_style) "
 ```
 
@@ -179,8 +180,8 @@ Let's explain this a little bit to give a feel:
 
 * `truncation_length` controls how many directories deep you have to be before
   Starship will abbreviate the directory name in your prompt.  I rarely go very
-  deep and TBH when I do I still want to see the full path so I made the number
-  rediculously high so that it never truncated
+  deep and to be honest when I do I still want to see the full path so I made
+  the number rediculously high so that it never truncated
 * `truncate_to_repo` is a special setting that controls if the directory is
   truncated to the root of the Git repo you are currently in.  Again, I don't
   like this (I want to see the full path), so disabled it
@@ -199,7 +200,7 @@ followed by the value of the `$path` variable. Each module has its own set of
 variables that get populated with values that are relevant to that module (in
 this case `$path` ends up being the full path of the current working directory).
 The brackets that follow a text group specify a `style string`.  You might
-wonder "but isn't that what the `style` setting is for?  And yes, but
+wonder "but isn't that what the `style` setting is for?"  And yes, but
 essentially the `style` setting defines the "default" style within a module, and
 style strings within the format can override that.  In this case, `$style`
 corresponds to the `style` setting defined in the configuration for the module
@@ -218,7 +219,7 @@ tweak each module to your liking.
 Ok, that's fine, but Adam how do we control the order of items in the prompt?
 And that's a good question that took me a little while to figure out.  Turns
 out that the prompt as a whole has a `format` setting.  The default is to show
-effectively all modules:
+all modules, this is from the docs:
 
 ```toml
 format = "$all"
@@ -281,16 +282,16 @@ $character"""
 ```
 
 This is what controls the order of items.  Move an item up, and it'll appear
-earlier in the prompt, move down to move it later in the prompt. It also
-provides a global "completely hide" ability for module -- if you remove it from
-the format then it won't be displayed.  Personally I don't like this, as it
-means if you want to change the order of items you have to override the
-*entire* format string.  It'd be nice if there was an "index" value or something
-on each module that could determine ordering, but oh well.
+earlier in the prompt, move down to move it later in the prompt. Personally I
+don't like this, as it means if you want to change the order of items you have
+to override the *entire* format string.  It'd be nice if there was an "index"
+value or something on each module that could determine ordering, but oh well.
 
-Note that I don't think hiding from the format is the same thing as *disabling*
-a module.  Each module has a `disabled` setting which (if true) disables that
-module (so won't get displayed, and I believe not evaluated).
+In any case it also provides a global "completely hide" ability for a module --
+if you remove it from the format then it won't be displayed. Note that I don't
+think hiding from the format is the same thing as *disabling* a module.  Each
+module has a `disabled` setting which (if true) disables that module (so won't
+get displayed, and I believe not evaluated).
 
 Ok, with this I continued on and got most of my old prompt in place:
 
@@ -318,9 +319,6 @@ format = '[\($symbol$branch\)]($style) '
 untracked = ""
 format = '([\[$conflicted$deleted$renamed$modified$staged$behind\]]($style) )'
 modified = '*'
-
-[python]
-format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\))]($style)'
 
 [status]
 disabled = false
@@ -562,7 +560,7 @@ disabled = true
 # time_format = "%a %b %d %Y %l:%M%p (%z)"
 ```
 
-Note current version in case I revise in the future is at:
+Note current version (in case I revise in the future) is at:
 [https://github.com/pzelnip/dotfiles/blob/mainline/.config/starship.toml](https://github.com/pzelnip/dotfiles/blob/mainline/.config/starship.toml))
 
 This gives a prompt like the following:
