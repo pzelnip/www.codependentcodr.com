@@ -2,7 +2,7 @@ Title: Using Starship For Terminal Prompt Goodness
 Date: 2021-02-27 10:39
 Modified: 2021-02-27 10:39
 Category: Posts
-tags: terminal
+tags: terminal,starship
 cover: static/imgs/default_page_imagev2.jpg
 summary: I recently discovered Starship & converted my old prompt to using it.  Lets see what I learned.
 
