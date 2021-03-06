@@ -10,37 +10,44 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
+            },
+            "problemMatcher": []
         },
         {
             "label": "Run Server",
             "type": "shell",
-            "command": "source $(dirname ${config:python.pythonPath})/activate && make devserver"
+            "command": "source $(dirname ${config:python.pythonPath})/activate && make devserver",
+            "problemMatcher": []
         },
         {
             "label": "Stop Dev server",
             "type": "shell",
-            "command": "source $(dirname ${config:python.pythonPath})/activate && make stopserver"
+            "command": "source $(dirname ${config:python.pythonPath})/activate && make stopserver",
+            "problemMatcher": []
         },
         {
             "label": "Open Site in Browser",
             "type": "shell",
-            "command": "open https://www.codependentcodr.com"
+            "command": "open https://www.codependentcodr.com",
+            "problemMatcher": []
         },
         {
             "label": "Open Site in Browser (via S3 URL)",
             "type": "shell",
-            "command": "open http://www.codependentcodr.com.s3-website.ca-central-1.amazonaws.com/index.html"
+            "command": "open http://www.codependentcodr.com.s3-website.ca-central-1.amazonaws.com/index.html",
+            "problemMatcher": []
         },
         {
             "label": "Open Site in Browser (via CF URL)",
             "type": "shell",
-            "command": "open https://d1c3rffik0endi.cloudfront.net"
+            "command": "open https://d1c3rffik0endi.cloudfront.net",
+            "problemMatcher": []
         },
         {
             "label": "Invalidate Cloudfront Cache",
             "type": "shell",
-            "command": "source envs && make cfinvalidate"
+            "command": "source envs && make cfinvalidate",
+            "problemMatcher": []
         },
     ]
 }
