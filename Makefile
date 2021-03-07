@@ -45,6 +45,7 @@ cleanbranches:
 	git branch --merged | egrep -v "(^\*|mainline|dev)" | xargs git branch -d
 
 tag:
+	echo "tagging: $(DEPLOY_TIME)_$(SHA)"
 	git tag "$(DEPLOY_TIME)_$(SHA)"
 	git push https://${GH_TOKEN}@github.com/$(REPO_NAME) $(DEPLOY_TIME)_$(SHA)
 
@@ -91,6 +92,7 @@ blackenit: dockerbuild
 
 test: blackenit lint_the_things bandit
 
-deploy: dockerbuild s3_upload tag dockerpush slackpost
+# deploy: dockerbuild s3_upload tag dockerpush slackpost
+deploy: dockerbuild tag dockerpush slackpost
 
 .PHONY: html clean regenerate devserver stopserver publish s3_upload cleanbranches tag lint_the_things markdownlint pylint dockerbuild dockerrun dockerpush slackpost cfinvalidate test deploy bandit blackenit
