@@ -6,8 +6,9 @@ services:
 - docker
 
 script:
+# use travis to only build if merged to mainline, GH actions now cover PRs
 - if [ "$TRAVIS_BRANCH" = "mainline" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
-  make deploy; else make test; fi
+  make deploy; fi
 
 notifications:
     email: false
