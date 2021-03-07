@@ -45,6 +45,7 @@ cleanbranches:
 	git branch --merged | egrep -v "(^\*|mainline|dev)" | xargs git branch -d
 
 tag:
+	echo "tagging: $(DEPLOY_TIME)_$(SHA)"
 	git tag "$(DEPLOY_TIME)_$(SHA)"
 	git push https://${GH_TOKEN}@github.com/$(REPO_NAME) $(DEPLOY_TIME)_$(SHA)
 
