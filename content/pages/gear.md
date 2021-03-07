@@ -17,6 +17,9 @@ July 2019 Update - This article was originally written in Aug 2018, I've gotten
 some new toys since then, so I've updated as appropriate.  Still all very much
 tongue-in-cheek.
 
+March 2021 Update - This was well out of date, so I've revised again.  Maybe
+at some point I'll start a `Changelog.md` for this file. 😉
+
 ## My Office Setup
 
 When I work at home (either on CDC or working from home for my day job),
@@ -65,22 +68,36 @@ screen (the W2442PA) I have a browser or my password manager open, and I use the
 middle LG for writing code on.  This very much varies depending on what I'm
 doing though.
 
-It's worth noting that I use [Spectacle](https://www.spectacleapp.com/) for
+It's worth noting that I use [Rectangle](https://rectangleapp.com/) for
 hotkeys that allow me to very quickly move apps around between monitors (this is
 why I actually prefer a larger number of poor quality monitors over one large
 high quality monitor).
 
-Additionally, all Macbooks I use are older models that can't natively drive
-more than two external displays.  As such, one of the screens is connected by
-the [Diamond DMMBVU3500H USB 3.0/2.0 to HDMI/DVI Adapter](https://www.amazon.ca/gp/product/B00K85XURC)
-This actually does work better than you'd think, I've watched Youtube videos
-on monitors connected to it.
+In terms of actual computers, for my day job I have a 17" 2019 Macbook Pro with
+32GB of RAM.  It's big, loud, and works really well for doing development.  For
+non-day job stuff, I recently acquired a 13" M1-powered Macbook Air with 16GB of
+RAM. I *love* this machine, and it has quickly become a very well-used piece of
+hardware.  My only criticism of the MBA is that it can only drive a single
+external display, unlike the Intel-based Pro that can drive 3 external screens.
 
-Speaking of USB, I have a handful of things that plug in by USB, so have the
-[ICZI Portable USB 3.0 to 4-Port USB 3.0 Hub](https://www.amazon.ca/gp/product/B01N3Q7SUF)
-for connecting stuff (including that display adapter)
+There's also a lot of dodads plugged into my Macbooks when I work on them.
 
-### Microphone/Audio
+Firstly, I have the
+[Plugable USB C to HDMI Multiport Adapter](https://www.amazon.ca/gp/product/B08CL4Y3PJ).
+This is functionally
+the same as the Apple USB-C Digital AV Multiport Adapter but about a third of the
+cost and works flawlessly (I used to have the Apple one from a previous job and
+aside from the fact one says "Pluggable" on it, I couldn't tell the difference).  I
+also have a
+[CableCreation USB C to HDMI + VGA Adapter](https://www.amazon.ca/gp/product/B01MRE92OO)
+as one of the monitors I use only has VGA out.  Works great.
+
+Lastly there's a
+[ZMUIPNG USB C Hub](https://www.amazon.ca/gp/product/B07X1VZRT1)
+that has HDMI, 2 USB C ports, a SD Card slot and two USB 3.0 ports.  Generally this
+only gets used with my work Macbook Pro.
+
+### Microphone
 
 Occasionally [I record videos to put on Youtube](https://www.codependentcodr.com/youtube),
 and while at first I just used the built-in mic on the Macbook, it became very
@@ -99,47 +116,18 @@ extravagant part of my setup to date.  If I really get into recording, this will
 be the place where I won't really be able to scrimp & will have to invest some real
 money.
 
-### Storage
-
-I also have a [WD Elements 1TB
-drive](https://www.amazon.ca/Elements-Portable-External-Drive-WDBUZG0010BBK-WESN/dp/B06VVS7S94)
-for my time machine backup. It's not great as I do have to remember to plug the
-drive into the computer to back it up (which I definitely don't do as often as I
-should).  There's another old (like probably 7+ years old) external WD drive on
-my desk that has some old files on it I occasionally need.  Pretty much
-everything on that drive is also sitting in Amazon S3 or Glacier for "in case of
-natural disaster" emergencies.
-
-There's also an old 750GB Toshiba portable drive that I use as external storage for my
-Xbox One.
-
 ### Chair
 
 Currently I'm using a
 [Serta Smart Layers AIR Arlington Executive Chair](https://www.officedepot.com/a/products/304556/Serta-Smart-Layers-AIR-Arlington-Executive/)
 It's decent, I have a herniated disc in my lower back, so I probably should invest in a
 better chair, but this one's a decent compromise between quality and price (it was under
-$200 and has some decent lumbar support).
+$200 and has some decent lumbar support).  Since I've recently (since COVID) begun
+working from home full-time this is the next big thing for me to invest in.
 
 ### Smart Stuff
 
-I also have a [Loonfree Wifi Smart Power Strip](https://www.amazon.com/gp/product/B078JMV9C3/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1).
-The 3 monitors are plugged into this, which is convenient as it allows me to turn all 3 on/off
-with a press of a button in an app.  It's also nice too as I have a schedule set up to cut the
-power on them at 11PM every night (so no phantom power drain overnight).
-
-Side note: don't buy the Loonfree, instead get the [Meross Power Strip](https://www.amazon.ca/gp/product/B07DMFZGVL/ref=oh_aui_search_detailpage?ie=UTF8&psc=1).
-The Meross Android app is *way* better than the weird third party app for controlling the Loonfree.
-I recently picked up the Meross strip and will likely at some point swap out the Loonfree for the
-Meross (I'm just too lazy to dig behind my desk to get it out 😛 ).
-
-The desk lamp on my desk has a [Phillips Hue A19 bulb](https://www.amazon.ca/gp/product/B01B9APZ6S) in it,
-which is nice as I can control it from my Macbook, the Hue app on my phone, or the
-[Echo Dot](https://www.amazon.ca/Echo-Dot-2nd-Generation-Black/dp/B07456NHZ7) that's in my living
-room ("Why would you want to turn the light in your office on from your living room?" is a question that
-my wife asked as well 😜 ).
-
-As mentioned I have an [Echo
+In terms of smart stuff, I have an [Echo
 Dot](https://www.amazon.ca/Echo-Dot-2nd-Generation-Black/dp/B07456NHZ7) for the
 sweet, sweet Alexa assistance in our house's kitchen/family area.  I don't yet
 have one in my office, but instead have a [Google Home
@@ -147,58 +135,67 @@ Mini](https://store.google.com/ca/product/google_home_mini) that I got for free
 with a [Spotify](https://www.spotify.com) promo that sits on my desk.  So far I
 very much like the Google Assistant better than Alexa, though both are handy.
 
+I also have a
+[Loonfree Wifi Smart Power Strip](https://www.amazon.com/gp/product/B078JMV9C3/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1).
+It's garbage.  Lasted for awhile and was convenient as it allowed me to turn all 3 monitors on/off
+with a press of a button in an app.  However, now the off button no longer works, and my Google
+Assistant keeps telling me it can't reach it.  At some point I'm going to switch it out for
+the [Meross Power Strip](https://www.amazon.ca/gp/product/B07DMFZGVL/ref=oh_aui_search_detailpage?ie=UTF8&psc=1)
+I have, but have just been lazy (it's hard to get at the current Loonfree power bar), and also
+the Meross currently gets used every winter for our indoor Christmas decorations. 🤷
+
+The desk lamp on my desk has a [Phillips Hue A19 bulb](https://www.amazon.ca/gp/product/B01B9APZ6S) in it,
+which is nice as I can control it from my Macbook, the Hue app on my phone, the Google Assistant in my
+office or the
+[Echo Dot](https://www.amazon.ca/Echo-Dot-2nd-Generation-Black/dp/B07456NHZ7) that's in my living
+room ("Why would you want to turn the light in your office on from your living room?" is a question that
+my wife asked as well 😜 ).  I also have a
+[Phillps Hue Lightstrip](https://www.amazon.ca/Philips-541805-LightStrip-Bundle-Extension/dp/B07NFCM2VB/)
+in my office as well.
+
 ### Gaming
 
 Aside from the monitor, there's an old Xbox 360 and an
 [Xbox One S](https://www.amazon.ca/s/ref=nb_sb_noss_2?url=search-alias%3Delectronics&field-keywords=xbox+one+s)
 that sit on my desk.
 
-Technically I have 3 Xbox 360's (two slim's & 1 original) in my house and two Xbox One's (the S and
-and original).
+Technically I have 3 Xbox 360's (two slim's & 1 original) in my house and 3 Xbox One's (the S,
+and original, and one of the discless ones).
 
-Tangentially related: When gaming I often just use headphones plugged into the
-Xbox controller.  Which headphones?  Well, there's two pairs:
+### Headphones & Audio
 
-* [JVC Hamr60X XX Series Headphones](https://www.amazon.ca/JVC-Hamr60X-XX-Series-Headphones/dp/B00VV6WRTY)
+Well, there's two pairs:
+
+* [Sony WH-1000XM4](https://www.sony.ca/en/electronics/headband-headphones/wh-1000xm4)
 * [Sennheiser HD 598 Cs](https://www.amazon.ca/gp/product/B01JP436TS)
 
-The Sennheiser's are the ones I use when I care about sound quality, the JVC's are more just for
-convenience (I often leave the Sennhiser's in other rooms in my house so the JVC's are when I'm feeling
-too lazy to get up out of my office and look for the Sennheisers).  The 598's are *great* headphones (not
-sure they're worth the price they're currently going for, I got mine for half-price during a Black
-Friday sale).
+The Sony's were admittedly a splurge to treat myself when I got a new job recently.  They're
+*amazing*, the noise cancelling is awesome, the battery life is wonderful and they're what I
+use when I work (both for calls as well as listening to music).
 
-I do also have a cheap pair of Dell Speakers (A425, 2.1) which I bought for $10 off a dude on
-either <https://varagesale.com> or <https://usedvictoria.com>.  Honestly they're surprisingly
-good.  Nothing that will knock your socks off, but for $10 I definitely cannot complain.
+The Sennheiser's are also phenomenal, though wired, not wireless.  They're super comfortable
+(I think I find them a smidge more comfortable than the XM4's), and sound great.
+
+I also have an old set of
+[Logitech X-540 5.1 speakers](https://www.amazon.ca/Logitech-X-540-Speaker-System-Black/dp/B000JJM8XE)
+which are really quite good for the price (they were like maybe $100).  Unfortunately they
+don't seem to make them anymore, which is a shame as Logitech used to make some really
+good speakers.  These are what I use for sound when I play Xbox in my office (when I'm not
+using headphones).
 
 ### Networking
 
-My router/WAP is the [Asus AC1900](https://www.amazon.ca/Asus-RT-AC68U-Wireless-Dual-Band-Gigabit/dp/B00FB45SI4).
-It's ok, previously I used a [Cisco Linksys E3000](https://www.amazon.ca/Linksys-E3000-Cisco-Linksys-Wireless-N-Router/dp/B003B48UQ8).
-The Asus was definitely a step up, but I still find a lot of spots in my house where coverage is sub-par.  It's
-good enough for the most part, but I definitely wouldn't particularly recommend it.
-
-### Misc
-
-I have an old [Nexus 4](https://www.amazon.ca/Nexus-LG-E960-Unlocked-Smartphone-Android/dp/B00BGYC12E)
-(my old primary phone) that sits on my desk plugged in.  I use this for when I forget my real phone
-in a different room & want to switch on my monitors.
-
-## Misc Gear
+My router/WAP is the
+[Asus RT-AC5300](https://www.asus.com/ca-en/Networking-IoT-Servers/WiFi-Routers/ASUS-WiFi-Routers/RT-AC5300/).
+It's huge, has a bagillion antennas and honestly, really is incredibly overrated.  I have issues with
+my Android phone disconnecting from the wifi, coverage in some spots of my house is poor, etc.  At
+some point I hope to switch it out for a mesh network.
 
 ### Phone
 
 I recently (writing this in Aug 2018) retired my old [Nexus 4](https://www.amazon.ca/Nexus-LG-E960-Unlocked-Smartphone-Android/dp/B00BGYC12E)
 after using it for ~5-6 years.  It ended up getting replaced by a
-[Moto G5 Plus](https://www.amazon.ca/gp/product/B01N5MEKSW) which I've been really happy with so
-far (TBF: my phone needs are very modest).
-
-### Tablet
-
-I have a couple tablets: a [first generation Nexus 7](https://en.wikipedia.org/wiki/Nexus_7_(2012)) which is
-capable of little more than being an e-book reader, and a 2nd generation [iPad](https://www.apple.com/ca/ipad/).
-The iPad is largely used as a portable Netflix player when I travel (which isn't very often).
+[Moto G5 Plus](https://www.amazon.ca/gp/product/B01N5MEKSW) which is alright (TBF: my phone needs are very modest).
 
 ### Fitness Tracker
 
