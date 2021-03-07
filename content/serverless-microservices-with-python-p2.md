@@ -3,7 +3,7 @@ Date: 2017-07-28 10:20
 tags: lambda,serverless,microservices,aws,python
 cover: static/imgs/python-logo-master-v3-TM.png
 
-Ok, so in [part 1]({static}/serverless-microservices-with-python-p1.md) of this series, I started off by exploring the
+Ok, so in [part 1]({filename}/serverless-microservices-with-python-p1.md) of this series, I started off by exploring the
 use of [Lambda](https://aws.amazon.com/lambda/) and
 [API Gateway](https://aws.amazon.com/api-gateway/) as a tool for building scalable microservices in Python. I largely
 focussed on taking an existing tutorial, and building out some unit tests for it, as well as some supplementary scripts
