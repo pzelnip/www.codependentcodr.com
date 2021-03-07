@@ -73,11 +73,11 @@ version that's inlined into your terminal with iTerm's shell integration.
 Now when you change an image in a Git repo and do a `git diff` while in iTerm
 you'll see a preview of the original image and the changed image.  Example:
 
-![Showing the image diffing]({filename}/static/imgs/imgcatDiff.png)
+![Showing the image diffing]({static}/static/imgs/imgcatDiff.png)
 
 The above image is the original, the 2nd image is what I changed it to.  Note
 that because imgcat is iTerm specific, it won't work in other terminals.  If
 you do a `git diff` in a different terminal (ex: the integrated terminal in
 VS Code) you'll see just the ordinary blank output:
 
-![Image diff in non-iTerm terminal]({filename}/static/imgs/imgcatdiffvscode.png)
+![Image diff in non-iTerm terminal]({static}/static/imgs/imgcatdiffvscode.png)

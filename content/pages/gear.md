@@ -24,7 +24,7 @@ I have a room set up in my house that I work out of.
 
 ### Desk
 
-![My Desk]({filename}/static/imgs/mydesk.jpg)
+![My Desk]({static}/static/imgs/mydesk.jpg)
 
 I currently use the "broken-ass giant desk that was a hand-me-down from someone
 in my building when I was a teenager" desk. It weighs a metric ton, is ugly, the
@@ -258,4 +258,4 @@ Ok, so this was a bit playful, but honestly, I take a bit of pride in not spendi
 gear I use.  Often people in tech can be caught up with the latest & greatest (and most expensive),
 but you can do a lot with not a ton of money.
 
-In any case, there you have it, some of the gear I use.  Did I miss anything? [Lemme know]({filename}contact.md)
+In any case, there you have it, some of the gear I use.  Did I miss anything? [Lemme know]({static}contact.md)

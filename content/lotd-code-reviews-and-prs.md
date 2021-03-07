@@ -6,7 +6,7 @@ tags: code review,pull request
 cover: static/imgs/code_quality_2x.png
 summary: A couple links related to pull requests and reviewing them, and things to do and/or avoid.
 
-[![XKCD ‘Code Quality’, copied under CC BY-NC 2.5]({filename}/static/imgs/code_quality_2x.png)
+[![XKCD ‘Code Quality’, copied under CC BY-NC 2.5]({static}/static/imgs/code_quality_2x.png)
 XKCD ‘Code Quality’, copied under CC BY-NC 2.5](https://xkcd.com/1513/)
 
 Today I have a few links related to pull requests and doing code review.  I've definitely

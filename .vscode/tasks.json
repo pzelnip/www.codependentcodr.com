@@ -20,12 +20,6 @@
             "problemMatcher": []
         },
         {
-            "label": "Stop Dev server",
-            "type": "shell",
-            "command": "source $(dirname ${config:python.pythonPath})/activate && make stopserver",
-            "problemMatcher": []
-        },
-        {
             "label": "Open Site in Browser",
             "type": "shell",
             "command": "open https://www.codependentcodr.com",

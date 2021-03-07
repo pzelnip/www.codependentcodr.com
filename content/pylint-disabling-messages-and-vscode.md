@@ -90,7 +90,7 @@ warnings will get put into the problems view.  To turn it on set the following i
 Note that these are both on by default (at least in the current version).  Once you save
 a Python file, Pylint warnings will show up in the problems view:
 
-![Pylint Warnings in VS Code Problems View]({filename}/static/imgs/pylint_warnings_in_vscode-crunch.png)
+![Pylint Warnings in VS Code Problems View]({static}/static/imgs/pylint_warnings_in_vscode-crunch.png)
 
 Note that that screenshot also illustrates how you can filter the problems view down to show just Pylint
 warnings by entering "pylint" into the search box.  Also note that clicking any of those will open up

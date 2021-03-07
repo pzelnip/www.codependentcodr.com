@@ -114,4 +114,4 @@ in Victoria.
 Tomorrow conference season continues for me as I'll be attending the 7th annual
 Polyglot Unconference in Vancouver, a favourite event of mine.  I'll likely blog about what
 I see there, but you can also read about what I've seen in prior years in my posts from
-prior years [here]({filename}/polyglotconf-2012.md) and [here]({filename}/polyglotconf-2017.md).
+prior years [here]({static}/polyglotconf-2012.md) and [here]({filename}/polyglotconf-2017.md).
