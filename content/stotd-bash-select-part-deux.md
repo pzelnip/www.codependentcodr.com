@@ -12,7 +12,7 @@ summary: Shell Tip Of the Day - Interactively deleting Docker images with Bash's
 ([source](https://devrant.com/rants/752222/if-all-you-have-is-a-hammer-everything-looks-like-a-nail-this-was-something-whic))
 
 Sometimes when you learn about a hammer, everything looks like a nail....  In
-[a previous tip]({static}/stotd-select-untracked-files.md) I showed off using
+[a previous tip]({filename}/stotd-select-untracked-files.md) I showed off using
 Bash's `select` statement to interactively select untracked files in a Git repo.
 
 Today I found another use for the `select` statement -- deleting local Docker
@@ -93,7 +93,7 @@ Dissecting the clunky argument to `docker rmi`: `awk -F'--' '{print $1}'` splits
 the input string on a double dash and then prints just the first column (the ID
 in our case).  We then just echo it back to `docker rmi`.  This works, and I
 tweeted it at Eric Promislow who was the person who demoed
-[the select statement at Polyglot this year]({static}/polyglotconf-2018.md)
+[the select statement at Polyglot this year]({filename}polyglotconf-2018.md)
 which was where I first saw the trick:
 
 <!-- markdownlint-disable MD033 -->

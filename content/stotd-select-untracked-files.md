@@ -7,7 +7,7 @@ cover: static/imgs/logos/Gnu-bash-logo-crunch.png
 summary: Shell Tip Of the Day - Selecting untracked files
 
 Today's tip of the day is a follow up from something I learned at
-[this year's Polyglot UnConference]({static}/polyglotconf-2018.md) -- how
+[this year's Polyglot UnConference]({filename}/polyglotconf-2018.md) -- how
 to use ```select``` with the Bash shell for interactive goodness.
 
 At Polyglot I saw an example that looked like this:
