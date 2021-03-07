@@ -1,6 +1,6 @@
 # CodependentCodr - The Source
 
-[![Build Status](https://travis-ci.com/pzelnip/www.codependentcodr.com.svg?branch=mainline)](https://travis-ci.com/pzelnip/www.codependentcodr.com)
+[![Actions Status](https://github.com/pzelnip/www.codependentcodr.com/workflows/Deploy%20the%20Site/badge.svg)](https://github.com/pzelnip/www.codependentcodr.com/actions)
 [![Updates](https://pyup.io/repos/github/pzelnip/www.codependentcodr.com/shield.svg)](https://pyup.io/repos/github/pzelnip/www.codependentcodr.com/)
 [![Python 3](https://pyup.io/repos/github/pzelnip/www.codependentcodr.com/python-3-shield.svg)](https://pyup.io/repos/github/pzelnip/www.codependentcodr.com/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
@@ -40,20 +40,22 @@ handful of tasks for things like starting the dev server, uploading to S3, etc.
 
 ### Deployments And Automation
 
-Currently I use [Travis CI](https://travis-ci.org/) for my CI/CD needs.  Merges to the `mainline` branch are
-automatically deployed to S3 by Travis.  Pull requests are automatically built with a number of checks
-(mostly linters) and builds are "failed" on non-zero exit codes.
+Currently I use Github Actions for my CI/CD needs.  Merges to the `mainline`
+branch are automatically deployed to S3 by GH Actions.  Pull requests are
+automatically built with a number of checks (mostly linters) and builds are
+"failed" on non-zero exit codes.
 
-On a deployment to S3 I automagically tag the current commit with a generated tag that includes
-the current date/time, the milliseconds since the epoch, and the Git SHA.  This means that I can
-look at the tags page on Github to see a history of deployments.
+On a deployment to S3 I automagically tag the current commit with a generated
+tag that includes the current date/time, the milliseconds since the epoch, and
+the Git SHA.  This means that I can look at the tags page on Github to see a
+history of deployments.
 
 As well, I throw a notification into a private Slack channel when a deployment happens.  This
 probably is silly right now (since I'm the only person deploying), but was fun to set up. :)
 This was set up as a basic Slack incoming webhook.  The secret token on the URL I have in an
 environment variable.
 
-Lastly, when Travis does a build it produces a Docker image and does the deployment from a running
+Lastly, when GH Actions does a build it produces a Docker image and does the deployment from a running
 instance of that Docker image.  After successful deployment that Docker image is uploaded to
 [Docker Hub](https://hub.docker.com/).  This allows me to see exactly what was deployed, including
 for old deployments.
