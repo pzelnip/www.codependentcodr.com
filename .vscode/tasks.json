@@ -16,7 +16,7 @@
         {
             "label": "Run Server",
             "type": "shell",
-            "command": "source $(dirname ${config:python.pythonPath})/activate && make devserver",
+            "command": "source $(dirname ${config:python.pythonPath})/activate && echo 'starting on http://localhost:8000' && make devserver",
             "problemMatcher": []
         },
         {
