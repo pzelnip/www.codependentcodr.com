@@ -24,7 +24,7 @@ around how to improve the performance of my site, one of those being to "Leverag
 Browser Caching" by setting a particular HTTP header on resources that don't change
 often (ex: images).  It'll look something like:
 
-![Leverage Browser Caching]({filename}/static/imgs/pingdomcachewarning-fs8.png)
+![Leverage Browser Caching]({static}/static/imgs/pingdomcachewarning-fs8.png)
 
 Specifically you set the
 [`Cache-Control` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
@@ -80,7 +80,7 @@ thinking "ah, that's weird, I'll look into it later".
 By the time that "later" happened and I turned off the Lambda, I had accrued around 1.1
 million Lambda requests:
 
-![The Lambda call count & costs]({filename}/static/imgs/lambda_costs-fs8.png)
+![The Lambda call count & costs]({static}/static/imgs/lambda_costs-fs8.png)
 
 But that's nothing:the real problem was that each one of those lambda calls represented
 a PUT to a S3 bucket.
@@ -88,7 +88,7 @@ PUT's with S3 are actually one of the more expensive operations.  For the `ca-ce
 region where I host my stuff, it's currently $0.0055 per 1,000 of them.  This sounds crazy
 cheap, and it is, but when you're doing about 1.1 million of them, well, that adds up:
 
-![The S3 PUT count & costs]({filename}/static/imgs/s3_costs-fs8.png)
+![The S3 PUT count & costs]({static}/static/imgs/s3_costs-fs8.png)
 
 Queue the Iron Maiden -- 6, 6, 6, THE NUMBER OF THE BEAST!
 
@@ -105,6 +105,6 @@ bill into likely well over $100.
 But in the end I got a funny picture, this is the graph of my S3 bill for the month of
 April:
 
-![Graph of S3 costs]({filename}/static/imgs/s3costgraph-fs8.png)
+![Graph of S3 costs]({static}/static/imgs/s3costgraph-fs8.png)
 
 Ouch, that's a pointy point in my pride.

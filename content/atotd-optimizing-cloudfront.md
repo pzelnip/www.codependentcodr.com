@@ -39,7 +39,7 @@ determines things like how long an item should remain in Cloudfront's cache befo
 request again to the origin, or if requests should be auto forwarded from http to https, and
 various other settings.  The behaviour screen looks something like:
 
-![Cloudfront Behavior]({filename}/static/imgs/cloudfront-behaviour-1.png)
+![Cloudfront Behavior]({static}/static/imgs/cloudfront-behaviour-1.png)
 
 By default, all items for your distribution are governed by the settings on this Default
 Behaviour.  What's really cool/handy is you can define multiple behaviours based upon request

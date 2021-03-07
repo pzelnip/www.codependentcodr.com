@@ -44,7 +44,7 @@ class EmailSubscriberAdmin(admin.ModelAdmin):
 If you've never done anything with the Django admin before, this might seem like
 magic, 1-line to get a nice date filter in place:
 
-![Date Filters in the Django Admin]({filename}/static/imgs/date_heir_filter.png)
+![Date Filters in the Django Admin]({static}/static/imgs/date_heir_filter.png)
 
 As you click those filters, the changeset view will adjust to only those records
 which meet that criteria.  All this for 1-line of code.  Yup, Django's pretty

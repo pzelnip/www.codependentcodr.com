@@ -20,7 +20,7 @@ with it.
 
 To begin with, here was my old bash prompt:
 
-![My Old Prompt]({filename}/static/imgs/oldprompt.png)
+![My Old Prompt]({static}/static/imgs/oldprompt.png)
 
 That prompt has a bunch of things in it, and shows:
 
@@ -116,7 +116,7 @@ touch ~/.config/starship.toml
 Now open up a new terminal and you should see the default Starship prompt
 which is actually quite sophisticated out of the box:
 
-![Default Starship Prompt]({filename}/static/imgs/defaultstarship.png)
+![Default Starship Prompt]({static}/static/imgs/defaultstarship.png)
 
 Your output may vary, as many of the items in a Starship prompt are dynamic
 depending on your current context.  In this you can see:
@@ -565,7 +565,7 @@ Note current version (in case I revise in the future) is at:
 
 This gives a prompt like the following:
 
-![New Starship-Powered Prompt]({filename}/static/imgs/newPrompt.png)
+![New Starship-Powered Prompt]({static}/static/imgs/newPrompt.png)
 
 Pretty sweet, lots of dynamicism where needed, but still has all the things I
 liked from before. Defintely took some time to get this just the way I liked it,

@@ -188,7 +188,7 @@ convert capture.png -crop 1920x1080+0+0 capture.png
 
 This worked, but gave the following image:
 
-![ScreenshotNoText]({filename}/static/imgs/captureNoText.png)
+![ScreenshotNoText]({static}/static/imgs/captureNoText.png)
 
 Wait, what?  Where's the text?  And why is the image so small?  Looking into the original
 image before the cropping I found these problems were there.  As it turns out, there's two
@@ -212,7 +212,7 @@ page a chance to load).  I gave it 3 seconds which is probably overkill.  `--min
 
 With this in place we get:
 
-![ScreenshotWithText]({filename}/static/imgs/captureFullRes.png)
+![ScreenshotWithText]({static}/static/imgs/captureFullRes.png)
 
 Ahh, much better.
 

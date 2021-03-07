@@ -178,7 +178,7 @@ Now in VS Code open the command palette and search for
 `Remote-Containers: Attach to Running Container...`.  Pick this, and then your running
 container called `vscodeenv` should appear in the list:
 
-![Attaching to the running image]({filename}/static/imgs/runningContainer.png)
+![Attaching to the running image]({static}/static/imgs/runningContainer.png)
 
 Pick it, and VS Code will open a new Window "attached" to the running container.  For
 more details, consult
@@ -189,7 +189,7 @@ your extension) folder and click OK.  You then get a VS Code window "attached" t
 the running docker container, with your test extension open and ready to play with.
 Here's a screenshot to give an idea:
 
-![Extension open in VS Code]({filename}/static/imgs/attachedToContainer.png)
+![Extension open in VS Code]({static}/static/imgs/attachedToContainer.png)
 
 Now you can hit `F5` and VS Code will open up a new Extension Development Host window with
 your test extension loaded.  In that window you should be able to search for the

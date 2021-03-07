@@ -41,11 +41,11 @@ preferences go to Profiles -> Keys, and do the following:
 
 Screenshots showing the settings:
 
-![Keyboard Option Key Settings]({filename}/static/imgs/keymapping1.png)
+![Keyboard Option Key Settings]({static}/static/imgs/keymapping1.png)
 
-![Keyboard Shortcut dialog for moving by word]({filename}/static/imgs/keymapping.png)
+![Keyboard Shortcut dialog for moving by word]({static}/static/imgs/keymapping.png)
 
-![Keyboard Shortcut dialog for moving to start/end of line]({filename}/static/imgs/keymapping2.png)
+![Keyboard Shortcut dialog for moving to start/end of line]({static}/static/imgs/keymapping2.png)
 
 ## Shell Integration
 
@@ -77,11 +77,11 @@ What these lines do is define two user variables that can be displayed in variou
 spots in iTerm.  My badge setting has the value `\(user.pythonVersion)` as you can
 see here:
 
-![Badge Setting]({filename}/static/imgs/itermbadge.png)
+![Badge Setting]({static}/static/imgs/itermbadge.png)
 
 And then the version displays in the terminal (it's the 3.9.1 in the corner):
 
-![Python Version]({filename}/static/imgs/pythonVersion.png)
+![Python Version]({static}/static/imgs/pythonVersion.png)
 
 As I switch to different Python interpreters this value updates.
 
@@ -107,7 +107,7 @@ completes you'll get a nice toast notification using OSX's notification system.
 Shell integration also gives a few handy shell commands, the one I use fairly
 often is `imgcat` which allows you to view an image right in the terminal window
 
-![Viewing an Image in the Terminal]({filename}/static/imgs/imgcat.png)
+![Viewing an Image in the Terminal]({static}/static/imgs/imgcat.png)
 
 ## Status Bar
 
@@ -115,7 +115,7 @@ The iTerm2 status bar is also fully configurable.  You can display various items
 like CPU load, or what your current directory is, etc.  Mine displays a handful of
 things:
 
-![My iTerm2 Status Bar]({filename}/static/imgs/statusbar.png)
+![My iTerm2 Status Bar]({static}/static/imgs/statusbar.png)
 
 From a glance this shows me that my current battery is 72% charged, CPU is at
 18%, memory utilization is at 22GB, that it's currently January 31st at 10:59AM,
@@ -127,7 +127,7 @@ probably redundant since that's in my badge, but 🤷).
 You can configure your status bar by going to Profiles -> Session and clicking
 "Configure Status Bar".  Here's a screenshot showing my settings:
 
-![My iTerm2 Status Bar Settings]({filename}/static/imgs/statusbarsettings.png)
+![My iTerm2 Status Bar Settings]({static}/static/imgs/statusbarsettings.png)
 
 I also configure the status bar to be at the bottom of the window (do this under
 Appearance -> General -> Status Bar Location)
@@ -141,18 +141,18 @@ Various other settings I turn on, mostly for minor conveniences or visual appeal
 I turn on transparency (Profiles -> Window -> Transparency).  This is a setting
 I continually fiddle with. 😛
 
-![Transparency settings]({filename}/static/imgs/transparency.png)
+![Transparency settings]({static}/static/imgs/transparency.png)
 
 I also set these settings under Appearance -> Windows:
 
-![Transparency settings]({filename}/static/imgs/appearancewindows.png)
+![Transparency settings]({static}/static/imgs/appearancewindows.png)
 
 I like the border around the windows, and find the window number in title bar
 superfluous.
 
 Under Appearance -> Tabs, I have:
 
-![Transparency settings]({filename}/static/imgs/appearancetabs.png)
+![Transparency settings]({static}/static/imgs/appearancetabs.png)
 
 ### Oddball Conveniences
 
@@ -162,7 +162,7 @@ opt out of beta releases.
 
 Under General -> Selection, I have the following:
 
-![Selection settings]({filename}/static/imgs/generalselection.png)
+![Selection settings]({static}/static/imgs/generalselection.png)
 
 The big one on there for me is that I find the "Copy to pasteboard on selection"
 feature very annoying, so I turn it off.
