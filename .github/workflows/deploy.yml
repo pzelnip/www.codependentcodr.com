@@ -5,6 +5,9 @@ name: Deploy the Site
 on:
   push:
     branches: [ mainline ]
+  # enable manual running in the actions ui
+  workflow_dispatch:
+    branches: [ mainline ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
