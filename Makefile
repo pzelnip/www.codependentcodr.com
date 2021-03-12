@@ -87,7 +87,6 @@ bandit:
 	docker run -it --rm $(SITE_NAME):latest bandit . -r
 
 blackenit: dockerbuild
-	echo "-----${GH_TOKEN}------${TRAVIS_BRANCH}-----"
 	./black_out.sh ${GH_TOKEN} ${TRAVIS_BRANCH}
 
 test: blackenit lint_the_things bandit
