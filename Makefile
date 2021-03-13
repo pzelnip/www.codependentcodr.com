@@ -49,17 +49,6 @@ tag:
 	git tag "$(DEPLOY_TIME)_$(SHA)"
 	git push https://${GH_TOKEN}@github.com/$(REPO_NAME) $(DEPLOY_TIME)_$(SHA)
 
-lint_the_things: markdownlint pylint pydocstyle
-
-pydocstyle:
-	docker run --rm -it -w /build $(SITE_NAME):latest pydocstyle .
-
-markdownlint: dockerbuild
-	docker run --rm -it -w /build $(SITE_NAME):latest markdownlint -i theme/ .
-
-pylint: dockerbuild
-	docker run --rm -it -w /build $(SITE_NAME):latest pylint *.py
-
 dockerbuild:
 	echo "$$DOCKER_PASSWORD" | docker login -u "$$DOCKER_USERNAME" --password-stdin
 	docker build -t $(SITE_NAME):latest .
@@ -83,14 +72,6 @@ cfinvalidate:
 s3_upload:
 	docker run -e AWS_ACCESS_KEY_ID=$(AWS_ACCESS_KEY_ID) -e AWS_SECRET_ACCESS_KEY=$(AWS_SECRET_ACCESS_KEY) --rm -it -w /build $(SITE_NAME):latest ./s3_push.sh
 
-bandit:
-	docker run -it --rm $(SITE_NAME):latest bandit . -r
-
-blackenit: dockerbuild
-	./black_out.sh ${GH_TOKEN} ${TRAVIS_BRANCH}
-
-test: blackenit lint_the_things bandit
-
 deploy: dockerbuild s3_upload tag dockerpush slackpost
 
-.PHONY: html clean regenerate devserver stopserver publish s3_upload cleanbranches tag lint_the_things markdownlint pylint dockerbuild dockerrun dockerpush slackpost cfinvalidate test deploy bandit blackenit
+.PHONY: html clean regenerate devserver stopserver publish s3_upload cleanbranches tag dockerbuild dockerrun dockerpush slackpost cfinvalidate deploy

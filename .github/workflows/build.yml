@@ -1,31 +1,46 @@
-name: Build the Site
+name: Run The Tests
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the mainline branch
 on:
   pull_request:
     branches: [ mainline ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    # container: pzelnip/codependentcodrbase:latest
-    env:
-      DOCKER_USERNAME: pzelnip
 
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    - name: Print env vars
-      run: echo "$GITHUB_REF -- $GITHUB_EVENT_NAME -- $GITHUB_SHA -- $GITHUB_HEAD_REF -- $GITHUB_BASE_REF"
+    - name: Check Black format
+      run: |
+        docker run --rm -v $(pwd):/data cytopia/black --version
+        docker run --rm -v $(pwd):/data cytopia/black --check .
 
-    # Runs a single command using the runners shell
-    - name: Run tests
-      shell: 'script -q -e -c "bash {0}"'
-      run: make GH_TOKEN=foobar TRAVIS_BRANCH=$GITHUB_HEAD_REF test
-      env:
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+    - name: Markdownlint check
+      run: |
+        docker run --rm -i -v $(pwd):/work tmknom/markdownlint --version
+        docker run --rm -i -v $(pwd):/work tmknom/markdownlint -i theme/ .
+
+    - name: Pylint check
+      run: |
+        docker run --rm -v $(pwd):/data cytopia/pylint --version
+        docker run --rm -v $(pwd):/data cytopia/pylint *.py
+
+    - name: Pydocstyle check
+      run: |
+        docker run --rm -v $(pwd):/data cytopia/pydocstyle --version
+        docker run --rm -v $(pwd):/data cytopia/pydocstyle .
+
+  bandit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Bandit check
+      run: |
+        echo "No official docker image yet, see https://github.com/PyCQA/bandit/issues/697"
+        echo "Also: https://github.com/cytopia/docker-pylint/issues/7"
+        docker run --rm -v $(pwd):/data -w /data pzelnip/codependentcodrbase:latest bandit --version
+        docker run --rm -v $(pwd):/data -w /data pzelnip/codependentcodrbase:latest bandit .
+        parallel echo ::: 1 2 3 4
