@@ -1,6 +1,9 @@
 """Tool for setting the cache-control header on items in an S3 bucket."""
 
+# pylint: disable=import-error
 import boto3
+
+# pylint: enable=import-error
 
 SESSION = boto3.Session(profile_name="codependentcodr")
 CLIENT = SESSION.client("s3")
