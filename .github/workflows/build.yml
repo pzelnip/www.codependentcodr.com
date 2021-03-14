@@ -31,16 +31,7 @@ jobs:
         docker run --rm -v $(pwd):/data cytopia/pydocstyle --version
         docker run --rm -v $(pwd):/data cytopia/pydocstyle .
 
-  bandit:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-
     - name: Bandit check
       run: |
-        echo "No official docker image yet, see https://github.com/PyCQA/bandit/issues/697"
-        echo "Also: https://github.com/cytopia/docker-pylint/issues/7"
-        docker run --rm -v $(pwd):/data -w /data pzelnip/codependentcodrbase:latest bandit --version
-        docker run --rm -v $(pwd):/data -w /data pzelnip/codependentcodrbase:latest bandit .
-        parallel echo ::: 1 2 3 4
+        docker run --rm -v $(pwd):/data cytopia/bandit --version
+        docker run --rm -v $(pwd):/data cytopia/bandit -r /data
