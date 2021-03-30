@@ -96,20 +96,17 @@ def run():
 
     cmd = _pop(args, "help")
 
-    if cmd in ["u", "up", "update"]:
+    if cmd not in ["u", "up", "update"] and cmd in ["l", "list"] and not args:
+        list_languages()
+    elif cmd not in ["u", "up", "update"]:
+        usage()
+    else:
         path = _pop(args)
 
         if path and not args:
             download(path)
         else:
             usage()
-    elif cmd in ["l", "list"]:
-        if not args:
-            list_languages()
-        else:
-            usage()
-    else:
-        usage()
 
 
 if __name__ == "__main__":
