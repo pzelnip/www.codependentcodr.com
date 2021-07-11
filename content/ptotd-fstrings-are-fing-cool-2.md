@@ -10,7 +10,9 @@ So in a
 [previous post]({filename}/ptotd-fstrings-are-fing-cool.md)
 a couple years ago I wrote about some of the reasons the f-string functionality
 introduced in Python 3.6 was so useful.  Today I learned a few new tricks with
-them so wanted to revisit the topic & share.
+them from
+[a recent episode of the Python Bytes Podcast](https://pythonbytes.fm/episodes/show/241/f-yes-we-want-some-f-string-tricks)
+ so wanted to revisit the topic & share.
 
 ## Debugging
 
