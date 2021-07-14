@@ -343,7 +343,7 @@ value](https://en.wikipedia.org/wiki/Sentinel_value) to indicate that processing
 is done and the coroutine consuming items from the queue should quit.  We then
 queue up that consumer coroutine & run it.
 
-Note if you put that `END_OF_QUEUE` before the `queue_coro` then it goes
+Note if you put that `END_OF_QUEUE` after the `queue_coro` then it goes
 forever.  Remember that the event loop is single threaded, so until something
 finishes or yields control, it'll keep running.
 
@@ -479,7 +479,7 @@ Got message: Emitting 29
 This is the end my friend....
 ```
 
-That is, the consumer keeps consuming until 42 is found, and then the consumer
+That is, the producer keeps producing until 42 is found, and then the consumer
 consumes everything. The reason for this is that the `asyncio.sleep()` call will
 yield control (it's effectively an I/O operation).  Remember: `asyncio` is
 single threaded concurrency, without those sleep calls what happens is the item
