@@ -106,7 +106,7 @@ Instead of `s3cmd` (which is what the generated `Makefile` uses), I changed to u
 ### Git SHA in Footer
 
 I hacked together some stuff in `pelicanconf.py` to get the git SHA & throw it into a variable.  This
-is then displayed in the page footer, which I find useful for sanity checking what revision is running.
+is then displayed in the page footer, which I find useful for coherence checking what revision is running.
 
 ### Github Corners Configurable Colour
 
