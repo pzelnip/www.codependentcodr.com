@@ -20,14 +20,15 @@ cover: static/imgs/default_page_imagev2.jpg
 ## Summary Of Content Read
 
 This book frustrated me. I once had the fortune of seeing Sandro give a talk at the Software Craftsmanship North America
-(SCNA) conference in 2013, and found his talk uplifting, and inspirational. As a result of that, when I saw this book
+(SCNA) conference in 2013, and found that talk uplifting, and inspirational. As a result of that, when I saw this book
 had been released it was an "instant buy" for me.
 
 Ultimately though I was incredibly disappointed by this book.
 
 I wanted to like this book. Rather I wanted to love this book. And honestly, much of what Sandro espouses in this book
-I agree with and believe. But, this book is poorly written and filled with anecdotal "evidence" to support his claims.
-This is a shame, as there is much well documented, well-researched evidence to support much of what he argues for. See,
+I agree with and believe. But, this book is poorly written and filled with anecdotal "evidence" to support their claims.
+This is a shame, as there is much well documented, well-researched evidence to support much of what is argued for in this
+book. See,
 the thing is when you make empirical claims (ie - if you do TDD you will reduce bugs and therefore reduce costs, or if
 you pair with other developers you will create a culture of learning which will improve productivity, or if you hire
 craftsmen your company will be better off), you need to back that up with empirical evidence, not just "I had this job
@@ -57,7 +58,7 @@ thing and want to know more? For the Bob Martin's of the world? It's so inconsis
 audience who's only vaguely familiar with the craftsmanship movement, and other parts feel like unless you've been
 writing code for decades you'll have trouble relating.
 
-I'm being overly harsh, there are nuggets of really good insights in this book and he certainly knows the craftsmanship
+I'm being overly harsh, there are nuggets of really good insights in this book and Sandro certainly knows the craftsmanship
 movement. The thing is though there's nothing you won't get from simply reading the blogs or books of some of the people
 in the craftsmanship community. If you've read Clean Coder by Bob Martin, there's no reason to read this book.
 

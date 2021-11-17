@@ -36,7 +36,7 @@ included) can unfortunately bring to code reviews and have them turn adversarial
 than collaborative.  One of the things I love about Sandya's article is that it shines a
 light on bad habits that are common, particularly amongst experienced developers.  I've
 definitely been guilty of passing off opinion as fact as well as bombarding a review with
-an avalanche of comments.  As well, she also not only points out some of the "bad" (or
+an avalanche of comments.  As well, they also not only points out some of the "bad" (or
 toxic) behaviours but offers constructive practices.  Really, really good stuff.
 
 The last one I have is more lightweight:

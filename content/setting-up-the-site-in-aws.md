@@ -5,9 +5,9 @@ cover: static/imgs/default_page_imagev2.jpg
 
 So I was going to write a blog post outlining most of the stuff I did in getting this
 site up off the ground, but then a colleague went ahead and did the same and
-wrote up his journey. :)
+wrote up their journey. :)
 
-So, in true CodependentCodr fashion, Imma going to stea...err borrow his content since
+So, in true CodependentCodr fashion, Imma going to stea...err borrow that content since
 mine was largely the same steps (and he's better at AWS than I am). :p
 
 Go [here](https://ben.gnoinski.ca/how-this-site-came-to-be.html) for all the deets on getting

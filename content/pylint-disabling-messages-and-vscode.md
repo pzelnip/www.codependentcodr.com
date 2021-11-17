@@ -34,17 +34,17 @@ def test_message_builder_generates_correct_bytestring_when_no_argument_supplied(
 ```
 
 This will suppress code C0103 for the remainder of the scope (module or block),
-or until it's re-enabled:
+or until it's turned back on:
 
 ```python
 # pylint disable=C0103
 def test_message_builder_generates_correct_bytestring_when_no_argument_supplied():
 
 
-# still disabled here...
+# still turned off here...
 
 # pylint enable=C0103
-def but_not_disabled_here_so_this_name_will_get_flagged_by_pylint():
+def but_not_turned_off_here_so_this_name_will_get_flagged_by_pylint():
 ```
 
 You can also (and it's generally better practice) use the "verbose name" for a

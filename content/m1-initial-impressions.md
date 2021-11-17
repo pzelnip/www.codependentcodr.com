@@ -20,7 +20,7 @@ experienced through the lens of a developer.
 
 Everything I've run through Rosetta has been flawless from a functionality
 perspective.  Having said that though: anything run through Rosetta does seem to
-suck battery life.  And not just apps that are normally CPU intensive.  For
+suck battery life.  And not just apps that are typically CPU intensive.  For
 example: I found that having Dropbox (which doesn't support M1), Itsycal, and
 Spectacle constantly running in my menu bar all seemed to have a significant
 drain on battery life.  I've since switched from
@@ -130,7 +130,7 @@ if I had my way I'd have Catalina instead of Big Sur on this machine
 
 ## In Summary
 
-This machine is awesome.  It's expensive (as all Macs are), but is crazy
+This machine is awesome.  It's expensive (as all Macs are), but is super
 fast, and (once you get rid of all your Intel apps) sips battery very
 lightly.
 

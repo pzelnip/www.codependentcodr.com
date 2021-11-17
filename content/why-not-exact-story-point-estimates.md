@@ -25,7 +25,7 @@ complete a task, but I can pretty much guarantee that it'll take the senior dev 
 task). So if we estimate in time units then suddenly we have this problem of do you estimate to the level of the person
 who's really experienced, or to the junior person? A fibonacci style sequence of "bucket sizes" (like 0.25, 0.5, 1, 2,
 5, etc) helps with this (if it takes the junior 9 hours, and a senior 5, then the SP estimate will likely be the same --
-1). (Mike Cohn, the Scrum Alliance guy, has a few blog posts on Story points to this effect, see
+1). (Mike Cohn, the Scrum Alliance dude, has a few blog posts on Story points to this effect, see
 [this](https://www.mountaingoatsoftware.com/blog/the-main-benefit-of-story-points) and
 [this](https://www.mountaingoatsoftware.com/blog/dont-equate-story-points-to-hours))
 

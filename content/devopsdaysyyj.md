@@ -42,9 +42,9 @@ Anubhav works for [Hashicorp](https://www.hashicorp.com), well known for many to
 space such as Vagrant, Terraform, Vault, and others.
 
 The talk started with a bit of a history lesson on how operations work has evolved over the last
-10 years or so, going from physical servers to virtualization, to the cloud, etc.  He then dove
+10 years or so, going from physical servers to virtualization, to the cloud, etc.  They then dove
 in to an overview of [Terraform](https://www.terraform.io/) which is a really great tool for provisioning
-infrastructure via code.  He then concluded with a quick demo of using Terraform to provision a
+infrastructure via code.  They then concluded with a quick demo of using Terraform to provision a
 webserver in Google Cloud with a DNS entry provisioned in AWS via Route 53.  Simple, but really
 was a nice little overview of the kind of stuff that's possible with Terraform.
 
@@ -57,7 +57,7 @@ the expense of the latter.
 
 I think this is why I really enjoyed Eduardo's talk.  Eduardo works for
 [Daitan Group](https://www.daitangroup.com)
-and he gave a description of their company's journey through DevOps transformation, not from
+and they gave a description of their company's journey through DevOps transformation, not from
 a tools & automation perspective, but on the perspective of the human focus.  Discussions of
 the importance of empathy and communication, the challenges of collaborating with people from
 very different cultures, and some of the lessons learned along the way.  Really inspiring,
@@ -66,7 +66,7 @@ and I enjoyed it a great deal.
 ## Distributed Brute Force Login Attack - Peter Locke
 
 Peter, like Jeff who did the Serverless talk earlier in the day, also works at
-[Giftbit](https://www.giftbit.com).  In this talk he delved into how they've had to deal with
+[Giftbit](https://www.giftbit.com).  In this talk they delved into how they've had to deal with
 distributed brute force login attacks where distributed botnets try to attack a login page
 with leaked credentials trying to compromise accounts on their service.
 
@@ -81,7 +81,7 @@ could potentially be used was had.
 ## Bitrot: A Story of Maintenance Failure - Will Whittaker
 
 This talk was just funny.  Will's been in the industry for some time, and told the story
-of a project he was a part of that started in the early 2000's, that he left, and came back
+of a project they were a part of that started in the early 2000's, that they left, and came back
 to and saw how the project had devolved in that time.  Lots of humourous, cynical anecdotes
 about the horrors of maintaining a system for a long time.
 
@@ -94,8 +94,8 @@ applications will likely become a maintenance nightmare years from now.  Interes
 This again was one of the "human-side" talks of the day.  Unfortunately the schedule doesn't
 have the speaker's name, and I didn't make a note of it, but the presenter told the story of
 how while working at a company as the head of the ops team, was in the hospital for the birth
-of his third son when he got a phone call from the CTO telling him that everything was on
-fire and he needed to fix it.  Inspiring story of the cost of siloing from a human perspective.
+of their third son when they got a phone call from the CTO telling him that everything was on
+fire and they needed to fix it.  Inspiring story of the cost of siloing from a human perspective.
 Lots of discussion on techniques they employed to help improve their culture & process over
 time (blameless post-mortems, release planning, etc).
 

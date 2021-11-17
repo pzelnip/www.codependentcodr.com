@@ -63,7 +63,7 @@ piece of text at all times in the top right corner of the terminal window.  It's
 handy for displaying things like what branch you're currently on or similar
 "contextual" items.  For me because I do a lot of Python work and I'm constantly
 switching between various Python virtual environments I have my badge display
-the current Python version that's enabled.  To set this up, I have the following
+the current Python version that's active.  To set this up, I have the following
 in my `.bashrc` file:
 
 ```shell

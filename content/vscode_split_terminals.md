@@ -16,7 +16,7 @@ write up about this and how I use tasks with VS Code, particularly as a Pythonis
 As a starting point, to give a basic idea of what tasks are, they're effectively little shortcuts to
 terminal commands that you can trigger from within VS Code.  They're commonly used for things like
 triggering build tasks, or starting up a local dev server, etc.  The thing that makes them nice is
-that they can be triggered from the command pallette much like normal VS Code commands.  For example,
+that they can be triggered from the command pallette much like built-in VS Code commands.  For example,
 when working on this blog, I'll use a task to fire up a local dev server to test out content before
 committing/pushing it.  It looks something like this:
 
@@ -120,7 +120,7 @@ that up, etc, etc, etc.
 },
 ```
 
-Whenever possible I use [pytest](https://pytest.org/) for running my unit tests.  Normally this is
+Whenever possible I use [pytest](https://pytest.org/) for running my unit tests.  Typically this is
 run from the command line as something like `pytest <name of directory containing tests>`.  The
 problem though is that pytest gets installed to a virtual environment, so how do I give the full
 path to the virtual env without making the task machine specific?  The answer is I run it as a
