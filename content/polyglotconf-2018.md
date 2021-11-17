@@ -76,9 +76,9 @@ number of technologies employed today is broader than ever, or just coincidence,
 ## One Simple Trick To Make You A Better Developer... Code Review
 
 This was a rather lively and deep discussion on the value of code review facilitated by
-[John Boxall](https://twitter.com/johnboxall), in which he started with a short presentation
-of his experience going from developer working in isolation to a team, and how looking at
-other people's code forced him to learn a ton.  Some of the insights he shared from stuff
+[John Boxall](https://twitter.com/johnboxall), in which they started with a short presentation
+of their experience going from developer working in isolation to a team, and how looking at
+other people's code forced him to learn a ton.  Some of the insights they shared from stuff
 they've done at [Mobify](https://www.mobify.com/) included:
 
 ### What Things Should Reviewers Look For
@@ -205,10 +205,10 @@ stuff you can do with the Bash shell.  Many of these things I'd never seen befor
 to see.
 
 For example, a neat trick is to use "bang dollar" to match the last argument
-from the last executed command.  Say for example, you're working in a Git repo and have
-changed a file.  You might do a `git diff` to see what's changed, and then having sanity
-checked the diff, want to add that file to be committed.  You'd do this with something
-like:
+from the last executed command.  Say for example, you're working in a Git repo
+and have changed a file.  You might do a `git diff` to see what's changed, and
+then having coherence checked the diff, want to add that file to be committed.
+You'd do this with something like:
 
 ```bash
 git diff some/subdir/containing/somefile.txt
@@ -247,10 +247,10 @@ State of the Union" discussion where the goal is to talk about all the newfangle
 popping up in the JS space.  This year, they changed it up a bit, instead focussing on plain
 Javascript the language, rather than the sampling of the new shiny stuff.
 
-One thing he noted was how it seemed odd that the famous
+One thing they noted was how it seemed odd that the famous
 [Javascript the Good Parts book by Doug Crockford](https://www.amazon.ca/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742)
 is widely regarded as one of the best texts on the language, yet seems to be largely
-ignored by many framework authors.  With this in mind, he started talking about how his company is
+ignored by many framework authors.  With this in mind, they started talking about how their company is
 taking a step back and starting to use just plain Javascript like a real programming language, and
 to bring all the good software design and engineering principles (SOLID, DRY, reduce coupling, etc)
 to their JS work.
@@ -260,7 +260,7 @@ to decompose units of computation down to tiny functions and use dependency inje
 to those functions to wire up functionality.  This has all the happy benefits you'd expect: code
 that's easier to read, to compose, and to test.
 
-As someone who's lived his life in the backend, programming language & software engineering side
+As someone who's lived their life in the backend, programming language & software engineering side
 of things, this really resonated with me.  One of the troubles I've had with trying to learn JS
 is just A) figuring out which framework to start with, B) figure out that framework, and then
 C) realize that by the time I've figured that out the framework's now obsolete and none of the
@@ -269,7 +269,7 @@ focus on JS just as a plain C-derivative language and approach learning it from 
 Good takeaway for me.
 
 Last gem was a book recommendation, JavaScript Allongé: <https://leanpub.com/javascriptallongesix/read>
-Sounded like it was a book that helped his team start on this journey towards stripping JS down
+Sounded like it was a book that helped their team start on this journey towards stripping JS down
 to the bare essentials, so I'll definitely be checking it out.
 
 The discussion at this point moved more to a discussion around using Javascript for distributed

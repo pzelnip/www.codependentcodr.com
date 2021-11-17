@@ -235,7 +235,7 @@ compiled dependencies -- it's not pure Python. I'm developing on a Macbook runni
 different environment than Amazon Linux (which is what a Lambda container runs in).
 
 So, this is where it gets interesting. I started off doing some googling, and found
-[this guy](https://github.com/Miserlou/lambda-packages), which is some common Python libraries with compiled
+[this one](https://github.com/Miserlou/lambda-packages), which is some common Python libraries with compiled
 dependencies built for Amazon Linux. Theoretically you should be able to specify that as a dependency in your
 `requirements.txt`, build it, and be good to go. So I tried this, and low and behold now my zip file is larger than the
 50MB for uploading through the Lambda web interface. Throwing a zip file into an S3 bucket is simple enough, so I did
@@ -261,7 +261,7 @@ and found that passlib actually supports [5 different bcrypt implementations (or
 * stdlib’s `crypt.crypt()`, if the host OS supports BCrypt (primarily BSD-derived systems).
 
 A pure-python implementation of BCrypt, built into Passlib.
-And that last one is disabled by default as it's just too damn slow. For now though, we just want something that works,
+And that last one is turned off by default as it's just too damn slow. For now though, we just want something that works,
 and is easy (we'll optimize later), so let's enable that backend. This is done by set the environmental variable
 `PASSLIB_BUILTIN_BCRYPT="enabled"` where you're running passlib. With Lambda, setting some env variables is easy, you
 can do this in the web interface:
@@ -282,7 +282,7 @@ function on the Configuration tab under advanced items:
 ![Extending Lambda Timeout]({static}/static/imgs/screen-shot-2017-07-27-at-2-19-06-pm.png)
 
 It's worth noting this can increase your costs with Lambda, as pricing is execution-time related.  With that change in
-place (50 seconds is crazy, but just trying to get it to work), I got a new error, this time from API Gateway:
+place (50 seconds is way long, but just trying to get it to work), I got a new error, this time from API Gateway:
 
 ```javascript
 {

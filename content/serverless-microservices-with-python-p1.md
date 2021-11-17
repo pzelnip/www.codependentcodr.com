@@ -24,7 +24,7 @@ unit testing like you would with a regular Python project? Any differences?
 So, let's take this example and enhance it with a new requirement -- support
 [Bcrypt](https://en.wikipedia.org/wiki/Bcrypt) as a digest.
 
-Now, there's a problem (ok, this is contrived, work with me here): normally before you start adding new functionality
+Now, there's a problem (ok, this is contrived, work with me here): typically before you start adding new functionality
 you want to ensure you have a decent set of automated tests to ensure that you don't break existing behaviour. So, step
 1: let's add some unit tests that enforce the existing requirements we have in our little Lambda function. I saw these as:
 
@@ -156,7 +156,7 @@ def test_default_hash_is_sha1(self):
 ```
 
 Ok, so now we have our tests which enforce current behaviour, a nice project structure, and at this point this is all
-plain old normal Python development, nothing about Lambda here. At this point you could follow the same steps in the
+plain old typical Python development, nothing about Lambda here. At this point you could follow the same steps in the
 tutorial and bundle it all up into a zip file, upload to Lambda and you're good.
 
 But I like automating some of the build stuff, so wrote a simple little Bash script to generate the zip file, and called

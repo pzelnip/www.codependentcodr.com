@@ -35,7 +35,7 @@ true at this event, but it seemed particularly diverse to me this year than in p
 Union" discussion which has happened in prior years at the unconference. Unsurprisingly [React](https://github.com/reactjs)
 was a technology mentioned a fair bit in this session, as was [Vue.js](https://vuejs.org/).
 
-I'm not a front-end guy, so this was definitely not my forte, but themes I took away from this session was the continued
+I'm not a front-end dev, so this was definitely not my forte, but themes I took away from this session was the continued
 explosion of the sheer number of JS frameworks out there. I didn't stick around for the entire session, instead following
 the law of two feet to switch to....
 

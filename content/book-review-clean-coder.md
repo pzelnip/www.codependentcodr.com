@@ -26,11 +26,11 @@ his/herself.  How should we as professional developers act?  What is the differe
 What are our responsibilities?  When can we say no & how do we do it?  When are we obligated to say yes?  How do we get
 better at what we do?
 
-Martin tries to distill his nearly 40 years of experience into some hard fought lessons.  While it is very much
+Martin tries to distill their nearly 40 years of experience into some hard fought lessons.  While it is very much
 appreciated to hear "tales from the trenches", the book does have a fairly heavy-handed "do as I say" tone.  Don't do
 TDD?  Well then you're not a professional.  Do you create ambitious estimates?  Well then, you're not a professional.
 From a rhetorical point of view, the book does rely on this "proof by appeal to professionalism" approach, rather than
-give solid evidence and data to back up many of the arguments he makes.  For example, the TDD chapter has the passage:
+give solid evidence and data to back up many of the arguments made.  For example, the TDD chapter has the passage:
 
 > Yes there have been lots of controversial blogs and articles written about TDD over the years and there still are.
 In the early days they were serious attempts at critique and understanding.  Nowadays, however, they are just rants.
@@ -40,7 +40,7 @@ I feel like the paragraph should have ended with
 "QED".  Hardly a conclusive argument in favour of TDD, and the off-hand dismissal of any critiques of the practice
 really does hurt the point he's making.
 
-Having said all this, it is certainly clear that much of what he offers is good advice, and represents an open challenge
+Having said all this, it is certainly clear that much of what is offered is good advice, and represents an open challenge
 to developers to be better.  If you put aside the "if you don't do this you're not professional" rhetoric, at its core
 this book is a call for developers to live up to the responsibility of the job they have been hired to do.  Oftentimes
 we as developers like to silo ourselves off, focus on our narrowly defined technical tasks, and that is simply

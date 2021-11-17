@@ -17,7 +17,7 @@ video](https://www.youtube.com/watch?v=7it7JFPInX0) showing the process.
 
 That's all fine and good, but one of the complaints I've heard from
 Django-ista's (is that a term?  Djangoites?  Django Devotees?) is that it means
-now the good old normal `python manage.py test` no longer works (well, I suppose
+now the good old plain `python manage.py test` no longer works (well, I suppose
 technically it still works, but doesn't use Pytest).
 
 So challenge accepted, as one can certainly create [custom manage.py
@@ -27,7 +27,7 @@ Pytest instead of the default built-in runner.
 
 ## Python Manage.py pytest
 
-So first challenge is "how do we run pytest from Python?" as normally you run
+So first challenge is "how do we run pytest from Python?" as typically you run
 Pytest as a command line tool.  As it turns out there's [docs on how to do this
 on Pytest's site](https://docs.pytest.org/en/latest/usage.html#calling-pytest-from-python-code).
 
@@ -58,7 +58,7 @@ class Command(BaseCommand):
 This works, in that now I can do `python manage.py pytest` and it'll run Pytest
 as if I just ran the `pytest` executable in the current directory.
 
-Cool, but how do I start passing arguments?  Normally in a custom Django
+Cool, but how do I start passing arguments?  Typically in a custom Django
 management command you define a `add_arguments` function and use the `argparse`
 module to define the expected arguments for your custom command.  In this case
 though, I essentially want the interface to Pytest, which would be non-trivial

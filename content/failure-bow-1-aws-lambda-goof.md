@@ -85,8 +85,9 @@ million Lambda requests:
 But that's nothing:the real problem was that each one of those lambda calls represented
 a PUT to a S3 bucket.
 PUT's with S3 are actually one of the more expensive operations.  For the `ca-central-1`
-region where I host my stuff, it's currently $0.0055 per 1,000 of them.  This sounds crazy
-cheap, and it is, but when you're doing about 1.1 million of them, well, that adds up:
+region where I host my stuff, it's currently $0.0055 per 1,000 of them.  This
+sounds unbelievably cheap, and it is, but when you're doing about 1.1 million of
+them, well, that adds up:
 
 ![The S3 PUT count & costs]({static}/static/imgs/s3_costs-fs8.png)
 
@@ -95,7 +96,7 @@ Queue the Iron Maiden -- 6, 6, 6, THE NUMBER OF THE BEAST!
 To give some context: this site usually costs me well under $0.50 a month, the biggest portion of
 which is Cloudfront which clocks in around $0.24.  Everything else is misc stuff: data
 transfer, S3 storage costs, S3 request costs, I have some old data in Glacier, etc.  So to
-see ~$7 accrued in a day felt, well, crazy.
+see ~$7 accrued in a day felt, well, excessive.
 
 What really bugged me was how *dumb* I felt, such a silly mistake.  What's kinda scary is
 that had I not gotten that email from AWS indicating I was close to the free tier limit,

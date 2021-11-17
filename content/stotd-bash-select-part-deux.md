@@ -108,7 +108,7 @@ images: <a href="https://t.co/imJV5WA3cB">https://t.co/imJV5WA3cB</a>  Thanks fo
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <!-- markdownlint-enable MD033 -->
 
-And he replied with a nice simplification of the clunky awk stuff:
+And they replied with a nice simplification of the clunky awk stuff:
 
 ```shell
 select x in `docker images --format '{{.ID}}--{{.Repository}}/{{.Tag}}'` ; do

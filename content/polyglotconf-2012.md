@@ -76,7 +76,7 @@ started with the facilitator soliciting people in the audience to share their ex
 were actually fairly small, anecdotal discussions about the difficulties of working with larger amounts of data with
 traditional RDBMS systems.  Partway through an attendee (who is an employee of Amazon) chimed in and gave an intro on
 some of the concepts behind true big data (ie Amazon S3) systems.  This was good and bad, while it was great to see
-someone with expert knowledge step in and share his insights, it did feel as though the talk moved from "how can we do
+someone with expert knowledge step in and share their insights, it did feel as though the talk moved from "how can we do
 big data, what are the challenges associated with it" to "if you need to do big data, you can use Amazon S3 for the backend".
 
 # R and Python

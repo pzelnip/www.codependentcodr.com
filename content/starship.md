@@ -11,7 +11,7 @@ Recently I had the good fortune of attending the
 and there was at least one talk that mentioned [Starship](https://starship.rs/)
 and at least one other where the presenter happened to be using it.  For those
 not in the know, Starship is a cross-shell compatible terminal prompt
-generator written in Rust that is crazy fast and crazy customizable.
+generator written in Rust that is super fast and super customizable.
 
 I was intrigued, and decided to take my (reasonably sophisticated) Bash prompt
 and Starship-ify it.  In this post I'll outline some of the things I went
@@ -184,7 +184,7 @@ Let's explain this a little bit to give a feel:
   the number rediculously high so that it never truncated
 * `truncate_to_repo` is a special setting that controls if the directory is
   truncated to the root of the Git repo you are currently in.  Again, I don't
-  like this (I want to see the full path), so disabled it
+  like this (I want to see the full path), so deactivated it
 * `style` is a common setting on (I believe) every module and controls the
   colour of the module when rendered.  In this case saying "yellow" to match my
   old prompt.  Styles are covered in depth in the

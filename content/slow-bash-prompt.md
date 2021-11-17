@@ -34,7 +34,7 @@ built this version for you and installed as part of Xcode command-line tools”
 version.
 
 So, I installed git from Homebrew (`brew install git`), which gave be the same
-normal version that anyone on any platform would get (just compiled for OSX),
+version that anyone on any platform would get (just compiled for OSX),
 and also gave me a much newer version (2.30.0).  Much faster.  How much faster?
 Check it out:
 
@@ -46,5 +46,5 @@ user	0m0.016s
 sys	0m0.026s
 ```
 
-From 1.7 seconds to 0.06 seconds.  Crazy.  Now my command prompt is nice and
+From 1.7 seconds to 0.06 seconds.  Wow.  Now my command prompt is nice and
 snappy.

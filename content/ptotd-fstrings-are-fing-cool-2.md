@@ -48,7 +48,7 @@ emitted:
 The value of myvariable=42 myothervariable=99
 ```
 
-Super handy.  What's really crazy is it works with expressions too:
+Super handy.  What's really amazing is it works with expressions too:
 
 ```python
 >>> myvariable = 42

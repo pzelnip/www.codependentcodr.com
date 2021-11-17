@@ -5,11 +5,11 @@ cover: static/imgs/default_page_imagev2.jpg
 
 I recently listened to a recording of a webinar put on through the ACM titled
 ["Agile Methods: Agile Methods: The Good, the Hype and the Ugly"](https://event.on24.com/eventRegistration/EventLobbyServlet?target=reg20.jsp&eventid=937091&sessionid=1&key=5B3C11566E06BE6564E638C6DFE0F413&sourcepage=register)
-where Bertrand Meyer (the Eiffel/Design by Contract guy) gave his interpretation of the agile software movement, and how
-we may tweak agile thinking.
+where Bertrand Meyer (the Eiffel/Design by Contract person) gave their interpretation of the agile software movement,
+and how we may tweak agile thinking.
 
-A point in particular caught my attention.  He talked about a rephrasing of some of the agile principles as stated in
-the manifesto, and in particular he talked about rather than "embracing" change, one should "accept" change.  While this
+A point in particular caught my attention.  They talked about a rephrasing of some of the agile principles as stated in
+the manifesto, and in particular they talked about rather than "embracing" change, one should "accept" change.  While this
 might seem like splitting hairs, I think it an important distinction, and one I completely disagree with.  I'd like to
 elaborate why I feel the distinction matters.
 

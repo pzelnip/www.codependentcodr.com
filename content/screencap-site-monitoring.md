@@ -101,10 +101,11 @@ This produced an image of Google's homepage.  Success!
 
 # Step 2 - Diffing two Images
 
-This is seemingly the hard part: how do you compare two images and get a similarity score?  I
-had visions of having to dig into machine learning algorithms to try and figure this out, but
-before breaking out the crazy ML I thought I'd see if someone else had already produced something
-that met my needs.
+This is seemingly the hard part: how do you compare two images and get a
+similarity score?  I had visions of having to dig into machine learning
+algorithms to try and figure this out, but before breaking out the heavy ML I
+thought I'd see if someone else had already produced something that met my
+needs.
 
 Some false leads that didn't quite work (
 [here](https://stackoverflow.com/questions/5132749/diff-an-image-using-imagemagick),
@@ -159,7 +160,7 @@ need a command-line tool to do this.
 # Step 2a - ImageMagick to the Rescue
 
 In case you've never seen it before, [ImageMagick](https://www.imagemagick.org/script/index.php)
-is a library for doing some crazy image
+is a library for doing some amazing image
 manipulation stuff.  And there's a CLI interface for it that's great for automating stuff.
 The full scope of IM is way beyond the scope of this post (there's a *ton* you can do with
 it), but cropping something is easy-peasy so let's get it installed:

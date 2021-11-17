@@ -502,8 +502,8 @@ helpful/useful yet).
 I'll refer to you another post by [Miguel
 Grinberg](https://twitter.com/miguelgrinberg) on [Unit Testing AsyncIO
 Code](https://blog.miguelgrinberg.com/post/unit-testing-asyncio-code) where he
-discusses some of the challenges and his approaches to solving them.  Miguel's a
-smart guy who's most known for his [Flask
+discusses some of the challenges testing async code and approaches to solving them.
+Miguel's a smart cookie who's most known for the [Flask
 Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
 which is something of the defacto way to learn [Flask](http://flask.pocoo.org/).
 
@@ -544,7 +544,7 @@ isolation.
 ## It Is a Complex Beast
 
 There's a now rather famous post by [Armin
-Ronacher](http://lucumr.pocoo.org/about/) (the guy who created
+Ronacher](http://lucumr.pocoo.org/about/) (the person who created
 [Flask](http://flask.pocoo.org/), [Jinja](http://jinja.pocoo.org/), and so many
 other seminal Python projects) talking about the complexities of `asyncio`.
 It's an extremely well-written and sobering post from someone who's been in at

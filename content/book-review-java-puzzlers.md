@@ -21,8 +21,8 @@ cover: static/imgs/default_page_imagev2.jpg
 
 Java Puzzlers is not so much a book, but a collection of obscure corner cases in the Java programming language.  The
 author (Joshua Bloch) is well known as the author of [Effective Java](http://www.amazon.ca/Effective-Java-2nd-Edition-Programming-ebook/dp/B000WJOUPA/ref=pd_sim_kinc_2)
-which is widely regarded as the premier text for the language, and furthermore he is one the designers and authors of
-the Java Collections Framework.  So to say the least, he knows his stuff.
+which is widely regarded as the premier text for the language, and furthermore they are one the designers and authors of
+the Java Collections Framework.  So to say the least, they know their stuff.
 
 Each chapter of the book features a collection of "puzzlers" centered around a particular section of the language
 (examples include loops, strings, exceptions, classes, etc).  Each "puzzler" is formulated where a puzzle (typically in
