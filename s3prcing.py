@@ -13,7 +13,7 @@ def main():
     months_in_glacier = 1
     imgs_per_day = 2 * 24
 
-    size_per_img_in_gb = (180 * 1024) / (1.0 * 2 ** 30)
+    size_per_img_in_gb = (180 * 1024) / (1.0 * 2**30)
     data_per_day = size_per_img_in_gb * imgs_per_day
     data_per_month = data_per_day * 30
 
