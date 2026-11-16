@@ -23,7 +23,7 @@ committing/pushing it.  It looks something like this:
 <!-- markdownlint-disable MD033 -->
 <video autoplay loop controls>
   <source src="/static/vids/vscodetask2.mp4" type="video/mp4">
-  <img src="/static/imgs/vscodetask.gif">
+  <img src="/static/imgs/vscodetask.gif" alt="Running a VS Code task from the command palette">
 </video>
 <!-- markdownlint-enable MD033 -->
 

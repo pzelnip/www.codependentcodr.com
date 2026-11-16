@@ -20,9 +20,9 @@ contributor who also works at Microsoft) is now the dev lead for the Python exte
 looking for people for ["Visual Studio Code / Python!"](https://blogs.msdn.microsoft.com/pythonengineering/2017/11/09/don-jayamanne-joins-microsoft/)
 
 Lastly, there's been a bunch of noise (see
-[here](https://www.bleepingcomputer.com/news/microsoft/microsoft-considers-adding-python-as-an-official-scripting-language-to-excel/),
-[here](https://news.ycombinator.com/item?id=15927132),
-and [here](https://excel.uservoice.com/forums/304921-excel-for-windows-desktop-application/suggestions/10549005-python-as-an-excel-scripting-language))
+[Bleeping Computer](https://www.bleepingcomputer.com/news/microsoft/microsoft-considers-adding-python-as-an-official-scripting-language-to-excel/),
+[Hacker News](https://news.ycombinator.com/item?id=15927132),
+and [Excel UserVoice](https://excel.uservoice.com/forums/304921-excel-for-windows-desktop-application/suggestions/10549005-python-as-an-excel-scripting-language))
 about how Microsoft is now actively seeking input on how Python could potentially be used as potentially a replacement
 for VBA as the macro/scripting language in Excel.  It's still way too early on this to see what will come of it, but
 imagine a world where managers who spend their lives in Excel get the power of Python at their fingertips and what that

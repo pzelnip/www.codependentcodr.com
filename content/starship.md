@@ -209,8 +209,8 @@ corresponds to the `style` setting defined in the configuration for the module
 is read only) and has a different style defined for that scenario (the default
 `$read_only_style` is "red", but you could change that in this configuration by
 adding a `read_only_style="blue"` setting to the directory config).  In any case
-the relevant part of the docs on format strings is
-[here](https://starship.rs/config/#format-strings).
+the relevant part of the docs is the
+[format strings section](https://starship.rs/config/#format-strings).
 
 Clear as mud?  Admittedly, this does take a bit to get your head around (or did
 for me), but basically you *override* settings in the config as appropriate to

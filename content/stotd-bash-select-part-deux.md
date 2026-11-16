@@ -41,7 +41,7 @@ Deleted: sha256:798362db6603c5f680029cfd8ec614cb2a4d7a321a28d222b26a4eb8597371b1
 ```
 
 If you have many though this is a lot of tedious copy & pasting.  I don't want to
-delete *all* images though, just _selected_ ones.  Enter the `select` statement:
+delete *all* images though, just *selected* ones.  Enter the `select` statement:
 
 ```shell
 select x in `docker images --format '{{.ID}}--{{.Repository}}/{{.Tag}}'` ; do docker rmi `echo $x | awk -F'--' '{print $1}'`; done

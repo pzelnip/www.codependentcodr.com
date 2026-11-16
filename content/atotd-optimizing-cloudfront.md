@@ -84,8 +84,8 @@ So what have I done?  Let's discuss.
 Because I have a custom domain and don't want people to have to go to <https://d1c3rffik0endi.cloudfront.net/> to visit
 the site, I edited the cloudfront distribution to have two alternate domain names (CNAMEs):
 
-* www.codpendentcodr.com
-* codpendentcodr.com
+* `www.codpendentcodr.com`
+* `codpendentcodr.com`
 
 You'll also have to set up DNS entries with whatever you use for DNS to have CNAME
 records on your custom domain that point to your Cloudfront url (which is typically
