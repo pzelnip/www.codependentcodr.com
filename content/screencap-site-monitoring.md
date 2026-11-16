@@ -108,10 +108,10 @@ thought I'd see if someone else had already produced something that met my
 needs.
 
 Some false leads that didn't quite work (
-[here](https://stackoverflow.com/questions/5132749/diff-an-image-using-imagemagick),
-[here](https://zachholman.com/posts/command-line-image-diffs/),
-[here](https://www.pyimagesearch.com/2017/06/19/image-difference-with-opencv-and-python/), and
-[here](http://douglasduhaime.com/posts/identifying-similar-images-with-tensorflow.html)
+[a Stack Overflow answer](https://stackoverflow.com/questions/5132749/diff-an-image-using-imagemagick),
+[Zach Holman's command-line image diffs](https://zachholman.com/posts/command-line-image-diffs/),
+[OpenCV image difference](https://www.pyimagesearch.com/2017/06/19/image-difference-with-opencv-and-python/), and
+[TensorFlow image similarity](http://douglasduhaime.com/posts/identifying-similar-images-with-tensorflow.html)
 ) and then landed on one that did: [image-diffr](https://www.npmjs.com/package/image-diffr).
 
 It's a pretty simple tool -- give it two images, and it spits out a similarity score.  For example:

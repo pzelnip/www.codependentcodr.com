@@ -10,7 +10,8 @@ wrote up their journey. :)
 So, in true CodependentCodr fashion, Imma going to stea...err borrow that content since
 mine was largely the same steps (and he's better at AWS than I am). :p
 
-Go [here](https://ben.gnoinski.ca/how-this-site-came-to-be.html) for all the deets on getting
+Read [Ben's post on how his site came to be](https://ben.gnoinski.ca/how-this-site-came-to-be.html)
+for all the deets on getting
 a static site set up with Pelican in AWS. Ben does a great job too of walking through setting
 up a nice local dev pipeline with Docker (mine's not quite the same, but similar, and I'm
 likely eventually going to do the same as him).

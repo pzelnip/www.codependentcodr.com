@@ -13,7 +13,7 @@ def main():
     months_in_glacier = 1
     imgs_per_day = 2 * 24
 
-    size_per_img_in_gb = (180 * 1024) / (1.0 * 2 ** 30)
+    size_per_img_in_gb = (180 * 1024) / (1.0 * 2**30)
     data_per_day = size_per_img_in_gb * imgs_per_day
     data_per_month = data_per_day * 30
 
@@ -21,12 +21,12 @@ def main():
     ia_cost = data_per_month * ia_1zone * months_in_ia
     glacier_cost = data_per_month * glacier * months_in_glacier
 
-    print("Standard: $%s" % (standard_cost / (1.0 * factor)))
-    print("IA: $%s" % (ia_cost / (1.0 * factor)))
-    print("Glacier: $%s" % (glacier_cost / (1.0 * factor)))
+    print(f"Standard: ${standard_cost / (1.0 * factor)}")
+    print(f"IA: ${ia_cost / (1.0 * factor)}")
+    print(f"Glacier: ${glacier_cost / (1.0 * factor)}")
     print("----------------")
     total_cost = (standard_cost + ia_cost + glacier_cost) / (1.0 * factor)
-    print("Total: $%s" % total_cost)
+    print(f"Total: ${total_cost}")
 
 
 if __name__ == "__main__":

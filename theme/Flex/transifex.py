@@ -13,6 +13,7 @@ API_URL = "https://www.transifex.com/api/2"
 API_KEY = os.getenv("TRANSIFEX_API_KEY")
 PROJECT_SLUG = "flex-pelican"
 RESOURCE_SLUG = "messagespot"
+REQUEST_TIMEOUT = 30  # seconds
 
 
 def get_languages():
@@ -23,7 +24,7 @@ def get_languages():
         }
     )
 
-    req = requests.get(url, auth=("api", API_KEY))
+    req = requests.get(url, auth=("api", API_KEY), timeout=REQUEST_TIMEOUT)
     req.raise_for_status()
     languages = req.json()
 
@@ -64,7 +65,7 @@ def download(path):
             }
         )
 
-        req = requests.get(url, auth=("api", API_KEY))
+        req = requests.get(url, auth=("api", API_KEY), timeout=REQUEST_TIMEOUT)
         req.raise_for_status()
         data = req.json()
         po_content = data["content"]

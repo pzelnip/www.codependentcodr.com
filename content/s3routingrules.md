@@ -7,7 +7,7 @@ cover: static/imgs/logos/Storage_AmazonS3_LARGE-fs8.png
 summary: How to use S3 redirection rules for simple redirecting to other hosts
 
 So as mentioned in many of my other posts, this site is served via an [S3](http://aws.amazon.com/s3)
-bucket.  Recently I decided I'd like to have certain paths off of my domain (www.codependentcodr.com)
+bucket.  Recently I decided I'd like to have certain paths off of my domain (`www.codependentcodr.com`)
 be automatically redirected to other URL's that aren't in the S3 bucket.  As a concrete example, I
 wanted to be able to set up redirections from `/twitter` to my Twitter account
 (<https://www.twitter.com/codependentcodr>).

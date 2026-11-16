@@ -54,7 +54,7 @@ to understand and then render as an actual image.
 ## Put imgcat In Your Path
 
 Next is put iTerm's `imcat` script somewhere on your path.  You can download it
-from [here](https://iterm2.com/utilities/imgcat).  Save that somewhere, make sure
+from [the iTerm2 utilities page](https://iterm2.com/utilities/imgcat).  Save that somewhere, make sure
 you chmod it to be executable (`chmod +x imgcat`), and then throw it into some
 directory on your path.  You can confirm it's there by typing `imgcat` into an
 iTerm window:

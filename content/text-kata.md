@@ -54,7 +54,7 @@ minute. Here's a recording of it, note that this does require the `change-case` 
 <!-- markdownlint-disable MD033 -->
 <video autoplay loop controls>
   <source src="/static/vids/textKata480p.mp4" type="video/mp4">
-  <img src="/static/imgs/textKata.gif">
+  <img src="/static/imgs/textKata.gif" alt="Recording of completing the text kata in VS Code">
 </video>
 <!-- markdownlint-enable MD033 -->
 

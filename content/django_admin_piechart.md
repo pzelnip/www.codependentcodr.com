@@ -112,7 +112,7 @@ re-renders with only the selected rows:
 <!-- markdownlint-disable MD033 -->
 <video autoplay loop controls>
   <source src="/static/vids/DateFilters.mp4" type="video/mp4">
-  <img src="/static/imgs/DateFilters.gif">
+  <img src="/static/imgs/DateFilters.gif" alt="Clicking date hierarchy filters re-renders the pie chart">
 </video>
 <!-- markdownlint-enable MD033 -->
 
