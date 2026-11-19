@@ -27,6 +27,24 @@ and ideas around full-stack development.  The site can be found at <https://www.
 The site is generated using [Pelican](https://getpelican.com), and hosted in [AWS](https://aws.amazon.com/).
 Currently it's a static site in an S3 bucket, served via AWS Cloudfront.
 
+## Local Development
+
+The local Python environment is managed with [uv](https://docs.astral.sh/uv/).  Dependencies are
+declared in `pyproject.toml` (pinned to match the
+[codependentcodrbase image](https://github.com/pzelnip/codependentcodrbase) used for deploys) and
+locked in `uv.lock`.
+
+To build the site locally:
+
+```shell
+uv sync
+make html
+```
+
+When `uv` is installed the `Makefile` runs Pelican via `uv run pelican`, which also keeps the
+environment in sync automatically.  Without `uv` it falls back to whatever `pelican` is on the
+`PATH` (which is what the Docker build does).
+
 ## Pelican Tidbits
 
 By in large I just ran the `pelican-quickstart` and have tweaked a few things here and there as I work on the site.
