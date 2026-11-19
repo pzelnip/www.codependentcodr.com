@@ -2,11 +2,20 @@
 ##
 # This section should match your Makefile
 ##
-PY=${PY:-python3}
-PELICAN=${PELICAN:-pelican}
+BASEDIR=$(pwd)
+
+# Use the uv-managed environment when uv is installed (local dev); fall back to
+# whatever python3/pelican are on the PATH otherwise.  --project pins uv to this
+# repo, since the HTTP server is started from inside the output directory.
+if command -v uv >/dev/null 2>&1; then
+  PY=${PY:-uv run --project $BASEDIR python}
+  PELICAN=${PELICAN:-uv run --project $BASEDIR pelican}
+else
+  PY=${PY:-python3}
+  PELICAN=${PELICAN:-pelican}
+fi
 PELICANOPTS=
 
-BASEDIR=$(pwd)
 INPUTDIR=$BASEDIR/content
 OUTPUTDIR=$BASEDIR/output
 CONFFILE=$BASEDIR/pelicanconf.py

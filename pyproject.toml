@@ -1,0 +1,16 @@
+[project]
+name = "codependentcodr"
+version = "0.1.0"
+description = "Source for www.codependentcodr.com, built with Pelican"
+readme = "Readme.md"
+# Matches the Python in the pzelnip/codependentcodrbase image used for deploys
+requires-python = "==3.10.*"
+# Pinned to the versions in the pzelnip/codependentcodrbase image used for deploys
+dependencies = [
+    "pelican==4.8.0",
+    "markdown==3.4.1",
+]
+
+[tool.uv]
+# This is a site, not an installable package
+package = false

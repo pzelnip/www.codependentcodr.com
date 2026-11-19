@@ -1,5 +1,11 @@
 PY?=python3
+# Use the uv-managed environment when uv is installed (local dev); fall back to
+# whatever pelican is on the PATH otherwise (e.g. the Docker build image)
+ifneq ($(shell command -v uv),)
+PELICAN?=uv run pelican
+else
 PELICAN?=pelican
+endif
 PELICANOPTS=
 
 BASEDIR=$(CURDIR)
