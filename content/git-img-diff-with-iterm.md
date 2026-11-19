@@ -5,6 +5,7 @@ Category: Posts
 tags: iterm,iterm2,git,terminal,shell
 cover: static/imgs/default_page_imagev2.jpg
 summary: iTerm has a imgcat function. Lets use it with Git for image diffing
+ai_use: none
 
 So iTerm2 has this neat `imgcat` command that allows you to "cat" or
 view an image right in the terminal.  It's pretty sweet, but I had an

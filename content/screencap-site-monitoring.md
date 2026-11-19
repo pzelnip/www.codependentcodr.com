@@ -5,6 +5,7 @@ Category: Posts
 tags: aws,monitoring
 cover: static/imgs/default_page_imagev2.jpg
 summary: An experiment using screen capturing to detect CSS errors
+ai_use: none
 
 So the other day I used [Pingdom's speed test](https://tools.pingdom.com/) to do some analysis
 trying to figure out ways to speed up loading of this site.  One neat thing about the tool though

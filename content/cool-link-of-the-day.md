@@ -2,6 +2,7 @@ Title: Cool Link of the day
 Date: 2017-03-25 22:14
 tags: shell
 cover: static/imgs/default_page_imagev2.jpg
+ai_use: none
 
 Ever wanted to coherence check your shell scripts?  Check out <https://www.shellcheck.net/>
 

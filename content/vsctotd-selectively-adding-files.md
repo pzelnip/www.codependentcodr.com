@@ -5,6 +5,7 @@ Category: Posts
 tags: git,vscode
 cover: static/imgs/vscode.jpg
 summary: Recently I figured out a way to selectively add files to a Git commit.
+ai_use: none
 
 Small tip: sometimes when working on something I find myself making changes to many
 files.  I then only want to include a few of those files in my next Git commit.  To

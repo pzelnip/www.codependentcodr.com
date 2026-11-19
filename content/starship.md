@@ -5,6 +5,7 @@ Category: Posts
 tags: terminal,starship
 cover: static/imgs/default_page_imagev2.jpg
 summary: I recently discovered Starship & converted my old prompt to using it.  Lets see what I learned.
+ai_use: none
 
 Recently I had the good fortune of attending the
 [2021 iteration of the Pycascades conference](https://2021.pycascades.com/),

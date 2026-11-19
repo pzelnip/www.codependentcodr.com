@@ -5,6 +5,7 @@ Category: Posts
 tags: bash,shell,shellTipOfTheDay,git
 cover: static/imgs/logos/Gnu-bash-logo-crunch.png
 summary: Shell Tip Of the Day - Interactively deleting Docker images with Bash's select statement
+ai_use: none
 
 ![Sometimes when you learn about a hammer, everything looks like a nail....]
 ({static}/static/imgs/hammer_nail.jpg)

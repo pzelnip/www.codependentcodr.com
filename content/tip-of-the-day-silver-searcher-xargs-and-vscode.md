@@ -5,6 +5,7 @@ Category: Posts
 tags: vscode,silversearcher,editors
 cover: static/imgs/default_page_imagev2.jpg
 summary: Tip for opening up all files which match a string in separate VS Code tabs.
+ai_use: none
 
 Oftentimes when working on a project you'll need to search through the codebase for
 a particular string.  Maybe it's looking for occurances of a variable, maybe a particular

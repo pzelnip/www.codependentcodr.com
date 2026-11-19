@@ -5,6 +5,7 @@ Category: Posts
 tags: awsTipOfTheDay,cloudfront,aws
 cover: static/imgs/aws_cloudfront.png
 summary: Lets recap some tips & tricks around optimizing your use of AWS CloudFront as a CDN.
+ai_use: none
 
 AWS CloudFront is one of the services that AWS gives you that helps you optimize & speed
 up delivery of your site's content.  Commonly Cloudfront is used as a Content Delivery

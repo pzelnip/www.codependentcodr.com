@@ -5,6 +5,7 @@ Category: Posts
 tags: python,pythonTipOfTheDay,asyncio,coroutine,abstract,abc,asyncawait
 cover: static/imgs/python-logo-master-v3-TM.png
 summary: What happens when you mix coroutines with Abstract Base Classes?
+ai_use: none
 
 Continuing on with my asyncio learnings.  Had the opportunity to look at a wrinkle I haven't seen discussed
 much -- using coroutines with [Abstract Base Classes](https://docs.python.org/3/library/abc.html).

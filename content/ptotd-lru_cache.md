@@ -6,6 +6,7 @@ cover: static/imgs/python-logo-master-v3-TM.png
 Category: Posts
 summary: How to use lru_cache for fun and profit
 status: published
+ai_use: none
 
 So one of the most useful and little known modules in the Python standard
 library is the [functools

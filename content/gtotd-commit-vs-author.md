@@ -5,6 +5,7 @@ Category: Posts
 tags: git,gitTipOfTheDay
 cover: static/imgs/default_page_imagev2.jpg
 summary: There's a distinction in git between committer and author. Lets learn about that.
+ai_use: none
 
 So one thing that has always kinda puzzled me in Git is that when I'd `amend` a
 commit, then do a `git log` the timestamp for that commit seemed unchanged even

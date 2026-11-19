@@ -5,6 +5,7 @@ Category: Posts
 tags: python,pythonTipOfTheDay,fstrings
 cover: static/imgs/python-logo-master-v3-TM.png
 summary: I learned some new tricks with f-strings, lets check 'em out.
+ai_use: none
 
 So in a
 [previous post]({filename}/ptotd-fstrings-are-fing-cool.md)

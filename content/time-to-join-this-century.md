@@ -1,6 +1,7 @@
 Title: Time to Join This Century
 Date: 2016-02-24 22:24
 cover: static/imgs/default_page_imagev2.jpg
+ai_use: none
 
 Blogspot is old.  Wordpress is the new sexy, time to migrate.
 

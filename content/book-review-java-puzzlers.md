@@ -2,6 +2,7 @@ Title: Book Review: Java Puzzlers
 Date: 2014-01-20 09:07
 tags: bookreview,java
 cover: static/imgs/default_page_imagev2.jpg
+ai_use: none
 
 # Book: Java Puzzlers
 

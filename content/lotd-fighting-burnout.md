@@ -2,6 +2,7 @@ Title: Link of the Day: Fighting Burnout
 Date: 2018-04-04 08:49
 tags: burnout,health
 cover: static/imgs/default_page_imagev2.jpg
+ai_use: none
 
 Today's link of the day is from Stride's blog: <https://www.stridenyc.com/blog/11-ways-to-fight-burnout>
 

@@ -2,6 +2,7 @@ Title: Git bisect And Nose -- Or how to find out who to blame for breaking the b
 Date: 2012-08-03 09:19
 tags: git,nose,python,testing
 cover: static/imgs/default_page_imagev2.jpg
+ai_use: none
 
 How did I not ever discover `git bisect` before today?  Git bisect allows you to identify a particular commit which
 breaks a build, even after development has continued past that commit.  So for example, say you:

@@ -5,6 +5,7 @@ Category: Posts
 tags: s3,aws
 cover: static/imgs/logos/Storage_AmazonS3_LARGE-fs8.png
 summary: How to use S3 redirection rules for simple redirecting to other hosts
+ai_use: none
 
 So as mentioned in many of my other posts, this site is served via an [S3](http://aws.amazon.com/s3)
 bucket.  Recently I decided I'd like to have certain paths off of my domain (`www.codependentcodr.com`)

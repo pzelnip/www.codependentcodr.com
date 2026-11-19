@@ -2,6 +2,7 @@ Title: Serverless Microservices and Python (with tests!) - Part 2
 Date: 2017-07-28 10:20
 tags: lambda,serverless,microservices,aws,python
 cover: static/imgs/python-logo-master-v3-TM.png
+ai_use: none
 
 Ok, so in [part 1]({filename}/serverless-microservices-with-python-p1.md) of this series, I started off by exploring the
 use of [Lambda](https://aws.amazon.com/lambda/) and

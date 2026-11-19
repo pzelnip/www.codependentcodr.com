@@ -5,6 +5,7 @@ Category: Posts
 tags: python,pythonTipOfTheDay
 cover: static/imgs/python-logo-master-v3-TM.png
 summary: Python Tip of the Day - Merging Two Dicts
+ai_use: none
 
 So it's not uncommon to want to merge two dictionaries
 in Python into a single dict.  Typically, you'd do this like so:

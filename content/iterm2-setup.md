@@ -5,6 +5,7 @@ Category: Posts
 tags: devenv,setup,tooling,iterm,iterm2,terminal,shell
 cover: static/imgs/default_page_imagev2.jpg
 summary: I've been a longtime user of iTerm2 as my terminal. This post walks through some of my setup with it.
+ai_use: none
 
 I first was introduced to [iTerm2](https://iterm2.com/) back around 2012, which
 was not coincidentally when I made the switch from a machine running Windows &

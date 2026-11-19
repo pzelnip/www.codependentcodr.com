@@ -2,6 +2,7 @@ Title: Python and Microsoft?
 Date: 2018-01-03 10:20
 tags: python,news,microsoft
 cover: static/imgs/python-logo-master-v3-TM.png
+ai_use: none
 
 Much has been said about how [Microsoft](https://www.microsoft.com) has changed in recent years, no longer the super
 closed-source monopolistic giant it once was.  Regardless of whether or not you believe the change is real or just at

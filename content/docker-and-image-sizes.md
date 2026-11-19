@@ -5,6 +5,7 @@ Category: Posts
 tags: docker,devops
 cover: static/imgs/default_page_imagev2.jpg
 summary: I was surprised & learned something about building Docker images.
+ai_use: none
 
 So this surprised me.  I had a Dockerfile that looked basically like this:
 

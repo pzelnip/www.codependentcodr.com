@@ -5,6 +5,7 @@ Category: Posts
 tags: testing,coverage,cqc,quality
 cover: static/imgs/default_page_imagev2.jpg
 summary: CQC #1 - Exploring Test Coverage
+ai_use: none
 
 ## The Challenge
 

@@ -6,6 +6,7 @@ tags: shellTipOfTheDay,shell,linux
 cover: static/imgs/default_page_imagev2.jpg
 summary: How to use find and sed to replace a common string across many files in one go
 status: published
+ai_use: none
 
 So I recently was tweaking the `<meta>` HTML tags on my posts to make them a little
 nicer for sharing on social media (notably Twitter).  The idea is that if you
