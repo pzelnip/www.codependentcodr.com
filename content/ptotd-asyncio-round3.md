@@ -5,6 +5,7 @@ Category: Posts
 tags: python,asyncio,asyncawait
 cover: static/imgs/default_page_imagev2.jpg
 summary: What happens when you try to make an __init__ async?
+ai_use: none
 
 I found this interesting and gave a small bit of insight/help with forming my mental model around
 asyncio.  Let's say you have a class:

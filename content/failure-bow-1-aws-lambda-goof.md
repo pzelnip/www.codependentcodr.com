@@ -5,6 +5,7 @@ Category: Posts
 tags: aws,mistake,lambda,s3
 cover: static/imgs/aws_logo.png
 summary: Lets talk about how I accidentally incurred a million or so extra S3 & Lambda calls in a day.
+ai_use: none
 
 So this post is going to be more "storytelling" than "tutorial".  I'm writing this for a
 couple reasons:

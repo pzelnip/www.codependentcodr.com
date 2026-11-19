@@ -6,6 +6,7 @@ tags: vscode,editing
 cover: static/imgs/default_page_imagev2.jpg
 summary: Using Visual Studio Code to do the Text Editing Kata
 status: published
+ai_use: none
 
 I recently stumbled across [this article](https://code.joejag.com/2016/text-editing-kata.html)
 which had a challenge/kata to do some funky text

@@ -5,6 +5,7 @@ Category: Posts
 tags: python,pylint,vscode
 cover: static/imgs/default_page_imagev2.jpg
 summary: Showing how to disable specific Pylint warnings.
+ai_use: none
 
 Small tip of the day since I keep having to look this up.  If you use
 [Pylint](https://pylint.org/) for static analysis of your code, you might find

@@ -6,6 +6,7 @@ tags: python,testing,pytest,unittest
 cover: static/imgs/default_page_imagev2.jpg
 summary: Learning some of the basics of Py.test
 status: published
+ai_use: none
 
 So I'm fortunate enough to work for an employer who grants me access to
 [Safari Books Online](https://www.safaribooksonline.com/). The other

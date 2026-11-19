@@ -5,6 +5,7 @@ Category: Posts
 tags: bash,git,osx,homebrew
 cover: static/imgs/default_page_imagev2.jpg
 summary: My bash prompt seemed to be slow.  Here's how I fixed it
+ai_use: none
 
 I recently got a new machine for my new job, and so I'm going through all the
 "new machine setup" gotchas.  Since getting it, I've been finding the

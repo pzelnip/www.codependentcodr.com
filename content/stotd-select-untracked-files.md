@@ -5,6 +5,7 @@ Category: Posts
 tags: bash,shell,shellTipOfTheDay,git
 cover: static/imgs/logos/Gnu-bash-logo-crunch.png
 summary: Shell Tip Of the Day - Selecting untracked files
+ai_use: none
 
 Today's tip of the day is a follow up from something I learned at
 [this year's Polyglot UnConference]({filename}/polyglotconf-2018.md) -- how

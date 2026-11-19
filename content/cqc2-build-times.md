@@ -5,6 +5,7 @@ Category: Posts
 tags: cqc,devops,jenkins
 cover: static/imgs/default_page_imagev2.jpg
 summary: CQC #2 - Reducing Build Times
+ai_use: none
 
 ## The Challenge
 

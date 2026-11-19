@@ -6,6 +6,7 @@ tags: python,pythonTipOfTheDay,contextmanager,testing
 cover: static/imgs/python-logo-master-v3-TM.png
 summary: How to use contextlib.contextmanager to combine context managers into one
 status: published
+ai_use: none
 
 So recently at work I had a test that did a fair bit of patching out of some
 dependent functions/classes.  The test looked something like:

@@ -5,6 +5,7 @@ Category: Posts
 tags: django,python,chartjs,graphs
 cover: static/imgs/default_page_imagev2.jpg
 summary: Walking through an example of adding a chart to the Django admin, and making it use the selected filters.
+ai_use: none
 
 So in my day job I do a decent amount of work in Django, and have recently been
 getting into customizing the Django admin page. If you've never done much with

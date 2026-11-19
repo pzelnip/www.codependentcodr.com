@@ -5,6 +5,7 @@
  tags: vscode
  cover: static/imgs/default_page_imagev2.jpg
  summary: The January update of Visual Studio Code has some useful features for working with tasks.
+ ai_use: none
 
 So as a big [Visual Studio Code](https://code.visualstudio.com/) fan, I've long
 made use of the [tasks feature](https://code.visualstudio.com/docs/editor/tasks).  The most recent (January 2019, 1.31) update

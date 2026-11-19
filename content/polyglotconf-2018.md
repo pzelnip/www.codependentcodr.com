@@ -5,6 +5,7 @@ Category: Posts
 tags: polyglotconf,conferences,learning
 cover: static/imgs/polyglotconflogo.png
 summary: I got to go back yet again for the 7th Annual Polyglot Unconference in Vancouver.  Let's recap.
+ai_use: none
 
 This year, like many past years (see [my 2012 post]({filename}/polyglotconf-2012.md) and
 [my 2017 post]({filename}/polyglotconf-2017.md)), I was fortunate enough to be able to make the trip to

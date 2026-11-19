@@ -5,6 +5,7 @@ Category: Posts
 tags: pythonTipOfTheDay,python
 cover: static/imgs/python-logo-master-v3-TM.png
 summary: Using Python's Simple HTTP Server for fun and profit (and quickly sharing files)
+ai_use: none
 
 This is kind of an old tip, but back in the days of Python 2 (aka
 [Legacy Python](https://pythonbytes.fm/episodes/show/5/legacy-python-vs-python-and-why-words-matter-and-request-s-5-whys-retrospective))

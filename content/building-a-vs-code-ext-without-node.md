@@ -5,6 +5,7 @@ Category: Posts
 tags: vscode,nodejs,docker
 cover: static/imgs/default_page_imagev2.jpg
 summary: How to build a VS Code extension without installing Node.js locally.
+ai_use: none
 
 I recently wanted to work through the
 [tutorial for building a VS Code extension](https://code.visualstudio.com/api/get-started/your-first-extension),

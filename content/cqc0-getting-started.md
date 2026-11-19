@@ -5,6 +5,7 @@ Category: Posts
 tags: quality,refactoring,cqc
 cover: static/imgs/default_page_imagev2.jpg
 summary: Let's do a quality challenge to find some quick wins.
+ai_use: none
 
 I recently did the [30 Day Code Quality
 Challenge](https://www.codequalitychallenge.com/) and enjoyed it greatly.  As

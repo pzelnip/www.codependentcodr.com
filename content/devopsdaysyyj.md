@@ -5,6 +5,7 @@ Category: Posts
 tags: devops,conferences,learning
 cover: static/imgs/devopsdaysyyj.jpg
 summary: I was fortunate enough to attend the inaugural DevOps Days Victoria.  Let's recap what I saw.
+ai_use: none
 
 This year I was fortunate enough to get to attend the very first
 [DevOps days here in beautiful Victoria, BC](https://www.devopsdays.org/events/2018-victoria/welcome/).

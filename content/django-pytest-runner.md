@@ -6,6 +6,7 @@ tags: python,testing,pytest,unittest,django
 cover: static/imgs/default_page_imagev2.jpg
 summary: How to make Django's manage.py use Pytest instead of the default test runner
 status: published
+ai_use: none
 
 Edit: For those who prefer visual content, I've recorded this as a video on Youtube
 which you can find at: <https://youtu.be/toKW2YLnGFQ>

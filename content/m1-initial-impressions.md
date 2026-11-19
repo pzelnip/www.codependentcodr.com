@@ -5,6 +5,7 @@ Category: Posts
 tags: apple,m1,apple_silicon,applesilicon
 cover: static/imgs/m1small.jpg
 summary: A recap of my experience setting up my new M1-powered Macbook Air.
+ai_use: none
 
 I recently took the plunge and obtained a shiny new M1-powered Macbook Air.  For
 those unfamiliar, last year Apple announced that they were now building

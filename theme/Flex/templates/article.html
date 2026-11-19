@@ -34,6 +34,28 @@
         &#8226; {{ _('%(minutes)s min read', minutes=article.stats['read_mins']) }}
       {% endif %}
     </p>
+    {% if article.ai_use %}
+    <style>
+      .ai-disclaimer {
+        margin: 1em 0;
+        padding: 10px 16px;
+        background-color: rgba(217, 65, 30, 0.07);
+        border-left: 6px solid #D9411E;
+        border-radius: 0 5px 5px 0;
+        font-size: 1.05em;
+        color: #242121;
+      }
+      .ai-disclaimer > strong { color: #D9411E; }
+    </style>
+    <p class="ai-disclaimer">
+      <strong>AI disclosure:</strong>
+      {% if article.ai_use == 'none' %}
+      This post was written <strong><em>without</em></strong> the use of generative AI.
+      {% else %}
+      {{ article.ai_note or 'Generative AI was used in the writing of this post.' }}
+      {% endif %}
+    </p>
+    {% endif %}
   </header>
 
   {% if GOOGLE_ADSENSE and GOOGLE_ADSENSE.ads.article_top %}

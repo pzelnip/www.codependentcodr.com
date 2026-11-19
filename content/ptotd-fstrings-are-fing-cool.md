@@ -5,6 +5,7 @@ Category: Posts
 tags: python,pythonTipOfTheDay,fstrings
 cover: static/imgs/python-logo-master-v3-TM.png
 summary: Python 3.6 introduced a new way to format strings. They're really f-ing cool. Let's see why.
+ai_use: none
 
 In Python 3.6 a new (yet another) way to format strings was introduced -- F-strings.
 These were introduced as part of [PEP-498](https://www.python.org/dev/peps/pep-0498/),

@@ -5,6 +5,7 @@ Category: Posts
 tags: asyncio,python,pythonTipOfTheDay,asyncawait
 cover: static/imgs/python-logo-master-v3-TM.png
 summary: Learning asyncio
+ai_use: none
 
 Recently I've been digging into Python's `asyncio` library which was introduced
 as part of Python 3.4, and iterated upon in each release since.  My reasons for

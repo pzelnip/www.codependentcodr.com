@@ -5,6 +5,7 @@ Category: Posts
 tags: blogging
 cover: static/imgs/default_page_imagev2.jpg
 summary: Recording my process for writing blog content
+ai_use: none
 
 So I thought I'd live record myself writing a blog post to show off my toolchain.
 You can see the recording below:
