@@ -3,12 +3,18 @@ name = "codependentcodr"
 version = "0.1.0"
 description = "Source for www.codependentcodr.com, built with Pelican"
 readme = "Readme.md"
-# Matches the Python in the pzelnip/codependentcodrbase image used for deploys
 requires-python = "==3.10.*"
-# Pinned to the versions in the pzelnip/codependentcodrbase image used for deploys
+# uv.lock is the source of truth for both local builds and the deploy image
+# (see Dockerfile), so bumping a version here changes what production uses.
 dependencies = [
     "pelican==4.8.0",
-    "markdown==3.8.1",
+    "markdown==3.8.2",
+]
+
+[dependency-groups]
+# Only needed inside the deploy image, for `aws s3 sync` in s3_push.sh
+deploy = [
+    "awscli",
 ]
 
 [tool.uv]
