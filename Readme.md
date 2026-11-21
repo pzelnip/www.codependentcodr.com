@@ -1,8 +1,6 @@
 # CodependentCodr - The Source
 
 [![Actions Status](https://github.com/pzelnip/www.codependentcodr.com/workflows/Deploy%20the%20Site/badge.svg)](https://github.com/pzelnip/www.codependentcodr.com/actions)
-[![Updates](https://pyup.io/repos/github/pzelnip/www.codependentcodr.com/shield.svg)](https://pyup.io/repos/github/pzelnip/www.codependentcodr.com/)
-[![Python 3](https://pyup.io/repos/github/pzelnip/www.codependentcodr.com/python-3-shield.svg)](https://pyup.io/repos/github/pzelnip/www.codependentcodr.com/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 ![GitHub tag](https://img.shields.io/github/tag/pzelnip/www.codependentcodr.com.svg)
@@ -106,15 +104,6 @@ times.  I ended up refactoring the Dockerfile to have a Dockerfile in a separate
 <https://github.com/pzelnip/codependentcodrbase>) which contains some basic 3rd party dependencies (npm, git,
 etc) and is built nightly.  This repo then uses the latest version of that Docker image as its base image.
 This helps with build times.
-
-### Safety
-
-I also have a Makefile target to run the [Safety](https://github.com/pyupio/safety) tool for checking any
-Python dependencies I have for security vulnerabilities.  This is also enforced by my CI pipeline (no merges
-if vulnerability found).
-
-For the record, this actually now happens on the
-[codependentcodrbase image](https://github.com/pzelnip/codependentcodrbase) rather than in this repo.
 
 ### AWS CLI
 
