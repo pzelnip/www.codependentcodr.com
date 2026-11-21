@@ -1,0 +1,68 @@
+name: Update Dependencies
+
+on:
+  schedule:
+    # Sundays at 19:00 UTC: 11AM Pacific Standard Time (noon during daylight time).
+    # GitHub cron schedules are always in UTC.
+    - cron: '0 19 * * 0'
+  # enable manual running in the actions ui
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+# Runs share the automated/update-dependencies branch, so never let two overlap;
+# a second run waits for the first instead of racing it.
+concurrency:
+  group: update-dependencies
+  cancel-in-progress: false
+
+jobs:
+  update-dependencies:
+    runs-on: ubuntu-latest
+
+    # Actions are pinned to full commit SHAs (tags can be moved), since this job
+    # can write to the repo. Dependabot keeps the pins up to date.
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      with:
+        # Always update from mainline, even for a manual run started on another branch
+        ref: mainline
+        # Don't leave the write-capable token in .git/config, where code from the
+        # packages being installed could read it. create-pull-request sets up
+        # its own credentials for the push.
+        persist-credentials: false
+
+    - name: Install uv
+      uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+      with:
+        # Keep in step with the uv version in the Dockerfile
+        version: '0.13.6'
+
+    - name: Update dependencies
+      # explicit bash turns on pipefail, so a failing make isn't hidden by tee
+      shell: bash
+      run: |
+        # uv lock prints what it changed; keep it for the PR description
+        make update-dependencies 2>&1 | tee update-output.txt
+        {
+          echo 'Weekly automated run of `make update-dependencies`.'
+          echo
+          echo '```'
+          grep -E '^(Updated|Added|Removed) ' update-output.txt || echo 'See the uv.lock diff for details.'
+          echo '```'
+        } > pr-body.md
+
+    - name: Create or update pull request
+      uses: peter-evans/create-pull-request@3ffccacd46053766916f087ce41d627c0b8cf2d1 # v8.1.3
+      with:
+        base: mainline
+        branch: automated/update-dependencies
+        delete-branch: true
+        add-paths: |
+          pyproject.toml
+          uv.lock
+        commit-message: Update dependencies
+        title: Update dependencies
+        body-path: pr-body.md

@@ -1,0 +1,9 @@
+version: 2
+updates:
+  # Keeps the SHA-pinned actions in .github/workflows up to date (Dependabot
+  # updates both the SHA and the version comment beside it).
+  # Python dependencies are handled by the update-dependencies workflow instead.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
