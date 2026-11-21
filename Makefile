@@ -80,4 +80,10 @@ s3_upload:
 
 deploy: dockerbuild s3_upload tag dockerpush slackpost
 
-.PHONY: html clean regenerate devserver stopserver publish s3_upload cleanbranches tag dockerbuild dockerrun dockerpush slackpost cfinvalidate deploy
+# Upgrade everything in uv.lock to the newest versions pyproject.toml allows,
+# then install the result
+update-dependencies:
+	uv lock --upgrade
+	uv sync
+
+.PHONY: html clean regenerate devserver stopserver publish s3_upload cleanbranches tag dockerbuild dockerrun dockerpush slackpost cfinvalidate deploy update-dependencies
