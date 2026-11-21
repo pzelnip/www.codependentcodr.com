@@ -56,7 +56,7 @@ handful of tasks for things like starting the dev server, uploading to S3, etc.
 
 ### Deployments And Automation
 
-Currently I use Github Actions for my CI/CD needs.  Merges to the `mainline`
+Currently I use Github Actions for my CI/CD needs.  Merges to the `main`
 branch are automatically deployed to S3 by GH Actions.  Pull requests are
 automatically built with a number of checks (mostly linters) and builds are
 "failed" on non-zero exit codes.
@@ -82,7 +82,7 @@ In the Makefile I added targets for running [`markdownlint`](https://github.com/
 [`pylint`](https://www.pylint.org), and ['pydocstyle'](https://github.com/PyCQA/pydocstyle).
 
 This allows me to run linters over the repository before any deployment.  I currently have a zero-tolerance
-policy for linting errors (ie linters must run clean before code can be merged into the `mainline` branch).
+policy for linting errors (ie linters must run clean before code can be merged into the `main` branch).
 
 Config for the markdown linter is in `.markdownlint.json`.  For the most part I just added exceptions that were
 needed so that Pelican's metadata didn't trigger markdownlint warnings.

@@ -1,13 +1,13 @@
 name: Deploy the Site
 
 # Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the mainline branch
+# events but only for the main branch
 on:
   push:
-    branches: [ mainline ]
+    branches: [ main ]
   # enable manual running in the actions ui
   workflow_dispatch:
-    branches: [ mainline ]
+    branches: [ main ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
