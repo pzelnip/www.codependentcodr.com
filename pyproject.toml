@@ -4,11 +4,12 @@ version = "0.1.0"
 description = "Source for www.codependentcodr.com, built with Pelican"
 readme = "Readme.md"
 requires-python = "==3.10.*"
-# uv.lock is the source of truth for both local builds and the deploy image
-# (see Dockerfile), so bumping a version here changes what production uses.
+# These are minimums only. uv.lock records the exact versions used by both
+# local builds and the deploy image (see Dockerfile), so changing the lock
+# (e.g. `make update-dependencies`) changes what production uses.
 dependencies = [
-    "pelican==4.8.0",
-    "markdown==3.8.2",
+    "markdown>=3.10.3",
+    "pelican>=4.11.0",
 ]
 
 [dependency-groups]
