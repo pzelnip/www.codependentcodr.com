@@ -48,7 +48,7 @@ devserver: regenerate
 
 cleanbranches:
 	git remote | xargs -n 1 git fetch -v --prune $1
-	git branch --merged | egrep -v "(^\*|mainline|dev)" | xargs git branch -d
+	git branch --merged | egrep -v "^\*|^[[:space:]]*(main|dev)$$" | xargs git branch -d
 
 tag:
 	echo "tagging: $(DEPLOY_TIME)_$(SHA)"

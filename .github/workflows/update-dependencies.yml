@@ -27,8 +27,8 @@ jobs:
     steps:
     - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       with:
-        # Always update from mainline, even for a manual run started on another branch
-        ref: mainline
+        # Always update from main, even for a manual run started on another branch
+        ref: main
         # Don't leave the write-capable token in .git/config, where code from the
         # packages being installed could read it. create-pull-request sets up
         # its own credentials for the push.
@@ -57,7 +57,7 @@ jobs:
     - name: Create or update pull request
       uses: peter-evans/create-pull-request@3ffccacd46053766916f087ce41d627c0b8cf2d1 # v8.1.3
       with:
-        base: mainline
+        base: main
         branch: automated/update-dependencies
         delete-branch: true
         add-paths: |
