@@ -3,7 +3,7 @@ name = "codependentcodr"
 version = "0.1.0"
 description = "Source for www.codependentcodr.com, built with Pelican"
 readme = "Readme.md"
-requires-python = "==3.10.*"
+requires-python = "==3.15.*"
 # These are minimums only. uv.lock records the exact versions used by both
 # local builds and the deploy image (see Dockerfile), so changing the lock
 # (e.g. `make update-dependencies`) changes what production uses.
