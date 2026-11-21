@@ -11,12 +11,9 @@ dependencies = [
     "markdown>=3.10.3",
     "pelican>=4.11.0",
 ]
-
-[dependency-groups]
-# Only needed inside the deploy image, for `aws s3 sync` in s3_push.sh
-deploy = [
-    "awscli",
-]
+# The AWS CLI used for the S3 upload is deliberately not listed here: its
+# docutils requirement conflicts with Pelican's. The Dockerfile installs it
+# into its own isolated environment instead.
 
 [tool.uv]
 # This is a site, not an installable package
