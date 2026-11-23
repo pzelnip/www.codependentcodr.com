@@ -9,6 +9,11 @@ on:
   workflow_dispatch:
     branches: [ main ]
 
+# `make deploy` pushes a release tag using GITHUB_TOKEN, so it needs write
+# access to repository contents; nothing else.
+permissions:
+  contents: write
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
